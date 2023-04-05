@@ -2806,33 +2806,572 @@ no * ns # pixelszám
 no * ns / 10^6 # 303 megapixel ha 1 millió
 no * ns * nsáv * r # bájl
 no * ns * nsáv * r / 1024 /1024 # Mega bájt
-no * ns * nsáv * r / 2^10 / 2^10 # Mega bájt
+V <- no * ns * nsáv * r / 2^10 / 2^10 # Mega bájt
 no * ns * nsáv * r / 2^20 # Mega bájt
 #+END_SRC
 Hány megapixeles? Van még pár bájt fejléc, amit elhanyagolunk!
-
-no*ns
-
-(18967*17815)/10^6 = 337 897 105
-
-338 MP ez azért jó a 50MP kamerához képest.
-
-Sávok száma
-Sávok statisztikája tárolható.
-
-RGB színkonponenst tárol a kép.
-
-pixelméret a world fájlból.
-
 r = 8 bit 1 bájt (radiometriai felmontás)
 
-nsáv = 3
+A fájlkezelőből nézzük, s számolunk egy tömörítési arányt.
 
-Tárhely igény
-V = ns*no*nsáv*r =
+#+BEGIN_SRC R
+fájl_méret <- 209 230 261 # piramis rétegekkel
+fájlméret / V # tömörítési arány
+#+END_SRC
 
-337897105 * 3 = 1 013 691 315 bájt
-/2^10 = kbájt
-/2^10 = mbájt
 
-Piramis rétegek
+Piramis-rétegek benne a leírásban
+** Szkennelési felbontás
+
+res' képi távolság pixel, utána ugyan az mm-ben!
+res' [mm/pixel] = d' [mm] /d'[pixel]
+
+d' kiszámoltuk a pixel távolságot
+d' névleges keretjel távolság 106 mm a képközéptől.
+
+#+BEGIN_SRC R
+## Szkennelési felbontás számítás
+## res'
+d_vesszo_mm <-   299.817 # mm pitagoras tétellel exbelben
+d_vesszo_pixel <-  21380.896
+res_vessző <-  d_vesszo_mm / d_vesszo_pixel # [mm/pixel]
+
+
+
+#+END_SRC
+
+keretjelek = FIDUCIAL MARKS
+
+| 1 |  105.998 |    -106 |
+| 2 | -106.001 | -106.002 |
+| 3 | - 106.003 | 106.004 |
+| 4 |  105.999 | 106.000 |
+
+1–3 átló
+
+d' [mm]   299.817 mm pitagoras tétellel exbelben
+
+d' pixel = 21380.896
+
+Elosztom 14 um pixel mérettel!
+
+0.014 és a kettőt átlagolom.
+
+** Mérés
+Szkennelési felbontás megvan, akkor bármit meg tudok határozni.
+
+Magasságmérő átmérője 896 pixel elég pixellel!
+
+#+BEGIN_SRC R
+896 # pixel a magasságmérő átmérője
+896 * res_vessző
+#+END_SRC
+
+A szkennelés felbontását sok tizedessel tárolni
+
+** Aktív képméret
+Keretjeltől mérni kis dudor LEKEREKÍTÉST NE VEGYÜK BELE!
+#+BEGIN_SRC R
+16287 * res_vessző # vsz-es
+16296 * res_vessző # függ
+#+END_SRC
+
+228 mm, zsugorodott a film, stb.
+
+** Szkennelési felbontás
+dpi-ben határozzuk meg!
+
+dot per inch 
+
+res'[dpi] = 1 inch / res'[mm/pixel] = 25.4 [mm] / 0.01402 [mm/pixel]
+
+#+BEGIN_SRC R
+res_vessző_dpi = 25.4 / res_vessző
+#+END_SRC
+1811 dpi
+
+** Példa visszafelé
+3600 dpi-t kapunk!
+
+25.4 mm / 3600 = 0.007056 mm/pixel
+
+
+** Tovább haladunk
+Mk # Méretarány
+
+Műszerek alapján alapvetően
+Jobb mezőben négyzet 152,70 az adott optikával kalibrálva.
+
+c = 152.70 # mm
+
+A magasság két km-es hektométeres skála * 100 m.
+
+2 km skála 4810-nél kicsit följebb 4812 FIGYELEM A SKÁLÁT!
+
+h0 = 4812 # m
+
+(Mk = 1 / ak)
+ak méretarányszám képi
+
+ak = h0*10^6/c
+
+Mk = 1 : 31513
+
+Műszer szerinti méretarány. Műszer nullázásától függ.
+Másik a légifénykép törzslap, amit beírtak.
+
+** Méretarány ellenőrzése
+Méretarány minden további paramétert meghatároz, terepi távolság lemérésével leellenőrizni.
+
+Ne kicsit távolságot mérjünk. TV torony magas kicsi. Ikvahíd mély és kicsi.
+
+Átlagos magasságban minél hosszabb távolság.
+
+Belerajzolom és kiszámolom. (Lehet vonalzóval is!)
+
+Kereszteződés egyik sarokban, ikva híd a másik sarok!
+
+Híd távolsága
+d'pixel = 19572,876 * res_vessző
+
+mm-ben megvan!
+
+
+** kérdés
+Zsugorodás
+
+Koordináta különbséggel!
+GNSS műszerrel mérünk. EOV koordináta különbség.
+Nem akarunk kimenni, digitális térképről levesszük. Másik qgis.
+
+OSM térképről
+
+qgis modulok telepítése quickmapservice
+
+Settings More services segítségével hozzáadhatok
+
+8395 m-t mértünk
+#+BEGIN_SRC R
+8395.2 / (274.495 / 10^3) # OSM saját vetülettel
+ak <- 8394.79 / (274.495 / 10^3) # EOV 23700
+#+END_SRC
+
+
+A tényleges méretarány :
+30584.16
+
+EOV beállításnál nem szabad kitekerni, mert lefagy!
+
+23700 az EOV
+
+** Felvétel tényleges repülési magassága
+h0 = c * ak
+
+h0 = (c/1000) * ak
+
+4670.275
+
+Következő, ami elő jöhet. 
+
+** Terepi felbontás
+res = res' * ak
+
+res = res_vessző * (ak/10^3) # Terepi távolság
+
+
+Méretarány / 10^3 akkor nem kell állandóan osztogatni!
+
+res = d[m]/d'[pixel] Ugyen úgy 0.4289
+8394.79/19572.876 # távolság méterben és távolság pixelben
+
+\Omega (FOV = Field of view) látószög.
+
+Omega = 2 * arctg(s'/(2*c))
+A háromszögekkel!
+
+Omega_y = 2 * arctg(s'/(2*c)) fokba!
+
+atan radián, fokká alakítani
+s_y képméret / 2 * c
+
+Most y iárnyú látószög! 73.61 fok
+
+Átlós problémás. Keretjelig? Maszk mögött nem látunk!
+
+Pillanatnyi látószög
+
+\omega (IFOV = instantenous field of view, pillanatnyi látószög)
+1 pixelhez tartozó látószög.
+
+EZ RADIÁNBA!!!
+omega_y = 2 * arctg(res'/(2*c))
+
+res' 1 pixelhez tartozó látószög
+m radban (omega_y) / 1000
+
+Ha radiánban van, akkor simán:
+Pillanatnyi látószög * c = képi pixelméret
+Pillanatnyi látószög * h0 = terepi pixelméret.
+
+Egyszerűsített képlet / sugárral res'/c-vel is
+közelítő képlettel sem rossz, de nem az igazi!
+
+omega magassággal lineárisan változik!
+
+Pillanatnyi látószög a kameráknál érdekes. Nem fix magasságú a
+pálya. Felvihetem 2000 vagy 5000 méterre, így gyorsan tudom számolni a
+terepi felbontást.
+
+** Egyképes magasságmérés és magassági torzítás
+Rajzol a táblára.
+
+kép, arról a szélre sugár objektum magassága!
+Nadírpont, csúcson átmegy.
+\delta h magasságkülönbség
+
+objektum képen kinő \delta r
+
+Töve r-rel távolabb a képközéppontól
+
+\delta h / \delta r = h0 / (r+\delta r = c / (r' + \delta r')
+
+Átrendezve
+
+EGYKÉPES MAGASSÁGMEGHATÁROZÁS
+\delta h = h_0 * \frac{\delta r'}{r' + \delta r'}
+
+Képen mért távolságok. Ha tudom pixel akkor
+
+Inkább fényképezzek!
+
+Képközéppontot.
+
+QGIS snapping be kell állítánai
+
+Projekt menü illesztési beállítások.
+
+Vonal illesztés
+és etszés illesztés. Megszéspontra is illeszt!
+
+Ha nagy az eltérés kiszerkeszthető a nadírpont is!
+
+Ez lesz az r' + \delta r'
+
+Bővített digitalizálás eszköztár bekapcsolása
+Nézet -> eszköztárak -> bővített digitalizálási eszköztár
+
+Elemek darabolása ikon ollós.
+
+TV torony nem ideális, mert a kör épületnek is van magassága
+
+dh = h0 * dr'/(r' + dr')
+
+dr' = 182.987
+r' = 5090.191
+
+Pixellel is számohatunk, de számoljuk ki mm-ben!
+
+2.5 mm-t dől a tévétorny a képen
+
+r' töve a nadírponttró 
+5090.191 pixel * res' szkennelési felbontás 71.386
+
+Számláló és nevező is szkennelési felbontással.
+
+dr'/(r'+dr') = 0.0347 azaz a repülési magasság 3.47%-a a tvtorony!
+
+dh = 162 m
+
+QGIS Infóval jelöl
+
+** Hőerőmű kéménye
+112.819 pixel
+7168.075 pixel az r'
+
+72.36 m a kémény!
+
+Egy képesnél akkor mérhetünk, ha függőleges az objektum és látjuk a tövét.
+
+QGIS raszter rétegre jobb gombal széthúzás az aktuális terjedelemre.
+
+** Téglagyári kémény
+73.615 
+4947.909
+
+68.46 m!
+
+* <2023-04-03 h> Előadás
+
+** Analitikus fotogammetria
+Analóg felvételek kiértékelése számolás útján.
+
+Képi koordinátákat mérjük minél nagyobb pontossággal. Ebből a terepi koord számítással.
+
+Mérő mikroszkópok vagy komparátorok
+- monokomparátor egyképes
+- sztereokomparátor kétképes
+
+Megfelelő pontossággal mérhető. Terepi koordinátor.
+
+** Komparátor ős
+Karl Pulfrich német fotogamméter
+
+Sztereokomparátor
+
+Két kép a képtartóba, utána a méréseket külön a mérőjel (virtuális itt is)
+
+Minden mért ponthoz 4 koordinátát határozunk meg. Bal kép fix. Beállítjuk a mért pontot.
+Két paránycsavar px-py paraméterek. Sztereoban mérünk.
+
+1 koordináta x,y,px,py.
+
+Képtartóba a képet, elvégezzük a belső tájékozást. Műszer
+koordinátarenszerből képi koordináta rendszerbe térünk át.
+
+x_{kép} = a_0 + a_1x_{műszer} + a_2 y_{műszer}
+
+y_{kép} = b_0 + b_1x_{műszer} + b_2 y_{műszer}
+
+1 keretjel két egyenlet, hány simeretlen 6 ismeretlen.
+
+Minimum 3 keretjelet mérni, ogy a hat ismeretlen meg legyen határozva.
+
+Műszer koordináta -> képi koordináta rendszer.
+
+Ez az analitikus belső tájékozás. Képlet tekintetében ugyan az, mint digitális.
+Itt a műszerből képi, (ott pixel)
+
+** Analitikus kölcsönös tájékozás
+
+Koplanaritás Két kép kapcsolópont Vetítési középpontok egy síkon!
+
+Térbeli pontra síkot állítunk. 5 pont a síkon!
+
+Koplanaritás 5 paraméter. 1 kapcsolópontra 1 egyenlet, így 5 kapcsolópont kell!
+
+3*3-as elredezés (hat kapcsolópont), van olyan szoftver 10–12-t mérünk!
+
+Relatv tájékozás után térmodell.
+
+** Analitikus abszolút tájékozás
+Térmodell vetületi koordinátarenszerben. Standard 7 paraméteres tájékozás.
+- Eltolási paraméter (vektor 3 paraméter)
+- 3 forgatási koordináta
+- Méretaránytényező.
+
+Hét paramétert kell meghatározni. Egy illesztőpont 3 egyenletet írunk fel. Minimálisan
+három illesztőpont!!!!
+
+1 pont eltolás, 1 pont forgatás és mégegy irányba forgatás. Térmodell
+a vetületi koordináta benszerben.
+
+** Analitikus foto tört
+- kb. 1900 Finsterwalder alapegyenletek. Nem volt esély alkalmazásra a
+  számítástechnika miatt. Gleccserek visszahúzódás. Két szezon, és több éves kiértékelés
+  táblázatos kezelés. Mindig nagy kongd. Igazi úttörő.
+- 1941 Zuse Z3: A számítógép fotogammetriai kiértékelésre.
+- 1953 Schmidt kiegyenlítés, tömbkiegyenlítés, légiháromszögelés. 1
+  lépésben relatív és absz tájékozás. Fejlettebb
+  mód. Tömbháromszögelés. Következő félévben!
+- Analitikus kiértékelők
+  - 1957 Helava: analitikus sztereokiértékelő. Pulfrich után nem
+    terjedtek el, mert nem számolt. Az első piacra dobott kiértékelő,
+    ami számítógéppel számol!
+  - 1976 Wild-gyár analitikus ortoprojektor. Jelentősége bármilyen
+    terepen ortofotót tudott csinálni. Mérni egy digitális
+    domborzatmodell. Magassági vezérlő. Fotopapír megfelelő
+    magasságba. Ortofoto kis darabja egy résen. Papírt emlete, süllyesztette.
+- Ma már nagyon ritka. 20 évvel ezelőtt, ha nagy pontosság kellett, de
+  ma már nem. Nagy pontosságnál is szkennelnek! Nem igazán használják!
+  Számítógéphez kapcsolódott. Elavult számítógépek!
+- Gyakorlato látni fogunk. Analóg műszerekkel szemben nehéz életre kelteni!
+
+** Differenciális képátalakítás
+Analitikus oltoprojektor lényege. Fotopapír tálcára! Ortofotó
+pontossága a magassági vezérlő és tájékozás. Mekkora a rés? Nagyon
+kicsi rés nem megy. Átsugárzás, kis résen a fény elhajlik.
+
+Digitális ortofotó hasonló. Ott pixelenként is másolhatunk!
+
+* <2023-04-03 h> Földi fotogammetria
+A földi álláspontról mérési és kiértékelési célra, mérőképek,
+fényképek feldolgozásával foglalkozó tudományág.
+Hordozó eszköz földi álláspont, hagyományos geodéziai műszerláb (egyéb).
+
+Mobil térképező nem ide, inkább légi, mert mozog az érzékelő.
+
+Földi fotogammetria statikus, nem mozog közben.
+
+** Földi foto sajátosságok
+- nem kell az objektumot megérinteni veszélyes üzemek felmérése! Le kellene állítani
+- terepi mérés időszükséglete rövid. (kiértékelés hosszabb) Hidak terhelés vizsgálata.
+  Nem kell leállítani a forgalmat. Teherautó, megáll behajlás fénykép.
+- Kis megvilágítási idő miatt gyors folyamat mérése. 1/1000 sec vagy
+  rövidebb. Amúgy nem mérhető folyamatok. Gépjármű
+  töréstesztek. Időben hogyan roncsolódik?
+- mérőképek sok infót tartalmaz (minőségi infók a mennyiségi
+  mellett). A kép minőségi jellemzői. Homlokzat kiértékelés. Homlokzat
+  ortofotó, nem kell minden díszítést rögzíteni!
+- Gyors kiértékelés és jól automatizálható. Gyorsabb és jobban automatizálható.
+
+** Koordinátarendszerek
+Fotogammetriai képi koordinátar rsz.
+
+Képközép \kszi \eta képi koord renszerek. Sztereo bázis koordinátar rsz.
+Origó a bal kép vetítési középpontja. Ahhoz képest a képek koordinátái. Lehet egy tárgy
+koordinátar rsz. Nem teljes!
+
+
+Jellemzően vízszintes kameratengellyel. Adott pont mérése. Pont x
+koordinátája egyezik a kép x koordinátája és a képfőpont eltolódás értéke.
+
+X_A = X_F
+
+y nál külpontosság
+
+Y_A = Y_F + a
+
+z műszermagasság és z irányú eltolóds
+
+ZA = Z_F + M_A +- e
+
+Kevés számolás. Légihez hasonló méretarányszám.
+
+a = d/d'
+
+Y = c * a # objektum távolsága a repülési magasság.
+
+X_i = a * \kszi_i
+
+Z_i = a * \eta_i
+
+Párhuzamos tárggyal, egyszerű számmolás.
+
+** Sztereo
+Felvétel párok.
+*** Normál
+Normál sztereogram, amikor a felvételi irány a bázisra merőleges.
+
+Korábban ha biztosítjuk, akkor kevés számolás!!!!
+*** Oldalra tartó
+*** Konvergens
+*** Általános helyzetű
+
+Ma már általános helyzetű elterjedt!
+
+** Normál sztereogram
+Fontos a bázis irányú parallaxisft. Bázis irányú parallaxis meghatározása a képpáron.
+
+Ábra alapján
+
+p_{\ksz} = \kszi_{bal} - \kszi_{jobb}
+
+Y = B \ p\kszi * c
+
+p_{\kszi} 
+
+c kameraállandó
+
+Y/B = c/bázisirányú parallaxis
+
+X is egyszerű Távolság megan. Elmaradt érték, mennyi az eltérés
+
+Z \ éta a bázis irányú parallakszissal szorozva.
+
+Másik képlet. a másik dián
+
+** Földi kamerák
+Egy képes és több képes kamerák gyakorlaton.
+
+Zeiss gyár két kamera FOTEO 1318 13 * 18 képre (üveglemezre)
+
+ZEISS UMK (Universal Messkammer)
+
+13 * 18 vízszintes kameratengely is állítható.
+
+Mindkét kamera egy képre alkalmas, de sztereo felvétel párok is
+készíthetők vele. Normál sztereogram a segítségükkel. Távcső a
+merőleges nézet, távcsővel irányzok!
+
+UMK is normál sztereo. Korábban az egyszerű számolás miatt!!
+A számítógép mindent ki tud számolni. Náhány fok szinusza...
+
+
+*** Wild
+P32 fototeodolit,
+
+Wild C120 és  C40 
+
+A számok a bázis távolságok. Egy időpillanatban készített felvételpár! Nagyobb bázis, annál
+pontosabb mélység (távolság) mérés. C120 van!
+
+** Munkafázisok
+- tervezés mit mérünk? milyen irányból, mit
+- kitűzés a mérés, pontjelölés, vagy csak kiválasztott (ablaksarok)
+- geodéziai mérés
+- felvétel elkészítés
+- műszeres kiértékelés
+  - pontok
+  - vonalak
+  - tónus (ortofoto)
+- további számítás és kiértékelés
+
+** Bázis távolság pontosság
+
+Objektum mélységétől függ. Legközelebbi és legtávolabbi pont.
+
+Y_{min} / 5 > b > Y_{max}/20
+
+Homlokzat, sík! Milyen látószög a kamera.
+
+10 méterről 10/20 minimum fél méter! Ha sík, akkor nincs 5 méternél kisebb.
+
+Beugrások esetén változnak.
+
+*** Pontosság
+Y = \frac{Y^2}{b * c} * \mu_p
+
+Nagyobb bázis, nagyobb kamera állandó. Pontosabb a mélységi mrés!
+
+** Alkalmazás
+- topo terepfelvétel. Nincs növényzet.
+- Mérnökgeodézia hidak terhelésvizsgálata
+- Építészeti alkalmazás homlokzat felvétel, műemlék felmérés, régészeti lelőhelyek
+- bűnügyi helszínelés
+- gyógyászat
+
+** Példa
+alagútmérés, bányamérés. épületmérés, Műszaki rajz
+
+Műemlék
+
+Baleseti helyszínelés. Egyetem előtti felvétel. Gyorsan helyszíneltek!
+Fénykép alapján is mérhető paraméterek
+
+Gyógyászat, arc, fogászat elváltozás.
+
+** Napjainkban
+Klasszkus földi fotogammetria nincs!
+
+Egyéb kiértékelések során! Képalkotó mérőállomás, amivel fényképet is
+tudunk. Fénykép alapján további mérés. Amit területen nem mérünk.
+
+Imaging Total Station
+
+Lézeres letapogatások. Más jellegű felmérés. Földi foto eljáráshoz hasonló eredmények.
+
+Gömbkamerák, szférikus kamerák. Minden irányba az álláspontból.
+
+Fénykép alapján modellezések. Átfedő képek automatikus eljárással!
+
+** Források
+Bácsatyai-Márkus jegyzet 6. fejezet
+
+Engler Péter dititális tankönyvtár
+
+Linkek!
+
+Jövő héten nem lesz előadás. Feladattal foglalkoztak-e?
+Elérhető volt.
+
+Reméljük nem gátolt a feladatban a fentrol.hu!!!!
