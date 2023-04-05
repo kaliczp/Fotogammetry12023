@@ -3375,3 +3375,124 @@ Jövő héten nem lesz előadás. Feladattal foglalkoztak-e?
 Elérhető volt.
 
 Reméljük nem gátolt a feladatban a fentrol.hu!!!!
+
+* <2023-04-05 sze> gyak
+
+Szenátus volt. Nagyon sokat késtem. Tomi volt az órán.
+
+** Worldfájl 
+
+Űj wordlfájl.
+
+Képközép a 0,0, kép befogllója 103.896, 67.824 függőlegesen.
+
+NAS lassú.
+
+
+A kép a fotogammetriai képi koordinátarendszerben
+
+ÉK tájolású koorináts rendszer.
+
+Terjedelmet kiírja. Mit számoltunk el?
+
+Valamelyik eltolási paraméter nem lett jó. Még egy tizedesjegyet meghatározni.
+Hibakeresés.
+
+Más pontosság.
+
+Normál esetben a képméretet kellene mutatni a tulajdonságoknak.
+
+ugyan úgy a képi koordináta renszerhez a másodlagos digitális képet mellé adjuk, a képméretek közötti eltérés látszik.
+
+1991_0061_1019 felvétel hozzáadása.
+
+Digitális mérőkamera képmérete jelentősen kisebb.
+
+QGIS sorrendet cserélve. 106 a keretjel koordinátája. mm-ben mérünk, ha a vetületi beállításokat kikapcsoljuk!
+
+Képterület vmiszer, másodalgos digitális kép képmérete.
+103,896 * 67.824
+
+
+7,5-szeres arány az analóg mérőkép javára.
+
+** Drónos felvétel
+Annak a képmérete hogyan néz ki a kamerához.
+DJI M3 X100 KAMERA 12 MP 4000x3000 pixel
+
+pixelméretet számolni. 3,61 a tényleges 20 az egyenértékű fókusz távolság.
+
+20-hoz tartozik a 24*36 Képátlója 43,266 
+
+7.8 mm a képátlója az érzékelőnek.
+
+Átló mentén 5000 (3-4-5) képátló 7.8 és 5000 pixel
+
+Képátló/átlós pixel számmal 0.00156 mm (1.56 mikron)
+
+Mennyivel eltolni a képet.
+
+vsz és függőleges képméretet. 6.24 mm az eltolás,
+másik irányba 3000 pixel. 4.68577 felével eltolni!
+
+-3.12384-el balra, függőlegesen 2.34289
+
+pixelméret
+
+Eltolás.
+
+A fájl jgw kiterjesztése.
+word fájlba tizedespont kell.
+** ÖF
+Három generáció, analóg, digitális mérőkamera és drón kamera!
+
+Analóg 1783-szorosa!
+
+** Összegzés
+A bemutatott számolást olyan szempontból megnézni, hogy mindenki megértse.
+
+EXIF adatokból focal lenth 35 mm -fil kis filmes eyenértékű fókusz távolság
+
+f35 vagy c35! 24 * 36
+
+Úgy van megadva, hogy a képátló menté legyen azonos a látószög!
+
+3/4 2:3-hoz az oldalarány a 35 mm filmnél!
+
+Egyenérétkű fókusz mindiga képátlóra vonatkozik. Az oldalarány ne kavarjon be!
+Látószög is kiszámolható. Egyszerű aránnyal számoltuk.
+
+43 -hoz 20 3, valamennyi.
+
+\Omega látószög = képátló / 2 * c
+
+2*fokarctan(átlós képméret / 2 * c)) 94.49 fok. 43 és 20 mm-nél is ugyan annyi. Éreemben egyszerű aránypárral tudunk számolni.
+
+Priamis csúcsán 3.61 mm 20 mm az egyenrétékű képátló a 7.valamennyi.
+
+43:20 = 7:3.61 Ebből az arányból tudok számolni. Látószögból is mehet, csak többet kell számolni.
+
+Sok esetben (a Kínaiaknál) gyakran keveset adnak meg. Ha normális
+esetben egy normális kameránál beleírják a focal lengthet és a 35 mm
+equivalent focal lenghtet is.
+
+Ha nincs meg, akkor külön utakon kell járni!
+
+** Két gondolat
+Első feladatot később küldhetjük meg. Nagy Péter rendesen és alaposan megcsinálta.
+A feladat kapcsán húsvét hétfőre ki lehet tolni!
+
+Nem esett le a nagypéntek. Húsfét hétfő 23:59 bla bla ba.
+
+Egy képes mérésekkel kapcsolatban alakul a feladat.
+
+Elsődleges, másodlagos digitális képen kiadja külön.
+
+Egyképesig!
+
+Jövő héten két képes. Egybe mehet. Gézának jobb.
+
+geoshop regisztráció. Elsődlegesek geoshopon érthetők el.
+
+Regisztrációt érdemes megcsinálni! Földhivatali térképek és régi
+térképek is elérhetők.
