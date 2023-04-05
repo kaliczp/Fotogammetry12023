@@ -1,0 +1,2838 @@
+* <2023-02-27 h>
+Kötelező látogatni az órát.
+
+Három feladat lesz. Határideje a gyakorlatot követő második hét péntek!
+
+Más időpontba az óra?
+
+** Bemutatkozás
+Három tantárgyból álló blokk, Foto I, Foto II., Távérzékelés
+
+Távérzékelés – Remote Sensing tükörfordítása.
+
+Táv távolról információ gyűjtés.
+
+Szükséges valami, amit továbbítja az adatot. Információ hordozó.
+- hanghullám
+- szeizmikus rezgés 
+- gravitácó
+- elektromágneses sugárzás (legfontosabb!)
+
+** Érzékszervek
+- látás
+- hallás
+- hőérzet magasabb hullámhossztartomány!
+- (szaglás)
+
+** Képalkotás
+Nem elég információt gyűjteni, helyhezkötni az információt. Látás az analógiája.
+Ilyen csak a látás!
+
+** Tágabb fogalom
+Olyan információ-gyűjtés, ahol nincs közvetlen kapcsolat a vizsgált objektummal.
+
+Szákebb:
+Elektromágneses hullámok és Földet vizsgáljuk!
+
+** Adatgyűjtés
+- adóegység, sugárforrás
+- vizsgált objektum kölcsönhatás
+- érzékelő (sensor)
+- hordozóeszköz (platform) az adott felülettől eltávolítja az
+  érzékelőt.  a jobban helyhezkötéshez. El kell emelkedni a
+  felszíntől. Homlokzatfelmérésnél vízszintes irányba eltávolodni
+** Adatelemzés
+- analóg és digitális képek
+- Vizuális kiértékelés, analóg, analitikius és digitális kiértékelés és képfeldolgozás.
+
+** Most
+analóg és analitikus fotogammetria.
+digitális foto II.
+Távérzékelés a feldolgozás
+
+Eredménye térkép tematikus térkép, jelentés!
+
+** Ábra
+Nap, mint forrás, visszaverődő sugárzás, műholdon helyezkedik el. passzív távérzékelés.
+Radarsat kibocsát és a visszaverődő jelet feldolgozzuk.
+
+Sugárzás és visszaveerődés térkép
+
+** Kapcsolódó területek
+
+- Geodézia
+  Helyhezkötés referencia. Távérzékelés és fotogammetria! Gravimetria. Egyre több a kapcsolódás.
+- Fotogammetria (része a távérzékelésnek) sokan együtt tárgyalják.
+- Távérzékelés
+- Geoinformatikai renszer (nagy adatéhség!)
+
+- GEOMATIKA USA, de európai is!
+
+** FOTOGAMMETRIA
+Fényképmérés! Így szoktuk nevezni!
+Dazser és Nips eljárása 1839 körül. Fényképezés feltalálása!
+
+Nem sokkal később indul az elméleti tudomány.
+
+Elsősorban mennyiségi információ szerzés. Hol van az objektum? Milyen mérete, hosszúság, szélesség,
+terület?
+
+- Objektum és képek matematikai, geometriai kapcsolata!
+
+** Távérzékelés
+1972-ben LANDSAT1 az első polgári célú műhold!
+Ekkor született meg!
+
+Minőségi információ szerzés állapot vagy állapot változás!
+- hullámhossz,
+- textúra alapján
+
+Távérzékelés minőségi, foto mennyiség
+
+** Foto vs. RS
+*** Külön
+- klasszikus mennyiségi/minőségi
+- tradíciók!
+
+*** Együtt
+Sok ok az együttárgyalás mellett. Nem teljesen elválaszthatók!
+
+mennyiség-minőség nem elválasztható, mennyi, mi nélkül nem megy.
+
+Feldolgozási módszerek idővel közelednek egymáshoz!
+
+Mi külön fogjuk tárgyalni!
+
+** Csoportosítás
+*** Sugárforrás
+- passzív NAP
+- aktív - saját adó
+*** Vizsgált objektu
+- természetes és
+- épített környezet
+
+sok módszer nem működik ami az egyiken a másikon!
+
+*** Hordozó eszköz
+- Műhold
+- Légi: rep, helikopter, hőlégbalon UAV-UAS
+- Földi: daru, állvány, mobil rendszer (Google autó)
+
+*** Érzékelő (sensor)
+- Fotográfiai renszer (régi)
+- Digitális érzékelő (manapság ez uralkodik!)
+
+FONTOS! Táv és Foto szempontjából is!
+
+1. Geometriai felbontás [m] 1 képi egység mekkora?
+2. Spektrális felbontás (hány sáv az elektromágneses sugárzásba) [sáv]
+3. Radiometriai felbontás (1 spektrális sávon belül hány érték) [bit]
+4. Időbeni felbontás [nap] távérzékelés a műhold visszatérési ideje,
+   fotoban az adott kamera milyen gyorsan tud egymás után képeket készíteni!
+   Drón ha másodpercenkét tud fényképezni, nagy sebesség, ha 3 sec, lassabb repülés!
+
+** Geometriai felbontás
+- Elemi látószög \omega (IFOV)
+  1 pixelhez tarozó látószög. [rad, mrad]
+- Repülési magasság h [m, km]
+- kamera állandó c [mm]
+
+Közelítő képletek.
+
+Pixelméret
+- Terepi [m] = a = h * \omega
+- 
+
+** Spektrális felbontás
+*** Monospektrális (pánkromatikus, mint film)
+- 1 sáv
+- Nagyon széles tartomány! > 100 nm
+*** Multispektrális
+- 2–15 sáv
+- Szélesebb tartománs (50–150 nm)
+*** Hiperspektrális
+- 16–4096 sáv
+- keskeny sávszélesség 2–20 nm!!!
+
+** Példa
+*** Spektrális felbontás
+8+1 sávú műhold: 8 szűk + 1 pánkromatikus
+
+Tartományon belül nem egységes az érzékelés!!!!
+
+*** Radiometriai felbontás
+Érzékelő dinamika A/D átalakítás
+
+Érzékenységi görbe (feketedési)
+
+Van egy minimum és egy maxiumum! Érzékelőn analóg jel, amit digitalizálunk
+
+8 bit : 0–1 V 255 részre osztva!
+
+** Érzékelők csoportosítása
+- Geom
+- Spektrális
+- Radiometriai
+(+ idő)
+
+Nincs olyan, ami mindháromból jót tudna. Geometria képalkotó, Spektrométer, Radiométer.
+
+Passzív érzékelő, Felszínről korlátozott foton! több sáv, 1 sávba még kevesebb foton,
+nagy felbontás! még kevesebb foton!
+
+FIZIKA korlátoz bennünket! Idővel játszó érintkezők!
+
+** Letapogató
+Az idővel játszik! Időben elhúzódó folyamat, több fotonnal dolgozunk!
+
+*** Passzív
+
+*** Aktív
+
+** Letapogatók csoportosítás
+- mechanikai
+- Elektro optikai (nincs mozgó alaktrész.
+
+Újabb csop:
+- 0D pont
+- 1D sor
+- 2D képszenzor
+
+Asztali szkenner 1D. Olcsóbb egy soros érzékelőt csinálni!
+
+*** Példa
+opto-mechanikai
+1 irány tükör forog és halad (0D)
+
+1D mint szkenner
+
+2D 1 időpillanatban teljes
+
+Cross-track
+
+Whisk-broom (1 pontos seprők)
+
+Push-broom (pratvis)
+
+** Fotogammetria
+A bevezetés után!
+
+ASPRS 1980 (American Society Photog) definíicó:
+
+Tárgyakról és környezetünkről megbízható ifó előállítása művészeti,
+tudomány, technológia amely a fényképek és más elektromág sugárzást
+rögzítő felvételek készítésének mérésének és értelmezésének folyamatai val dolgozik.
+
+Mérés és interpretáció.
+
+Art építészeti fotográfia!
+
+*** Csoportosítás
+Átfed távérzékeléssel.
+
+**** Hordozóeszköz
+- Földi
+- Légi
+- Űr
+
+50-es évek végén műholdas távérzékelés. Műholdról fényképek,
+hagyományos fotók. Kémműhold programok! Ma is jelentősége az űrfotogammetriának, mert kiértékelhető!
+
+
+****  Adatnyerés dimenzió
+- Sík
+- Tér vagy sztereo (rég két képes)
+
+- Fotointerpetáció (távérzékelésnél)
+
+*** KIértékelés szerint
+- Analóg :: (analóg – analóg)  Nem kell számolni!
+- Analitikus :: analóg felvételek digitálisan (számolással)
+- Digitális :: digitális felvétel, digitális számolással.
+
+** Történeti áttekintés
+- 1267 :: Roger Bacon Camera Obscura centrális leképezés! Van régebbi írásos nyoma kína...
+- Reneszánsz :: Centrális perspektíva felfedezése. Térbeli tárgyak rekonstrukciója!
+- 1839 :: Daguerre és Niepce eljárása. Fényképezés elterjedése. Francia
+  Akadémia megvette a licencet, szabadon fejleszthető ingyenes eljárás
+- 1854 :: Újsághy Zsigmond fényképmérés elve. Selmecbánya erdőmérnök hallgató.
+- 1858 :: Felix Turnachon ballonról fényképez
+- 1896 :: Csiby Lőrinc Fototeodolittal készített térképek!
+- 1897 :: Nobel Alfréd rakétáról
+- 1897 :: Scheimplflug egyképes optikai képátalkítás
+  Ekkor földi fotogammetria
+- 1900 :: Finsterwalder centrális vetítés matematikai
+  formulája. Gleccserek visszahúzódása! 2 nyár és 3 év kiértékelés!
+- 1904 :: Wright testvérek repülése
+- 1908 :: Orel-féle sztereoautográf. Mechanikus kiértékelő. Vetítési sugár csuklókkal
+- 1915 :: Messter automatikus légifénykép időzítő készítette a képet
+- 1917 :: Jankó Sándor 1. magyar nyelvű fotogammetria könyv. Vékonyka.
+- 1924 :: Gruber légiháromszögelés Mószertani fejlődés kezdete
+- 1953 :: Schnidt kiegyenlítés tömbháromszögeléssel tömbkiegyenlítés
+
+** Képek
+Újsághy Zsigmond
+
+Gawspard-Félix Tournachon (Nadar művésznév) 1820–1910 felvételek!
+
+Boston hőlégbalon, Nobel Wright, Bajor postagalamb!
+
+Jankó Sándor!
+
+CORONA program légifényképező kamera. Oroszok lelőtték a
+kémrepülőt. Elfogták a pilótát.  Ennek eredmények a program. Kapszula,
+stabilizálás, film. Visszajuttatás a legnagyobb. Még a levegőben
+begyűjtik. 17. küldetés az első siker.
+
+Ma már szabaddá tett felvételek. Olcsón beszerezhető. Magyarországról is van sok felvétel!
+Pentaogon. 2m-ről lementek 1m alá a felbontásban!
+
+1m -es kameraállandóval!
+
+** ZH
+Alapfogalmak ZH
+
+5–5 fogalmak.
+
+* <2023-03-01 sze> Gyakorlat Ismerkedés a légifényképekkel
+Félév első gyakorlati köszöntő.
+
+Gyakorlat elején nem lesz gépezés, de a második felében...
+
+** Légifénykép definíció
+Levegőből készített fényképfelvétel.
+
+*** Felső határa
+Magassági tartomány. 100 km körül helyezkedik el a légkör felső határa.
+
+Kármán vonal (Kármán Tódorról). Az a magasság, ahol már aerodinamikai felhajtóerővel
+nem tudunk feljebb jutni.
+
+*** Alsó határa
+Az alsó határa, ha elemelkedik a földtől, már légtérhasználat.
+
+0 – 100 km
+
+** MÉrőkamera
+Fotogammetriai célból, ahol méréseket akarunk végezni, mérőkamerákat
+használunk. Ami mérések készítésére tervezett. Nem kizárólag, de elsődleges.
+Amatőr kamera, ha nem tud bizonyos feltételeket teljesíteni.
+
+Rég: Mérőkamara (Kamara obscura) Korábbi szakirodalomban.
+
+A mérőkamera ismert belső tájékozással rendelkezik.
+
+*** Belső tájékozás
+Fényképkészítés esetén centrális vetítést használunk. 
+
+Fekete doboz és lyuk. Fordított állású kép.
+
+Képsík és a vetítési középpont egymáshoz viszonyított helyzete ismert.
+
+Hány paraméterrel meghatározható a pontnak a síkhoz való viszonya.
+Pont a vetítési középpont. Térbeli pont három paraméter.
+
+Vetítési középpont képsíktól távolsága, illetve a képsík melyik pontja fölött helyezkedik
+el a pont. Képsík koordináta rendszerében pont.
+
+*** Kameraállandó
+A képsík és a vetítési középpont egymáshoz viszonyított távolsága.
+Kameraállandó /c/.
+
+Képtávolság (k), tárgytávolság (t) és fókusztávolság aránya.
+
+1/k + 1/t = 1/f
+
+Végtelenre fókuszálva a kettő megegyezik. Fókoszálunk, akkor a tárgytávolságot megnöveljük
+
+k itt nálunk c. Mikor egyenlő a kameraállandó.
+
+Ha t == végtelen, akkor a fókusztávolság egyenlő a kameraállandó értékével!!!!!
+Kameraállandó és fókusztávolság még szakkönyvekben is összekevert.
+
+Mérőkamerák fix fókusszal rendelkeznek. Nem tudunk élességet állítani! Kiértékelésben
+újabb ismeretlen! 10m-re hasznát kamera 10–végtelenig mér, de 10m-nél nincs
+
+*** Másik két paraméter
+vetítési középpont talppontja vetítve a képfőpont (x,y). A vetítési
+középpont képsíkra eső merőleges vetülete.
+
+\ksi \eta
+
+Képfőpont eltolódás xszi és éta_0 (mm, um)
+
+- kamearállandó (c)
+- képfőpont eltolódás (\ksi_0, \eta_0)
+
+Hagyományos kameránál exponálás után kivett film. Ott a kivett filmen kell rekonstruálni
+a képi koordináta renszert.
+
+*** Keretjelek
+A képfőpontot lehet rekonstruálni. az eltávolított filmből.
+
+Mérőkamerás légifénykép. Sakokban és oldalközepeken keretjelek. Keretjelek koordinátája labor
+körülmények között meghatározva. ANALÓG!! kameráknál!
+
+Analóg kameránál kell a keretjel a meghatározáshoz!
+
+*** Résau-grid
+
+Rézau gridet határoznak meg. Szabályos rácsháló a képsíkon a
+
+
+Résau-grid földi kamerák esetében, léginél a keretjel.
+
+*** Optikai elrajzolás
+Még egy valami amit a tankönyvek belső tájékozáshoz sorol, mások nem!
+
+Nagyon kicsi luk. túl kevés fény. Lecsökken a fényerő. Lyukkamera
+nagyon hosszú expozíciós idő! Lyukkamera egy napos expozíció. Megfelelő számú foton
+kell a filmre.
+
+Gyűjtő lencse. Nagy átmérő, több fotont enged be! Fényesebb.
+Optika egyre komplexszebb lett. De nem mindíg tökéletes centrális vetítés.
+Optikai elrajzolás.
+
+Centrális egyenes képe egyenes.
+
+Optikai elrajzolás nem téglalap a képe, hanem hordó, párna.
+Hordó vagy párna torzítás!
+
+Rövidebb gyujtó hordó, hosszabb gyűjtó távolság párna.
+f=valamennyi. 26 mm egyenértékű fókusztávolság. Mobil 2–3 esetleg 4 mm.
+
+Mérőkameráknál az optikai elrajzolást laborban meghatározzák. Grafikon:
+Mérőkamerák esetén 10–12 um rég ma néhány mikron!
+
+*** Nagy képméret
+Különböző típusú kameráknál különböző.
+Légifényképező kamera. 230x230 mm! Ekkora képsík, nagy film.
+Kisfilmes méret = 24x36mm Leica kisképkocka.
+Digitális kameránál a full-frame azt jelenti, hogy ekkora a méret!
+
+70-szer akkora a filmanyag!
+
+180x180 is megjelent. Az 1970-es évekig!
+
+300x300 mm katonai méret.
+
+A minta is 230x230mm volt! Mutatott 180x180mm-eset is.
+
+*** Kiegészítő adatok
+Képkészítéskor sok kiegészítő adat készül
+
+Modern analóg kamerán. Bal fölül az óra. 
+Magasság mérő. információ. Ablak a használt optika adatait.
+
+*** Példa az optikai adataiban
+Optika ablaka:
+Wild 15/4
+UAGA-F
+Nr. 13096
+152,98
+
+15 cm-es fókusztávolság /4 a blende!
+UAGA-F az optika típus Ulta Algolon üveg F sorozat
+Nr. a gyári szám
+152,98 a c értéke mm mértékegységben!
+
+*** Magasság
+km ablak kettesével van.
+Skála 20-ig megy!
+
+*** Óra
+Rendes analóg.
+
+*** Egyéb
+Korszerű kamera oldalán digitális számok.
+
+Dátum lehet ott. Képkészítés közelítő koordinátái. Földrajzi!
+Repülési magasság lábban! A GPS-ből fényképezték rá.
+
+Alul
+1/320 a záridő, f 5.6 a blende érték (le lett szűkítve). 26.4 V, kameraszám stb.
+
+*** Korábbi kamerán szelencés libella
+Sarokban korábban szelencés libella is volt
+
+*** Optika adatai
+Mindig fel vannak tüntetve. C kamera állandó nagyon fontos!
+
+*** régi titkos
+Filmanyag titkosságát jelezték!
+
+Kép sorozatszáma, és fölötte az optika
+
+*** Összefoglalva
+- 1. Belső tájékozás
+- 2. Optikai elrajzolás
+- 3. Nagy képméret
+- 4. Kieg adatok
+
+** Légifényképek méretaránya (7. kép)
+Centrális vetítés törvényszerűségei között hasonlóság a tárgysík és képsík között
+akkor és csak akkor,
+ha a két sík merőleges, illetve párhuzamos egymással.
+
+M = térképi távolság / terepi (vetületi) távolság = d_t / d_v
+
+M = d' / d
+
+Két csúcsával szembefordított hasonló háromszög. Alapok úgy aránylanak, mint a magassága.
+
+Kis három szög a c kamaraállandó, Nag három szög magassága a repülési magasság h_0
+
+M = c / h_0
+
+M = M_k képi méretarány
+c = kameraállandó
+h_0 = relatív repülési magasság. Néha h_r mihez képest relatív? A terepsíkhoz!
+
+Normál esetben a magasságmérőt lenullázzák az indulásnál. Repülés indulási magasságához
+képest!
+
+h_0 mindig fenntartással kezelendő!
+
+DE ha kamaraállandó és magasság feltüntetve, akkor számítható!
+
+M = 1/méretarányszám = c/h_0 = 1/a_k
+
+a_k = h_0/c
+
+FIGYELNI a mértékegységre!
+
+*** Méretarány példa
+h_0 = 4690 m
+c = 152,98 mm
+
+Kamaraállandót szokta váltani. kevesebb nulla
+a_k = 30657,6
+
+Ebből: M_k = 1 . 30658 NE ÍRJ TIZEDESTÖRTET!!!!
+
+**** bÜKKI példa
+h_0 = 4630 m
+c = 152.13
+a_k = 30434.5 M_k = 1:30434
+
+**** Botankert
+h_0 = 910 m
+c = 152,98
+a_k = 5948 M_k = 1:5948
+
+*** Doborzatos terep
+Méretarány pontról-pontra változik.  Domborzat esetén csúcson vagy
+völgyben mért távolság nem jó. Teljes képre minél hosszabb távolság az
+alapján!
+
+Hegytetőn nagyobb a méretarány, a völgyben kisebb!
+
+TV torony méretaránya változik.
+
+Fotogammetriában a méretarány és a lépték fontos.
+
+Méretarány szerinti csoportosítás.
+
+** Csoportosítások
+*** M_k szerint
+Más-más szakterület más-más határokat határoz meg.
+
+Általában 
+igen nagy 1:4 000-nél nagyobb
+nagy 1:4 000 – 1:10 000
+közepes 1:10 000 – 1: 50 000
+kis 1:50 000 – 1:200 000
+igen kis 1:200 000 –
+
+Nem kőbevésett!
+
+Erdészeti közepes alsó fele. 1:12 000
+
+Országos felmérés 1:20 000 – 30 000
+
+Speciális botankert
+igen nagy méretarány analóg kameráknál ritka!
+
+*** Kamera látószög alapján
+Mi a látószög
+
+FOV = field of view
+
+tg ( \omega / 2) = s' / 2 * c
+
+s' értéke mennyi?
+
+230 mm-es film. Átlós irányban!
+
+Oldalirányú látószög
+
+
+(atan(230/(2*152.13)) * 2)
+
+omega = 2 * arctg(s'/2 * c)
+
+73,87 fok
+
+Képátló 325,27 mm
+
+93,5 fok
+
+Átlós látószög nagyobb mint 90 fok!
+
+A látószöget jellemzően nagy látószögű optikának felel meg!
+
+Egyenértékű fókusztávolság. Olyan kameraállandó, ami ugyan ekkora látószöget biztosít.
+Kisfilmes esetben ez a látószög mekkora egyenértékű fókusztávolságnak felel meg.
+
+24*36 mm képkocka
+
+Átló:
+43.27 mm
+
+s'(230)/2c(230) = s'(24*36) / 2*c(24*36)
+
+35 mm a film, mert a 8. ábra
+
+
+c (35 mm) = c(150 mm) * s' (35) / s'(150)
+
+C (35 MM) = 20.35 mm
+
+Egyenértékű fókusztávolság ugyan az a látószög.
+
+Mi a normál látószögű optika?
+Normál távolságra tartjuk a képet, az ember szemével megfelel.
+
+50 mm gyújtótávolságú optika normál látószög.
+
+c(35 mm) normál = 50 mm
+50 mm-nél hosszabb egyre kisebb látószög!
+
+Légifényképnél mekkora a kameraállandója egy normál látószögű optikának?
+
+c(230mm) = c(35 mm) * s'(150 mm) / s'(35)
+
+50 * (325 / 43)
+
+375.86 mm
+
+Nem szoktak 375 mm optikával képet készíteni.
+
+
+230 mm-es filmméret
+
+- igen nagy látószög 80 mm optika Katonák használták.
+- Nagy látószög a 150 mm körüli érték.
+- köztes látószög 200 mm optika
+- NOrmál látószög kb 300 mm-es optika
+
+*** Felvéel iránya szerinti csoportosítás
+Térképezési cél leggyakrabban a függőleges tengelyű
+Kamera tengely függőlegesen áll. a vetítéski középpontból
+Fonto a nadír irány. Légifénykép nadír pontja.
+Zenit a függőleges fölfelé irány. Szigorúan véve pont lefelé.
+
+Nadírtól eltérés szöge nadírszög! Régi kamerákon a szelencés libella mutatta!
+Ma 2-3 fok, régen 5 fokig!
+
+
+- függőleges tengelyű (2–3 foknál kisebb nadírszög!)
+- ferdetengelyű felvételek (oblique = oblikus magyarul) kameratengely 0–90 fok között!
+- vízszintes tengelyű (földi fotogammetria, épület fotogammetria)
+
+Városok felmérésében van nagy jelentősége. Épület homlokzatát is látjuk!
+
+Ingatlan ügynök közelről megmutatja a részleteket és távolról a szép környezeteet!
+
+Földi fotogammetriában korábban 90 fokos felvételek. Meteorológusoknál sem ismeretlen.
+
+*** Filmtípusok
+Még egy csoportosítás. Eddig analóg fényképészeti eljárás, itt fontos!
+
+1839 sokáig csak egy emulziós réteget hordtak az üvegleezre.
+
+- ff fekete-fehér (1 rétegű filmek)
+  - ortokromatikus 400–700
+  - pánkromatikus 400-900 
+  - feketefehér-infra 700-900 a \lambda
+
+film érzékenységi görbe
+
+Sokszor térképészetnél pánkromatikus
+
+Színes a két világháború között
+
+- Színes 3 rétegű
+  - színhelyes színes
+  - infraszínes
+
+10. ábra színes
+
+A pára a kéket nyomja le a leginkább.
+
+Infraszínes mindegyik eltolva eggyal.
+Kék a zöldre, zöld a vörösbe, vörös az infravörös. 9. hullám
+
+Infraszíneset sárga szűrővel is csinálnak, ami kizárja a kéket!
+
+* <2023-03-06 h> Előadás Centrális vetítés
+Centrális vetítés és törvényszerűségei.
+
+Fotogammetria összegyűjtött elektromágneses sugárzás (optikai eszköz)
+Hullámhossz kisebb, mint az optikai eszköz vastagsága, illetve atomi mérete,
+akkor geometriai optika jelensége. \lampda << optika
+
+** Lyukkamera
+Jól demonstrálja. Doboz és a beérkező sugárzás Fordított állású kép.
+
+Régi Kínában Kr. e. 400 Mo Tzi felfedezte. Sugarak egyenes vonalakban
+
+Arisztotelés Lyuk ellenére a nap képe kör alakú. Napfogyatkozásnál is
+látták a fordítt állású képet.
+
+Alhazen (1011–1021) optika könyvében írt róla.
+
+** Camera obscura
+Roger Bacon 1267-ben írja le.
+
+Leonardo da Vinci is használta
+
+Albrecht Dürer is másolja a képet
+Jan Vermeer
+
+Rács leképezése Centrális vetítés.
+
+Magyarországon miskolci egyetemen, egerben
+Abelardo Morell hotelben lyukkamerás felvéteelk.
+
+** Gyűjtő lencse
+Lyukkamera fényereje kicsi. Növelni kell. Először egyszerű gyűjtőlencséve.
+Lencse fókustávolság, ahol a párhozamos sugarak metszik egymást.
+
+Egyszerű lencse dioptrijája
+
+D = 1/f = (n-1)*[1/R_1 - 1/R_2] vékony lencse
+
+Vastag lencse == Lencsegyártók alapképlete
+
+Bonyolultabb! Mit jelent a dioptria
+
+D = 1/f = (n-1)*[1/R_1 - 1/R_2 + \frac{(n-1) * d}{n * R_1 * R2] vékony lencse
+
+-3 -0.33 a fókus (m-ben) Szóró lencse!
+
+** Petzval József (1807 – 
+Több nemzet is. Képgörbület
+
+Nem egy pontban metszik egymást a sugarak. Képsík gömbfelület Szférikus aberráció.
+
+Petzval-féle összeg
+\sum 1/(n_i * f_i)
+
+n törésmutató, f fókus!
+
+Minimalizálni, ha gyűjtő és szóró lencse kombinációval!
+
+Gyűjtő és szóró kombinálás
+
+Petzval-féle portré objektív. Pályázaton nem ő nyert, de cég őt gyártotta!
+Sony, Canon, Nikon bajonettekhez lehet venni ugyan olyat, mint a régi!
+
+1856 Orthoskop (Voigtlander) Megalapozta a korszerű optikákat!
+
+** Centrális vetítés törvényszerűségei
+Vetítési középpont előtt (sokszor mögött) a képsík.
+
+Egyenes képe (bármely) egyenes! Fontos tulajdonsága.
+
+Egyenes iránya a vetítési középpont felé. Egy pont!
+
+MInden egyenes iránypontja (I') párhuzamos egyenes iránypontja azonos!
+
+Egyenesnek eltűnési pontja. Képsík és a vetítő sugár párhuzamos.
+Eltűnési pont a végtelenben a pontok! Ne vetül rá a képsíkban.
+
+Nyomvonal a két sík metszésvonala.
+
+Irányvonal, ahol az iránypontok vannak!
+
+Irányvonal a horizont az alföldön! Fényképkor a képsíknak csak kis
+részét látjuk.
+
+Hasonlóság akkor és csak akkor, ha a tárgy és a képsík párhuzamos
+egymással. (Légifénykép kameratengelye legyen függőleges!)
+
+Eltűnési pont (iránypont) enyészpont.
+
+Párhuzamos egyenesek iránypontja!
+
+Három merőleges él is összefut. Hány enyészpontos ábrázolás a
+képkivágattól függ!
+
+** Nadírpont
+A vetítési középpontból lefelé húzott egyenes! Képsík a képi nadírpontban, a terepet
+a terepi nadírpontban metszi.
+
+Függőleges egyenesek a viszonyítási síktól kifelé. Képi nadírponttól kifelé dől.
+Vonza a tekintetnket!
+
+Erdei felvételeknél is megvan a képi nadírpont!
+
+Fontos a kamera látószöge. Kis látószög, kevésbé dől, nagyobb
+látószögnél nagyobb dőlés.
+
+** Kettősviszony
+Vetítési középpont, pozitív képsík (u.a. oldal, mint tárgysík), tárgysík
+
+ACAD
+BCBD
+
+Minden képsík esetén állandó.
+
+Háromszögek kétszeres területe a szinusztétellel!
+
+Aoc, bod
+
+\bar{AC} * m = \bar{OA} \bar{OC} sin(AOC)
+
+Papírcsík módszer 4 vonalat a síkra. Eredeti felvételi helyzet a kettősviszonnyal
+
+FONTOS TULAJDONSÁG!
+
+** Nevezetes pontok és vonalak
+Vetítési középpont terep felett repülési magasság.
+
+h_T a tengeszinthez viszonyított, abszolút rep. mag.
+h_0 abszolót
+
+Képfőpont (F') a vetítési középpont képsíkra eső merőleges vetületet!!!
+Kamera állandó mellett.
+
+c kamera állandó vetítési középpont és a képsík.
+
+K képközéppont. Próbáljuk a vetítési középponthoz közel!
+
+Felvételi irány nadírral vaó szöge \nü 2-3fokig függőleges tengelyű felvétel.
+Nadírszög
+
+Szögtartó pont (Sz') nadír irány és felvételi tengely felénél. terepi
+és képi szögtartó pontot kimetszi. Ha felállnánk egy műszerrel, ugyan ezek a szögek!
+
+Bezzegh László műszer javaslata, radiálortoszkópia. Szögtartó pontokból
+indul és készít ortofotót. Egyenesek mentén ortofotó.
+
+** Légifénykép torzulásai
+- képdőlés miatti torzulás (perspektív) :: ha nem párhuzamos a kép és
+  tárgysík, akkor a képen torzhulások.
+- magassági torzulás :: nem a tárgy sík, hanem alatta vagy fölötte. Torzul, nem megfelelő hely
+- Objektív elrajzolási hibája ::
+- Refrakció hatása :: Optikai szintezés. Légrétegek közötti tükröződés
+  fénytörés (elektromágneses jel) Délibáb, vizes aszfalt. Az égbölt
+  tükröződik. Nagy látószögű képek és földi fotogammetria. Kerülni a felvételi időt.
+- földgörbület :: nagyon kis méretarányú felvételen jelentős!
+
+** Képdőlés miatti torzulás mértéke
+Felvételi hiba Tényleges és elméleti jó hely közötti eltérés.
+nadírszöggel közel egyeensen arányos. Szögtartó ponttal négyzetes,
+kamera állandóval négyzetes. Kis látószöbű, kisebb. Minél tábolabb a szögtartó
+ponttól, annál jelentősebb NÉGYZETES! Minél jobban dől, annál nagyobb torzítás.
+
+sin\nu kicsi, így a tényleges szögzöz hasonlít
+
+s'^2 * (sin\nu) / 2
+
+Kép 4*4-es rácsháló. Billenő kép perspektív torzulások.
+
+Egy irányba dől trapéz, ha két irányba, általános négyszög.
+Párhuzamos egyenes egy iárnypontba. Dőlés meghatározható!
+
+** Magassági torzulás
+magasság különbségből eredő torzulás. Viszonyítási sík fölött lévő pontok
+a nadírponttól kifelé, alatta lévő nadírponttól befelé!
+
+\delta r = \delta h * r'/c
+
+Messzebb a nadírponttól nagyobb. Nagy kamera állandó, annál kisebb a
+magassági torzulás.
+
+Ibolya úti lakótelep. Északkeletr van a nadírpont!
+
+Magassági torzítást az egy képes magasságmérésnél is használjuk!
+
+** Optikai elrajzolásból eredő torzulás
+
+Vetítési középponton (VK) p-pontból egyeneskt húzunk
+Nem oda vetít, ahová kellene, optikai elrajzolás a kettő távolsága
+Távolság c*tg(\tau)
+
+\delta r' az érdekes! = r' - c * \tg \tau
+
+Nagyon fontos az optika kalibrálásánál! A kalibrált érték a jegyzőkönyvön és a kamerán
+a módosult.
+Optikák körszimmetrikusak. Ma gömbszférikus, és aszfrikus is van (nem göbre)
+
+Sugárirányú elrajzolás a jelentős. Érintő irányú az jelentősen kisebb!
+
+Képkészítéskor a terep leképeződik centrálisan.
+
+Térképnél az ortogonális!
+
+Fotogammetria célja, ortogonális térkép helyes térképet készítnei!
+
+** Cetrális felvételek feldogozása
+Eredeti felvétel helyzet visszaállítása = tájékozás.
+
+Meghatározzuk a paramétereket, ami az eredeti felvételi helyzetet jellemzi.
+
+- Belső
+- Külső tájékozás
+
+*** Belső 
+a kamerán belüli helyzet. Vetítési középpont (F') képfőpont támvolság
+c kameraállandó, \Delta r optikai elrajzolás
+
+*** Külső
+Vetületi rendszerben hol a kamera. Vetítési középpont helyzete.
+X_0, Y_0, Z_0
+Vetítési középpont felvételkori helyzete.
+
+\omega, \phi, \kappa
+
+A pont körüli forgatás! Szögek a vetületi tengelyek körüli forgatás.
+x, y, z tengely körüli forgatás.
+
+Van olyan renszerek, ahol a repülő eszköz rendszerében.
+
+Több képes fogogammetria: tájékozás
+- kölcsönös (relatív) :: képpár forgatása, hogy a térmodell létrejöjjön., 5 praméter
+  (\omega_1, \phi _1, \phi_2, \kappa_1, \kappa_2)
+- abszolőt :: térmodell abszolút tájékozással vetületi rensezrbe.
+   7 paraméteres
+
+12-7 5 paraméter marad a relatív tájékozásra.
+
+** A centrális vettés elve
+
+Flinszerwalder állította fel, de nem ilyen alakban.
+
+Tájékozott kamera és koordinátával adott p pont a terepen.
+
+Alapegyenlet leírja a képi koordinátákat. Képfőponthoz képest nézünk mindent!
+
+c * a koordináta különbségeknek a megfelelő forgatási iránnyal beszorozott.
+
+Mátrix első eleme x, második y, harmadi z külöbség
+és elosztjuk a mátrikx 3. sorával.
+
+kszi
+
+eta esetében a másodikat a harmadikkal.
+
+** Fordított irányban
+A vetítési középponthoz viszonyítunk mindent! Z koordináta helyett a kamera állandóval szorozzuk
+az értéket! A többinél X és Y koordintátát!
+
+Ismerni kell a Z-t!
+
+Egy képes fotogammetriánál nem tudjuk a térbeli koordinátát meghatározni. Csak két képes
+fotogammetriából.
+
+** Repülési terv
+Mivel egy kép kevés. Jellemzően a mérőkamerás képeknél minden kép legalább két képen.
+
+L1-es szabályzat mérőkamerás légifénykép megrendelésére ... 1977
+
+1. Légi fénykép anyag
+2. filmtípus
+3. fókusztávolság / képméret
+4. Átlagos képméretárány
+5. sorok átfedés
+6. stb.
+
+** Repülési szabályzat
+Sorok hossza és a soronként a repülési magasság.
+Sor végeket a terepen lejelölték. Rég a légi navigáció GPS nélkül nem volt könnyű.
+Szétnyíló sorok, eltévedt repülő.
+
+** Képek átfedése
+Megfelelő nagy átfedés 50% vagy nagyobb kellene! Ez repülési irányban, vagy bázis irányban!
+Sorok között több repülési idő! Soron belüli átfedés, az több film, de repülési költség nem nagyobb!
+
+kb. 60%, sorok közötti 5–30% domborzattól függő domborzatos terpnél a nagyobb.
+
+** Átfedés alapképlet
+B = S * (1-p%) # Bázis irányú távolság
+A = S * (1-q%) # harántirányú
+
+nulla % átfedés pont annyi, ami a képméres.
+
+Egy adott terület hány képpel Teljes terület lefedése sztereóval.
+
+H = S *p% + (n_k - 2) * S (1-p%)
+
+n_k = (H+2*S-3*S*p%)/(S-S*p)
+
+Sz = n_s*S-(n_s-1) * S*q%
+
+n_s = (SZ-S*q)/(S-S*q)
+
+1-p%, 1-q% kiemelt!
+
+Sztereo átfeds miatt több kép, hogy a teljes hosszon meglegyen!
+
+
+Tervezésnél az egyes paraméterek terevezése táblázat!
+
+S oldalhossz! fent is!
+A sortávolság!
+
+Milyen sűrűn tud a kamera. Megfelelő sebesség!
+
+** Új jogi háttér
+2012-ben az L1-es szabályzat az új földméréis törvény
+- 399/2012. (XII. 20.) 
+
+90-es évek közepétől a digitális kamera 2012-ig szabályozatlan!
+
+Karácsony előtti rendelet! Egy hónapja volt a tulajdonosnak, ha védett
+objektumot bejelentik! Még Paks sem teljesítette. Mátrai hőerőmű
+jelentett be védett objektumot!
+
+Archív légi fényképeknél rengeteg kimaszkolt, utána kettő (paks és mátra) ma már több
+védett objektum, de jelentősen kevesebb, mint régen!
+
+Távérzékelést MH GEOSZ (geoinformációs szolgálat) engedélyezi
+Bejelentés 2 munkanappal a felszáláss előtt.
+Adatlap leszállás után. Adatokat is!
+
+Osztrák cég és határidők. Mai napig is vannak problémák!
+Elméletileg Földmegfigyelési Információs Rendszer keretében be lehet jelenteni.
+Drónos felvételnél is.
+
+Bonyolultabb a drónos szabályozás, mitn a pilótás nagygépre.
+
+Manapság nem számolják kézzel, repüléstervező szoftver. Kamera gyártója
+adja a programot.
+
+Inmein szigetköz! Program kilöki a tervet!
+Repülési tervben a leghosszabb kiterjedés a sorok iránya! 3D-ben tervezik az utat!
+Mint egy videójáték! Nem a szomszédos sorokat repüli. Hogy a fordulási sugár jó legyen!
+Pontos fordulás és repülési ktg csökkentése.
+
+** Adatlap
+Leszállás után leadni.
+
+** Minimum kérdések
+Centrális vetítés legfontosabb tulajdonságai
+egyenes-egyenes hasonlóság párhuzamos tárgy- és képsík
+
+Alapvető számítok. Légi fénykép, báhis távolság.
+* <2023-03-08 sze>
+Szenátus volt
+
+Kontakt másolat, nagyítások
+
+Volt rajz is.
+
+Autokollimáció
+
+Innen voltam.
+
+** Régi légifénykép azonosító
+93-279
+6-125
+
+Kiadott engedélyszám első évtízed (vagy év a 6 ott 86) és a vége a sorszám.
+
+** 
+Fontos Mo-i légifénykép és általában is.
+Közel függőleges kameratengellyel készült.
+
+Kiértékelés, 1 pont a képen, terepi pozíció meglegyen. ábra!
+
+Egy kémény. Részben átfedő légifénykép párok.
+
+Egyik kép és másik kép.
+
+Bal oldali képen nézzük.
+
+Hasonló háromszögek
+
+\delta h / (r + \delta r) = c/(r' + \delta r')
+
+\delta h kémény magasság
+
+r a középpontokból 
+
+delta r a kémény dőlése, távolsága a középpontból. r' a képen,
+
+
+Képen a vesszős értéket mérhetem
+
+\delta h = c * (\delta r / ( r' + \delta r')
+
+Behelyettesítve előzőbe alábbit:
+\delta r / \dleta r' = h_0/c
+
+\delta h = (h_0/c ) * c * (\delta r') / (r' + \delta r')
+
+EGY KÉPES MAGASSÁGMEGHATÁROZÁS KÉPLETE!!!!!!
+\delta h = h_0 * (\delta r') / (r' + \delta r')
+
+\elta r' a dőlés mértéke!
+Ebből tudom, hogy milyen magas az objektum háromszögek!
+
+Csúcsa és töve távolságok!
+
+r és delta r hogyan oszlik!
+
+Inkább a szélén pontos!
+
+Háromszögek a kémény teteje, képközéppont és kémény teteje és a képen a vesszősök
+*** Ha NEM látom a tövét vagy nem függőleges.
+
+Két képes magasságmérés ugyan azon az ábrán
+
+Ami fontos
+
+bal képen balra dől, jobb képen jobbra dől a kémény képe!
+jobb oldaon a kép delta n' bal oldali dőlés delta m'
+
+\delta h = h_0 * \frac{\delta m' + \delta n'}{m' + n' + \delta m' + \delta n'}
+
+Bázis távolság a két képközéppont távolsága
+
+m + n = B a bázistávolság
+
+m a tövéig tart és az n is a tövéig tart!
+
+\delta m' + \delta n' = \delta p korábban speciális műszerrel mértük.
+
+Bázis irányú parallaxis! a \delta p, ami jó lenne vesszővel, mert képen mérem.
+Sztereomikrométerrel mérem. Két üveglemez és szálkereszt. Objektum tövét irányzom,
+leolvasom távolságot, tetejét is irányzom, s a kettő különbsége adja.
+
+Kézből bemutatta. Üveglemezeken mérőjel. Tövét és csúcsát irányzom.
+Tized mm beosztás, század becsülve. Relatív távolság!
+
+m' + n' a bázis távolság képi oldalon megjelenő értéke
+
+m' + n' = b' képi bázis.
+
+KÉTKÉPES MAGASSÁGMEGHATÁROZÁS ALAPKÉPLETE!!!!!
+\delta h = h_0 * \frac{\delta p}{b' + \delta p}
+
+Normál szereogramm alapképlet!!!
+
+Ábrán normál sztereogram. Más nyelvben derékszög right angle recht angle = helyes irány.
+Normál sztereogram, ahol a kamera tengely iránya a bázisra merőleges.
+Bázis a két kép távolsága. Régen a szögeket nem tudták számolni, hanem táblából kerestek!
+Egyszerű számolás.
+
+Amikor merőleges a felvételi irány = normál sztereogram!
+
+*** Képi bázis meghatározása
+Felülnézeti képpár
+
+Képközéppont és a másik középpontot a tartalom alapján átjelölöm.
+Az lesz a b'. A b'-k zöldek egyik képről a másikra átjelölöm.
+
+*** Térbeli szemlélés
+Sztereofotogammetria itt nem lesz! Csak alapismeretek.
+Régi analóg műszereknél a szereo képpárokat térben szemléltük.
+
+Mesterséges szereoszkopikus látás. Természetes látás emberre
+jellemző. Állatvilágban a ragadozóknál van jelentősége. Távolságot jól
+fel tudja mérni. Milyen messze kell ugrani...
+
+Természetes sztereoszkopikus látás
+
+Két szem. Bázistávolsága kb. 65 mm átlagosan. Szemorvos méri.
+Két szemünkkel különböző nézőpontból látjuk. Bázis irányú parallaxist ceruzával
+pislog, háttér előtt ugrál a ceruza.
+
+Különböző álláspontból látott objektum. Máshol a toll és a háttér. Máshol képződik le,
+akkor milyen messze. Végtelen párhuzamos szemtengely. Közel konvergál. Konveergencia
+szög. Akár merőleges is lehet.
+
+Természetes látás. Térben látok, de nem mindent élesen látok. Emberi szem mozog,
+folyamatosan ugrál. A tollra fókuszálva különböző képet látok!
+
+Hová fókuszálok. Természetes térlátásnál szűk tartomány. Amit fel tudunk fogni.
+
+Viszonylag kicsi a bázis távolság. 2–300 m után nem tudom közelebb vagy távolság.
+Kicsi a konvergencia szögben az eltérés. Katonák speciális távmérő eszközök. Periszkóp
+megnöveli a bázis távolságot. Távolra pontosan meghatároz! 2–300 m után minden egy síkban.
+
+Három feltétele van a mesterségesnek:
+- Képpár :: Olyan felvételpár, ami különböző álláspontból
+  felvéve. Részben átfedő legalább. Bázis irányú paralaxisokat tartalmazó képpár.
+- Relatív tájékozás :: A képpárok tájékozása oly módon, hogy
+  tereoszkópikus szemlélés zavartalan legyen.  Alulról megnyomott
+  szemtengely alulról. Haránt irányú eltérést az agy nem tudja
+  feldolgozni. Egyszerű módszer. Botankerti képpár.
+  - áttekintő tájékozás :: egymásra tett képek 2126, 2125 szám
+    alapján, honnan hová repül.Haránt irányú
+    eltérés. Szereomikrométerrel kicsit komolyabb tájékozás kell.
+  - magsík (bázissík) szerinti tájékozás :: bázisvonal mindkét képen
+    megrajzolni. Két egyenest egybe forgatom.  Mindent nem tudok
+    kiküszöbölni. Nincs jelentős elfordulás. Miért fordulnak el. A
+    szél miatt elforoghatnak. A repülő ahogy repül! /Oldalgásnak/
+    hívják. Komolyabb kamerarendszernél be lehet állítani. Nagyon
+    elfordul, nem fed át megfelelően. Lukacsos területfedés az
+    oldalgás miatt.
+- Szétválasztás :: mindkét szemünk csak a neki megfelelő képet
+  lássa. Jobb szemmel jobb kép, bal szem balt. Fehér lapot beteszek
+  közé. Mi a korlátja? A bázis távolság. Csak 65 mm-es sávot nézni.
+  Profi fotogamméterek crossed-eye szemlélés. jobb szemmel látom a
+  jobb képet, ami bal oldalon van és fordítva. Teljes képmezőre kép.
+  Többféle segédeszköz. /Tükrös sztereoszkóp/.
+
+*** Tükrös sztereoszkóp
+A bázistávolságot megnöveli! Két kép, a képpár tükörre vetül, ami 45
+fokos, így megtöri 90 fokban. Pentaprizma 90 fokban újra, s bejut a
+szemlencsébe. Teljes 23*23 vagy 30* 30-as képet szemlélek. Prizmás
+távcsöveknél is a jobb tér érzet miatt! Szétválasztás + bázistávolság
+növelése, Két okulár! Szemlencse a párhuzamos szemtengely, ne kelljen
+közlere fókuszálni.  akkomodáció.
+
+Vannak tükrös sztereoszkópok. Alaplemez. Úgy felállítani, hogy az
+alaplemez tőlünk elfelé. Kinyitható, alaplemez tőlünk távolabb. Tükör
+védő lemezzel védve. Ne törölje senki. Speciális tükrök. Fürdő szoba
+üveg hátoldalán a foncsor. Felszínen foncsorozott tükrök! Nincs fénytörés.
+
+Most csak áttenkintő tájékozás egy szemmel belenézünk. Jól
+azonosítható pont. B épület. Felváltva nyitogatom. Ugrál és fedésbe
+kerül. Dolgozik, megfájdul a fejem és szemem. Kényelmes legyen nézni.
+Tologatni lehet. Megemelve a teljes képet nézni.
+
+Makett szerű kép, mert a növelt bázis miatt a magasságilag megnyújtva.
+
+* <2023-03-13 h> Ea Fényképészeti felvevőrendszerek
+Két alapvető rész:
+- film :: érzékelő megfelelő radiometriai, geometriai és spektrális felbontással
+  rendelkezik, megvalósítja az adattárolást
+- Kamera :: Kamaratörzs és optika
+
+** Film
+Hordozórétegre hordott emulzió
+Fényérzékeny fotokémiai anyag.
+Zselatinba ágyazás a fényérzékeny szemcsék megfelelő elosztását is jelenti.
+
+*** Hordozó
+Síkpárhuzamos lemez (planparalell)
+Film vékony rétegű hordozó eszköz. Celluloid és műanyag alapú is.
+
+*** Film felépítése
+Emulzió, hordozó rétegen.
+Emulzió 10 um vastag, emulzióban a szemcsék 1 um vastag.
+Ezüst halogenid AgBr Egy szemcsében 10^9 ezüstbromid molekula.
+
+Rajz vékony réteg a vastag hordozón
+
+*** Hordozó
+Fotogammetriában régen sokat planparallel lemez. Síkpárhuzamos lemez. Nagy pontosság.
+A két határoló sík nagyon párhuzamos! Ablaküveg nem nagyon. Síkpárhuzamos lemez
+a kisebb torzulások. Földi fogogammetriában 70-80-as évekig használták.
+
+Üveglemez nem változtatja a méretét, légnedvességre sem érzékeny. Jó a mérettartás,
+kicsi hőtágulási együttható.
+
+Légi fotogammetriában nagy szerepe a súlynak. Inkább filmet
+használtak. Nagyobb torzulások jelentkeznek a filmeknél! Korábban
+celluloid alapú filmek! Jó hordozó, de a légnedvesség hatására
+torzul. Állandó páratartalom mellett tárolás.
+
+Celluloid alapú film tűzzel szemben nem ellenálló. Nagyon jól ég. Mo
+is több archívum részben vagy egészben megsemmisült.
+
+Kisebb formátumú
+
+1970-es évektől műanyag alapú filmek. Kisebb torzulások a nedvességre. Ellenállób.
+
+*** Fényképészeti folyamat.
+Emulziót valamennyi fény éri az emulzió réteget. Kevés foton, a réteg
+felső felületén redukálódnak az ezüst bromid molekulák. Ahogy haladunk
+lefelé, kialakul a latens kép
+
+**** Negatív előhívás
+A nem megvilágított ezüstbromidot kimossák. A maradékot fixálják! Létrejön a negatív.
+Ahol a legtöbb fény, a legsötétebb. Ahol nem világították meg átlátszó.
+
+**** Pozitív eljárás
+Előzetes előhívás. A nem megvilágított AgBr eltávolítva. Pozitív
+eljárásnál a pozitív kép egyenletes megvilágításnál kialakul. Fordítós
+eljárásnak is hívják!
+
+Fekete-fehér fordítós eljárás.
+
+Film esetén további termékek. Fotópapír is hasonló. Papír hordozóra az
+emulzió. Papíron jelenik meg a kép (pozitív, negatív)
+
+*** Feketedés
+D denzitás
+
+D = log10 \ph_0 / \phi = log 1/\tau
+
+\phi_0 filmre jutó fényáram,
+\phi az átjutó
+
+\tau 
+O = opacitás, áttetszőség.
+
+Minél nagyobb a feketedés, annál kisebb részét engedik át.
+
+Előhívás után a feketedési görbét is ábrázolják. Vízszintes
+
+Egyre hosszabb ideig teszem ki a filmet E = expozíció
+
+Feketedésig görbe mindkét skála log-log!
+
+alul-normál-felül exponált.
+Telítődési görbe.
+
+Alapfátyol. A film nem átlászó telesen. Emulziós réteg bombázása. Sötétebb lesz. Az elején
+nincs egyértelmű kapcsolat. VAn egy könyök görbe. 
+
+normál lineris logaritmikusan. Feketedés egyre erősebb.
+
+felülexponálás = Elfogy az ezüst bromid. Majd még csökken is a
+feketedés. Fotonok roncsolják a fémezüstöt.
+
+Cél a normál tartományba legyen a fényképezés. Itt tudjuk a legnagyobb különbségeket
+detektálni. Meredekségi szög lineáris tartomány \alpha
+
+log H a vsz tengely.
+
+*** Gradáció
+Emulzió feketedési eltérés. 
+
+\gamma = gradáció az előző alfa szög tangense. Egységnyi besugárzás, egységnyi feketedés.
+
+- \gamma < 1 lány 45-foknál laposabb (\delta D < \delta ( log h)
+- normál 45
+- kemény meredekebb, mint 45 fok
+
+Fotózás portré a lágy filmeknél, az apró változások a besugárzások is meglegyenek.
+Nem jönnek ki a fényképen.
+
+Légi fénykép esetén repcsiről letekintve nem kontrasztos a föld felszíne.
+
+Légifénykép 2-es gamma, hogy a kevésbé kontrasztos is jó legyen.
+
+*** Érzékenység
+A feketedési szint mekkora sugárzás mellett elérhető.
+
+Alacsony érékenységú filmen később kezdődik a
+
+
+Érzékenységre itt a DIN (keletnémet) használták.
+
+ASA amerikai szabvány
+
+ISO az ASA tvábbfejlesztett változat
+
+- DIN :: logaritmikus skála, hármasával 21
+- ISO :: 21 = 100, ASA, ISO 200, 400 kétszeres szorzó.
+
+Nagyobb érzékenység nagyobb szemcsék. Nagy érzékenység = durvább rajzolat.
+Alacsonyabb érzékenység, finomabb rajzolat.
+
+Rég 27 din (400 ASA) beltérben. szemcsés kép.
+
+Jó megvilágítás 18 DIN-es film (50 ASA)
+
+*** Spektrális érzékenység
+Különböző hullámhosszú fotonokra hogyan érzékeny az emulziós réteg.
+
+- Régen 1 rétetű ff filmek.
+  - Ortokromatikus
+  - Pankromatikus
+  - Infra
+
+- Színes filmek 3 rétegőek
+  - Színhelyes színes
+  - Infraszínes
+
+- Spektrozonális
+  - két rétegű kémfilm katonai igények
+  - viíbehatolás rövidebb hullámtartomány ibolya, kék
+
+*** Spektrális érzékenység diák
+**** Ortokromatikus
+FF film 700 nm-ig érzékeny. kb. lineárisan. (300-tól)
+
+Rövidebb hullámhossznál érzékenyebb. Szűrővel kizárhatók UV sugarak.
+
+Sárgaszűrő a látható kék tartományt kizárja, légköri pára kizárása.
+**** FF Infra film
+900-ig kiterjesztett.
+
+vörös vagy infravörös szűrőt használunk.
+
+Pánkromatikus film és a FF infra film hasonló Pánkromatikusnál sárga, vagy UV szűrőt használunk.
+*** Példák
+Szintetikus film szimulációk
+
+- Ortokromatikus 400-700 nm az erdők-növényzet nagyon sötétek. Épület világos
+- Pankromatikus 900 nm-ig, vegetáció nagyobb struktóra. Közeli infra nagy visszaverés!
+- Infra. Láható kizárva, csak infravörös. Negatív hatású út vasút
+  aszfalt sötét, vegetáció világos.
+
+Légi fotogammetria a pánkromatikus. Legszélesebb tartomány több fény, egyéb paraméter,
+is jobban meghatározható, több fény, rövidebb záridő.
+Leggyakoribb
+
+** Színes filmek
+*** Emberi szem színlátása.
+Csapok és pálcikák. Szürkület, emberi szem a színeket nem látja! Alacsony látunk, de a színeket
+kevésbé, erősebb megvilágítás.
+
+Emberi szem kék-zöld-vörös tartományban érzékel. Additív színkeverés.
+Kék zöld vörös érzékeny csapok és pálciák.
+
+Additív alapszínek, egyéni eltérések! Szemünk nem tud elválasztani spektrális szíeket.
+Vannak állatok, amely a spektrumot különítik (pók).
+*** Alapszínek additív
+kék-zöld vörös
+
+Aktív kijelző használ additív színeket. Nem világít fekete + színek.
+
+*** Additív
+Két additív alapszín összeadva
+kék + zöld = cián
+kék + vörös = bíbor
+zöld + vörös = sárga
+
+CMYK színes nyomtatóba!
+
+cián + vörös = fehér
+Bíbor + zöld = fehér
+sárga + kék = fehér
+
+Fentiek a komplementer színek Fehérre egészítik ki egymást!
+
+Színeket a szűrőkkel befolyásoljuk. Színes fényképet előállíthatjuk.
+
+*** Színes film
+Három emulzió.
+
+Legfölül kék, majd zöld, majd vörös!
+
+Színezés a komplementer színnel színezve!
+
+Komplementer színnel színezett. Negatívon a kék ég sárga színű.
+
+kék és a zöld réteg közé sárga szűrőt tesznek!
+
+vörös szűrőt nem mindig tesznek beh
+
+*** Táblázat
+Színek összerakása.
+
+sárga, bíbor, cián szűrők rendre a kéket, zöldet vöröset zárja ki.
+
+*** Ezek alapján
+Színhelyes színes film. spektrális érzékenységek.
+UV szűrő elválasztva. UV a hegyeken és tengerparton elkékültek a felvételek!
+
+Manapság az UV szűrő az érzékelő elé beépítve.
+
+*** Infraszínes film
+Egggyel jobbra a hosszabb felé eltolva.
+
+Sárga szűrő a látható kék kizárva, pára kevésbé befolyásolja!. Infraszínes film párás
+viszonyokra is jó! Kék tartományban szór a légkör!
+
+*** Minták
+RGB zöld nem az igazi.
+
+Inra vörös a vegetáció zöldes sárgás a háztető, mert a vörös cserépre
+a zöld réteg érzékeny.
+
+** Geometriai felbontó képesség
+Radiometria feketedési görbe
+Spektrális a spektrális érzékenységi görbe
+
+Geometrial laborban meghatározható
+
+Teszttábla Vonalpár per mm mértékeség! 1 mm-en belül hány vonalpárat
+tudunk megkülönböztetni. Jó felbontó képesség sok, kevés keveset.
+
+Teszttábla a felbontó az optika, fényképezés, digitalizálás minősége
+is meghatározható.
+
+Teszttábla vsz és függőleges csíkok! Amikor összemosódnak.
+
+Irányok az optika esetén eltérő a sugár és tangenciális felbontó képesség.
+
+Teszt tábla = egyszerű meghatározás. Szubjektív, hogy hol mosódik össze.
+Megfigyellő, ki nézi profi többet számol.
+
+Információ, nincs csak egy érték. részfolyamat nem nézhető.
+
+Légi 20–50 vonalpár / mm régi film rosszabb.
+
+*** Kontraszt átviteli függvény
+Teljes renszer minősége jellemezhető. Tesztminta FF csíkokból áll.
+Tesztminta éles határral, fehér fekete. Mint egy digitális jel!
+
+
+Frekvenciája van. A fényképen nem lesz olyan éles a határ
+
+
+C = Tárgykontarsz max - min / (max+min)
+C' = Képkontraszt ugyan úgy a képen!
+
+CTF (Contrast Transfer Function)
+
+CT = C'/C
+
+Ritka vonalak kicsi átsugárzás, ahogy sűrősödik, csökken a kontraszt átvitel.
+
+Szépen lecsengő a CT (y tengely) a vonalpár/ mm függvényen.
+
+A magasabban futó görbe az ideálisabb. Mindig az a jobb, aminek a függvénye magasabban
+halad. Objektív meghatározás. 
+Szubjektivitás kizárható. Minden frekvenciról információ.
+
+Külön CT_{optika} + fénykép 
+
+Az egyes részfolyamatok megismerhetők. Bonyolultabb meghatározás!
+
+*** Példa
+KODAK AEROCOLOR iv
+Negatív.
+
+Modulation Transfel funciton.
+
+Kontraszt és a spektrális érzékenység!
+
+Minden filmtípusnál megvannak a paraméterek.
+
+** Kamerák
+- Mérőkamerák:
+  - Űr
+  - Légi
+  - Földi
+
+Úr már nem nagyon használt.
+
+- Nem mérő kamerák (Amatőr)
+  - középformátumó 6x6
+  - kisformátumú 
+
+Kompromisszummal használható!
+
+- Különleges kamerák
+Nem centrális vetítés! Különleges kiértékelés
+
+*** Mérőkamerák
+Belső tájékozás elemei ismertek
+Optikai elrajzolás mértéke ismert
+Kiegészítő információk a képeken
+Nagy film-méret 230x230 mm, 180x180, 300x300
+
+230^2 a legygyakoribb magyarországi viszonyok között.
+
+**** Belső tájékozás
+Képsík és vetítési középpont egymáshoz viszonyított helyzete ismert.
+
+Vetítési középpont képsíkra eső merőleges vetülete a képfőpont.
+
+Kameraállandó c érték a távolsága, meghatározom a képfőpont eltolódást. Origótól
+mennyire \ksi_0 és \eta_0 koordináták.
+
+Három paraméter \ksi_0 \eta_0 és c
+
+**** Optikai elrajzolás
+Valaki az előzőhöz
+
+Fénysugár útja. Komplex optikai renszer, \tau szöggel érkező fénysugár nem pont annyival
+halad tovább.
+
+c*\tan \tau = sugárirányú elrajzolás, optikai tengelyre körszimmetrikus. Mért érétkből lebonom
+a szabályos r' és \delta r' = r' - c*\tan\tau
+
+**** Goniométer
+Kamera síkjába finom osztású lemez. Távcső egy szöget állít. Adott
+szög mellett a beosztást leovlvasom. \tau mérve az adott r' esetében.
+
+Elrajzolás felrajzolva. Úgy meghatározni a c-t, hogy minél kisebb legyen az
+
+c- is goniométerrel. Leforgatjuk. 
+
+C minél kisebb elrajzolás. A négy fő irány irányába átlagot!
+
+60-as években készült kamera (főleg rövid c) jelentősebb torzítások, 15 um. Ahogy halad
+az idő egyre jobb optika, kisebb elrajzolással.
+
+Két képfőpont meghatározása.
+
+- Autokollimációs pont :: távcső merőlege, meghatározzuk, hogy hova látunk.
+- Szimmetria pont :: A két görbe összefordítva. Ahol nulla az optikai
+  elrajzolás ott a tengelybe. PPS legjobb szimmetriájú pont.
+
+Két képfőpont.
+
+*** Mérőkép
+Mérőkamerával készített.
+Belső tájékozás elemei, rajta keretjelek, kameraállandó.
+Kiegészítő információ libella, óra, optika típusa, nagy képméret.
+
+Modern mérőkameráknál a hagyományos műszer mellett digitális kijelzők
+is befényképezve. Korábban ilyen nem volt. A 90-es évek második felétől. Kamera
+gps koordináta, magasság ráfényképezve!
+
+*** Jelenleg egyre ritkábban használják
+Főleg az analóg egyre ritkábban használt.
+
+Megrendelő is digitális terméket vár el. Digitális ortofotó és termék. Aki jelenleg
+analóg kamerát használ.
+
+Még vannak forgalomban! Beszerzése komoly beruházása. Analóg kamera
+jól működik, amortizálódik, még most is használják.
+
+**** Leica RC30 (ex Wild RC-20) RechCammer
+
+Mo-n leica vonal.  Még forgalomban 23 cm a film belső szélessége.
+60x60 cm alap, girostabilizátor. Navigátor kémlelő nyílása, nagy
+látószögű távcső.  Átfedés és oldalgás nincsen. Jó-e a vonal? Régen a
+navigátor feladata súlyos volt! Navigátor igazította a pilótát. Ma a
+navigátor feladata is tabletes cuccon. Ma nem kell kukucskálni.
+
+**** Z/I Imaging RMK TOP (Zeiss RMK tOP)
+ZedI Zeiss és Integraph Néhány fényképezés ezzel Mon. Eredetileg
+mechanikusan a repülő billegése ellenére tartja a függőlegst.
+
+23x23 cm
+
+- Vákkumos leszívóberendezés. Sík legyen a film az exponálás
+- Motoros filmtovábbítés
+- képvántordáls kiegy FMC
+- GIROSZKÓOS TAB
+- AUTOMATIKUS fényémés
+- GPS/INS
+- 150 és 300 mm optika.
+
+**** Látószög
+Gyakorlaton számoltuk
+FOV Filed of Vew
+
+\Omega
+
+Kocka nagy kameraálladó párhuzamos az egyenesek.
+
+Csökkenő kameraállandó nagyobb perspektív torzulás
+
+tan \omega/2 s/2 
+
+\omega = 2 * atan (S/c/2
+
+Dan Vojtech
+
+**** Lencsehibák
+
+**** Képvádorlás kompenzáció.
+Expozíció közben a fénykép a képsíkon elmzdul. Amígy nyitva a zár,
+mozog a gép.  Virtuálisan a képsík visszafelé kell, hogy
+haladjon. Amíg nyitva a zár jelentősen ne mosódjon el a kép.
+
+v * t
+rep sebessége / méretarűnyszám
+
+U_elm = v*t*\frac c h
+
+Tovább viszi a filmet. Rászív, és a kép előre mozdul. Visszamegy a
+helyére a leszívott félmmel a lemez. Gyorsan, vissza! Komoly mechanikai
+igénybevétel! 1/100 sec mm-eket kell elmozdulni! Ha olyan kameránk
+
+Gyorsabban repülhetünk, v, növelt záridő, rosszabb fényviszonyok vagy finomabb rajzolatú film.
+c növelése, nagyobb kameraállandó. Város kisebb épület dőlés 300 mm optika.
+
+h csökkentése = alacsonyabb reülés.
+
+Képvándorlás kompenzáció digitális mérőkameráknál. VAn olyan, hogy mechanikus,
+van olyan kamcsi, ami elektronikusan olvas. Sor kiolvasás!
+
+80-as években jelent meg! Nagyobb méretaránynál muszáj volt. Mozgási
+képéletlenség előjött.
+
+* <2023-03-20 h> Felvevőrendszerek folytatásától
+** Kodak arechrome
+Kodak arechrome jó anyagok vannak fent. Infra film.
+
+Háború, katonai motiváció. Sok egyéb felhasználás.
+** Forward motion compensation
+Megvolt múltkor
+** Speciális különleges kamerák
+*** Panoráma kamera
+Egyik irányban nagyobb látószög. (akár átlósan is). Hagyományos
+centrális széles látószöggel elképzelhető. Nagy látószög, a kép
+szélein torzítások.  Hengerre vetített nagy látószög. Nem centrális
+vízszintesen. Szögtartó vetítés. Szögekkel arányos.
+
+Sokféel van. Modern kamera.
+
+360 fokos panoráma. 150 fok után nem lehet használni síkat. Hengerre a 360 fok is ok
+
+Vízszintes vetítés más, ha úgy széles
+
+*** Hemisférikus kamera
+Halszemoptikák leképezése.
+
+Mindkét irányban szögtartó vetítés. Félgömböt körre vetítünk.
+Vízalól nézve a teljes félgömb körre vetül. Ha a hal kinéz a víz alól!
+
+Panoráma egy irányban szögtartó, Ez mindkét irányban szögtartó.
+
+Ma már fotogammetriára. VR vagy lézerszkennelés! Szögtartással megfelel.
+
+Nagy törésmutatójú üvegekből állnak össze. Mutatott képet. Teljes látó mező.
+Korábban sok halszem optikás felvétel. GPS mrés tervezésénél. Halszemből horizont korlátozás.
+Tervező szoftverbe beadni, ideális időszak választható. GNSS mérés tervezésénél!
+
+Ma már alkalmazás összerak mozaikból halszemoptikásat. GNSS tervezéshez jó.
+Jobb oldal halszemoptika, szögszámláló mintavétel nagy egyedek. Hány fok egy pixel?
+Vastagabb fák bekerülnek.
+
+*** NASA nap képe
+lyukkamerás felvétel Sörös doboz lyukkamera. Szolárgráfra tervezik. Nap mikor milyen csíkot húz?
+
+Középpontba AN2 repülő. Légifényképezésben. Sörös doboz hátuljába betett filmre.
+
+** Minimum kérdés ebből a részből
+- feketedési görbe
+- mérőkamerák ismérvei
+  4 dolog.
+
+* DIGITÁLIS fényképek Digitális mérőkép
+
+** Bevezető fogalmak
+
+*** Tesszeláció
+Viszgált terület hézag és átfedés mentes felosztálsa.
+- Szabályos és
+- szabálytalan
+
+*** Szabályos tesszeláció
+Platón féle síkidomok felosztják a síkot.
+- Háromszög Egyenlő oldalú (esetleg szárú) háromszögek,
+- Négyzet (lehet téglalap, rombusz, paralegogramma)
+- Hatszög
+
+Hézag és átfedés nélkül.
+
+*** 2D szabályos tesszeláció
+Picture x element = pixel
+
+- sorok
+- oszlopok
+- sávok
+
+Több sávos lehet.
+
+Digitális kép esetében:
+- minőségi, tematikus kód
+- Mennyiségi 
+  konkrét fizikai mennyiség egyértelmű kapcsolat pl. csapadéktérkép is lehet.
+
+** Digitális kép
+2D szabályos adatmodell, amely vizsgált objektum radiometriai és
+spektrális tulajdonságairól tárol mennyiségi információkat digitális
+érték. Szabályos tesszeláció.
+
+Több sávos, milyen színű az objektum.
+
+2D szabályos tesszeláció, radiometrioa mennyit? spektrális miylen színben?
+
+*** Elsődleges
+közvetlenül
+
+*** Másodlagos
+digitalizált kép
+Fotográfiai eljárással.
+
+** Ismérvei
+Felbontás:
+
+*** geom
+Elemi látószög IFOV instatenous field of view
+1 pixel látószöge \omega mrad-ban kifejezve.
+
+Repülési magassággal az elemi látószög terepi pixelméret megadható.
+
+Terepi
+a = h * \omega
+a' = c * \omega
+
+Közelító képlet ívhosszal a középponti szöggel. De pici szögek.
+Két derékszögű háromszög. 
+
+*** spektrális felbontás
+Hány spektrális tartományban készül.
+- monospektrális felvétel (pánkromatikus a fotó miatt)
+- multi spektárlis 2–15
+- hiperspektrális 16-akár több szár v. több ezer
+
+Megvan, hogy hány sávunk van. Milyen hullámhosszban érzékel az is benne van.
+A fotonok bizonyos hullámhosszal máshogy gerjeszti az érzékelőt. Adott sávon mlyen hullámhossz.
+
+*** radiometriai felbontás
+Érzékelő dinamikája. Érzékelő karakterisztika görbéje.
+Hasonló a filmeknek a feketedési görbéjéez
+
+alapzaj = alapfátyol sötétben is kósza áram jelenik meg egy-egy pixelen.
+
+fotonokkal bombázzuk, nő az alapzaj, majd megjelenik a jel. Logaritmikus skálán
+lineáris, annál több foton jelenik meg, több elektron, majd az érzékeny
+maximum. 
+
+A lineáris az érzékelő dinamikai tartománya. Az alján jel/zaj arány, akkor zajosabb
+a felvétel. Jobb fényviszony, kevésbé zajos. jel/zaj jobb.
+
+Ábra!
+
+A zaj végig nő.
+
+Érzékelőn analóg jel jelenik meg A/D átalakító. 8-bit 1/255-ödönkét digitalizálunk.
+A/D is meghatározza aradiometriai felbontást.
+
+*** időbeli
+
+*** helyigénye
+sor * oszlop = pixelszám. 
+pixel szám * radiometriai felbontás (bit v bájt) * sorok száma
+
+** Digitális kép tárolása
+Sok formátum.
+
+*** Fejléc header
+- sor oszlpp szám
+- radiometria
+- sávok
+- pixel, befogalaó koordináta
+*** Adatok
+A fejléc során
+
+Adatok csak több sávos felvétel
+- BSQ band sequential
+  egész kép egy sávban.
+- BIL BAND INTERLAVED by line
+  soronként egymás után a sávok.
+- BIP BAND INTERLAVED by pixel
+  1 pixel 3 sáv, majd a következő
+
+BIL az általános a távérzékelésben.
+
+Digitális kép nagy adatmennyiség.
+*** Tömörítés
+**** Adatvesztés nélkül
+Eredmény pixel az eredeti pixel
+
+- RLE pcx tif
+- lánckódolásúCHAIN kódolás tif, gif
+- négyesfa Quad tif
+
+**** Adatvesztéssel
+Tolerancia után kapunk vissza
+
+- DCT discrete cosinus trafo jpg
+- wavelet ecv jpeg2000 is ilyet használ.
+
+**** jpg minta
+Adat az épület sarka.
+
+Különböző a tömörítés. Harmadára tömörít adatvesztés
+90% nyolcadára
+10 % huszadára tömörít
+5 % 100-ad
+1 % ezredre tömörít.
+
+jpeg 8x8-as blokkokban dolgozik. 10% színinformáció csökken, de még jól lehet alkalmazni.
+
+Színes kép jobban tömöríthetó, mint ff. színesben kevesebb információ
+a színek korrelációja miatt. Digitális fényképezőnél is ez a formátum.
+
+Adott jpeg superfine, fine, normal a tömörítás!
+Nagyobb kép = kisebb adatvesztés.
+
+921 bájt ugyan ez tömörítetlen tiff-be.
+
+** Digitális kép megjelnítése
+Színfüggvény definiálása. pixeé -> szín hozzárendelés. Melyik részét jelenítem meg?
+
+Színmodellek:
+- RGB vörös, zöld kék összeadó
+- CMYK kivonó alapszínek is használhatók.
+- HSI színárnyalat, színtelítettség intenzitás Hue Saturation Intensity
+- YUV (YCC) luinancia, kromiancia krominancia a szín jobban tömöríthető.
+
+** Hisztogram (gyakorisaági diagram)
+vsz a pixel érték
+8 bit 0-255 érték
+
+függőleges tengelyen a gyakoriság, hány pixel van benne.
+
+Hisztogram fontos!
+
+*** Hisztogram transzformáció
+Hisztogram transzformáció. Színfüggvény hogyan rendelhető hozzá? Trafó görbe
+szórke kiegyenlítés trafó. Telítési görbe transzformál.
+
+255-ről 255-re transzformál!
+
+Fotográfiai eljárás. Digitális felvétel simább hisztogramot produkál
+
+Különböző trafók vannak
+
+*** szóródási digagram scattergram
+Két sávban függetlenül nézett hisztogram. Két sávban nézem a hisztogramot. A színek mutatják.
+
+A szóródási diagram a pixelek közötti összefüggést mutatja! Vizsgáljuk
+a pixelek egymással való összefüggését.
+
+** Fotogammetriai szkennelés
+
+speciális szkenner alakít digitális képpé! speckó eszköz nem túl olcsó.
+
+Analóg kép 1 szemcse 1 mikron 10^9 árnyalat, mert annyi szemcse elméletben!
+
+Digitális kép 7–21 um, egy pixel 8–14 bit radiometria.
+
+Nagy különbség. 1 um szkennelés sem lehetetlen, de akkor látjuk a
+szemcséket, de nem lesz több információ 7um-nél nem mennek lejjebb,
+mert nem lesz az információ több. 49 um -ben min 49 szemcse, de ...
+
+*** kvantálás
+A/D átalakításnál. Milyen egységet váasztok. Analóg jel a feketedés reciproka. pl.
+
+pixelméret elhatározva, megnéze az adott helyen a pixelértéket. Mi a legkisebb egység a
+dinamikai tartomány beosztásában! Finom részletek eltűnnek. Megfelelő kvantum fontos
+a kis információ vesztéshez!
+
+**** példa
+Gömb szürekárnyaltban 256 árnyalat! Folyamatos átmenetnél gáz.
+
+*** tulajdonságai a szkennernek
+- Nagy geom felbontás < 10 um
+- nagy geom pontosság jobb, mint 1/4 pixel két szkennelés után a
+  pixelek eltérése 1/4 pixel Asztali szkennernél 10-15 pixel a két
+  szkennelés között. a mozgatás irányába pontatlan!
+- nagy radiometriai pontosság jobb, mint 2 szürkeségi fok db,
+  szürkeségi fok legvilágosabb és sötétebb tartomány
+- minimum 23x23 cm film (30x30)
+- fotogammetriai funcionalitás felismert keretjelek, automatikus belső tájékozás
+- tekercsfilm szkennelhetősége
+  - aut intenzitás ellenőrzés
+  - szkennelő
+  - képelforgatás, minden északra.
+  - próbaképek átugrása
+  - film kezdet és vég
+  - filmsérülés elkerülése
+
+*** FÖMI
+DLA projekt leica geosystems dsw 700 10um 2um RMSE
+DLA = digitális légifénykép archívum ?
+
+*** KATONA
+Z/i IAMGIN 7 UM 2UM RMSE
+
+*** eGYÉB
+WEHRLI RASTER MASTER archív képek digitalizálása az arhív katona 30x30 kép
+A korábbi 23x23 csak!
+
+** Digitális mérőkamerák elemei
+- optikai rendszer
+- érzékelő félvezetőből álló eszköz. Az odajutó foton elektronok
+  keletkeznek rögzíti.
+- jelfeldolgozó az érzékelőn indukálódó áram alapján
+- adattároló
+
+A film egyben betölti az optikán kívül mindet!
+
+Nagy a technológiai fejlődés. Régen csak CCD volt. Azután CMOS
+szenzor, vagy még újabb, hátulról világított cmos. Nem részeltezzük.
+
+Függ, hogy milyen az érzékelő. CCD lassú kiolvasás. CMOS gyorsan kiolvasható.
+
+*** Érzékelők csop
+- geom
+- spektr
+- radiometriai
+
+felbontás háromszögein belül helyezhető el. Adott időjárás kép, adott foton korlátos!
+
+geom növelése sok felosztás, négyzetesen csökken a fotonok száma.
+
+spektrális növelés, sávonként oszja! így is kevesebb.
+
+1 bites felbontás helyett a dinamikához is kell elég foton.
+
+Összefüggenek! Egy érzékelő kompromisszum!!!
+
+*** Letapogatók (szkennerek)
+technológiai újítás. Nem egy időpontban veszem fel a képet. Több foton áll rendelkezésre.
+
+Időben elhúzódó folyamat. Hátránya, hogy mozgó objektum torzul!
+
+**** Csoportosítás
+- mecanikai optikai (mozgó)
+- elektrooptikai nincs mozgó
+
+New csopoet
+0D - pontszenzor
+1D - sorszenzor asztali síkággas
+2D - 
+
+Más elnevezés
+
+0d = whisk-broom, cross track
+
+1-2d 
+push-broom, along track focal plana array
+
+Foto csak 1D és 2D
+
+**** Tábla
+2D:
+- Z/I imaging DMC első letapogaató kamera intergeo kiállításon
+bejelentették. 2 év múlva sem szállították.
+- Vexcel Imaging UltraCamD 2001-ben jelent meg. Lesöpörte a piacot.
+1D:
+- leica ADS40 push-broom ezt érdemes
+
+**** Leica ADS40
+vissza, lefele és előre néző szenzor
+több féle bázis magasság viszony
+
+Nem olyan jó a push-broom renszer. Nem olyan képek, mint korábban a mérőkép.
+Nem egyenes szélű sáv. Hagyományos szoftverrel máshogy értékel ki!
+
+A felhasználói oldal nem tudta kezelni. Geometrialilag nem túl meghatározott.
+Máig használják. 20e pixel 1 sor érzékelő 4 előre, 5 le 4 vissza.
+Jó radiometriai felbontás 4 sáv kék-zöld-vörös-közeli infra.
+
+Kisebb ugrás, mint a felmérési sáv!
+
+**** 2D mérőkamerák
+Hogyan lesz több sávos felvétel. Sor szenzor egy prizmával eltérítve.
+2D színrögzítés
+
+biam szűrő nem minden szín össze zöld második ,kék és vörös 4-edik. Interpolált kép nem annyira jó.
+Hagyományos nem annyira.
+
+Több rétetű érzékelők. Jó eredmények, de problémák. Zajos alsó rétegek.
+
+Legelterjedtebb:
+Egy testbe több kamera. több kamera rögzíti a színeket!
+
+**** Vexcel UltraCamD
+Magyar felvételek zömében ilyen.
+Microsoft felvásárolta! egy időben brandelték, majd vissza vezették.
+Graz Leberl prof dolgozta ki a több kicsi érzékelőből egy nagy érzékelő, összekalibrálva.
+
+9 érzékelőből összeteszi, mintha egy nagy lenne! 9 kicsi olcsó összekalibrálási módszer!
+Olcsó és nagyon jó minőségű. 80% a megjelnés után ilyen kamera.
+
+Pánkromatikus 9*24*36-ból 9
+103.5 * 67.5 mm
+
+Egy nagy + mellette négy sáv multispektrális kamera.
+
+4 optika mögött 9 érzékelő + 4 multi kamera.
+
+Első digitális fényképezés. A cég aki csinálta, az sem ismerte a technológiát.
+
+4 sáv, = színhelyes színes + infraszínes.
+
+Sokat fejlődő ultracam kamerák.
+86 MP ről 450 Mpixel
+
+Ma is ilyen ultracamet használnak.
+
+*** Ferde tengelyű kamerák oblique oblikus
+
+vexcel Ultracam Osprey
+
+leica RCD30 oblique
+
+egy kamera törzsben nadír mellett ferde felvtétel is.
+Obliq ugyan olyan, vagy közel ugyan olyan felvétel. Városi felvétel 3d város modell.
+A homlokzat is a városban!
+
+** Minimum kérdések
+- digitális mérőkamerák 1D 2D csoportosítás
+- Nevezz meg egy korszerű digitális mérőkamerát. gyártó, típus.
+
+* <2023-03-22 sze> Gyakorlat
+Késtem a tesi miatt.
+
+Mérőkamerák
+
+2 archívum
+
+FÖMI -> Lechner
+
+Katonai archívum
+HM Zrínyi
+
+FÖMI DLA (Digitális Légifénykép Archívum)
+
+210000 légifénykép (5-6 ) haramda
+
+2012-es Földmérési törvény
+1:10 000 és ennél nagyobb -> polgári
+1:10 000 és kisebb -> katonai
+
+Eddig párhuzamosság!
+
+http://fentrol.hu
+
+Elején csak gyógy, jelenleg a teljes felvétel ingyenesen elérhető.
+
+Bizonyos funkciók regisztráció után, képek letöltése nem a fentről.hu-ról, letöltés
+egy másik fontos oldalra (http://geoshop.hu) oldalra irányít.
+
+Legalább a geoshop.hu-n regisztrálni az ingyenes letöltshez.
+
+fentrol.hu egyszerű regisztráció. Később látjuk a funkcióit.
+
+Szolnok
+1997-1007-0597 ezzel a háromszor négyes számmal azonosítható minden felvétel
+évszám-filmszám-képszám
+
+Törzslap L1-es szabályzat,
+Légifénykép törzslap. Szkennel a 1999-1007 
+
+1963-01171-5937
+
+A szám alatt összes kép.
+
+Felmérési idő 1963, minden fekete-fehér, látható
+23 cm képméret, RC-5 kamera
+
+Minősítések
+
+Pipálni a georeferálást. Helyre téve.
+
+A szerver, ami a DLA mögött van nem túl erős.
+
+- Teljes 207186
+- 181103 ff
+  - infra 3824
+  - 177279 orto és pánkromatikus
+
+- 26083 színes
+  - 14147 db színhelyes színes.
+  - 11909 infraszínes felvétel.
+
+Képméret
+- 23 cm 167111
+- 18 cm 40075
+- 5–6 nem ír ki.
+
+** Kameratípus
+Wild kamerák RC-vel kezdődő
+
+ZeiSS RMK TOP
+AFA-TE orosz.
+
+
+
+** Sopron
+Gyorsmenüre kell rákattintani.
+
+Kisebb terhelés a szervernek.
+
+Sopron
+641 
+
+Képközéppont, de van, hogy Harka középpont, de sopron is fedezi.
+
+- 358 színes
+  - 178 színhelyes
+  - 180 infra
+- ff 283
+
+Sopronban 1966-os az első archívum. 4 felvétel 1966
+
+1966-0647-9546
+09:51:33
+1966 július 4.
+
+1998 a legújabb.
+1998-0221-5565
+
+
+Félévente 5-10 ezer újabb
+
+Méretarány fontos
+
+Alacsony
+
+1984-0126 Szárhalom. Valamelyik gyakorlat kemény karton transzformátum mozaik.
+
+
+*** Méretarány
+1984-0126-5534
+
+88.24 a kameraállandó. Iszonyatosan nagy látószög!
+
+h0 = 650 m
+c = 88.24 mm extrém nagy látószög. Nem biztos, hogy ennek lesz a legnagyobb a méretaránya.
+
+h0/c = 7366
+
+Mk=1:7366
+
+Kicsi a c, gyanakvásra ad okot.
+
+*** 1969-0137-0382
+Helikopteres
+
+c = 152.41 mm
+h0 = 725 m
+MK 1:4756
+
+Legnagyobb méretarányú sopronban
+
+Tesztmező illesztőpont jelölésekkel.
+
+69-es diplomaterv.
+
+*** Legkisebbb
+1991-0061-es repülés
+
+Több szempontból érdekes.
+
+Ferde tengelyű felvétel, amikor kanyarodott a repülő.
+
+1991-0061-1019
+
+h0=4810m
+c = 152.7mm
+h0/c = 13499.7
+
+Mk = 1:31500
+
+Ez talán a legkisebb méretarányú.
+
+Törzslap és kamerakalibrálás.
+
+Duna-magas repülés.
+
+** Letöltés
+tiff + tfw word fájllal többé kevésbé jó helyen van!
+
+Szerkesztemmel pontosítani lehet, ehhez kell a regisztráció.
+
+0-ás felvétel. Filmen is bemutatva. Amiből eredeti film van. Asztalfő projekt.
+Kontakt másolat is van több sorozat. Kamera típus még nem ismert.
+
+Egyetem készíttette.
+
+Érdemes megismerni az oldalt.
+
+** 1. feladat.
+Mindenki kiválaszt egy területet
+
+Közig határ
+
+Összegyűjteni, milyen képek érhetők legrégebbi, legújabb, legnagyobb, legkisebb méretarányú,
+érdekességek.
+
+Nem kell, Elég sima szöveges állományba írni.
+
+Magunknak és Gézának is könnyítünk. Sopron.
+
+Linket tegyük be. Legrégibb felvétel linkjét.
+
+Számadatok mellett linkek!
+
+Ellenőrzés könnyebb.
+
+** Szünet
+
+** Könyvtár
+y:fotogammetria 2023 pdf
+
+Katonai képfeldolgozás.
+
+Fény-Tér-Kép
+
+2020 nyarán indult el.
+2012 tv. 2015-től ingyenes!
+
+Légifénykép archívum.
+172915 db, színes 5633
+
+1938–2004 közötti felvételek.
+
+A várban van intézmény. Ami oda került nem biztos.
+
+30x30 50 e kép.
+
+50-es évek csúcs.
+
+38-49 nincs repülési vázlat
+
+Katonai térképek GK szelvényezés. Katonák GK szelvény azonosító. Átteszik EOV-ba.
+
+Voltak tárgyalások a közös archívumról. Elég messze voltak az álláspontok.
+
+** QGIS
+3.10
+
+Új projekt.
+
+x: dfotogr 1991-0061-1019 behúzás
+
+*** Hozzáad
+- data source manager
+- behúzni a fájlat
+
+tiff mellett twf world fájl Egyszerű képek mellett sima szövegfájl
+tif -> tfw
+bmp -> bpw
+jpg -> jgw
+
+Első és utolsó betű a kiterjesztésnek + w
+
+Normál esetben hat sor. Nincs vetületi koordináta információ
+
+Első négy elem forgatási mátrix négy eleme.
+
+r11 r12
+r21 r22
+tx
+ty
+
+r21 és r22 a pixelméretnek megfelelő.
+
+y negatív, mert a digitális képeknél bal fölső sarokból.
+
+negyedik negatív
+
+Vetületet nekünk kell megadni
+
+23700 az EOV
+
+WEB menü OSM STANDARD
+
+43 26 ALUL FÖLDRAJZI, EGÉSZ TÉRKÉP EOV-ba
+
+rétegek átlátszóság
+rgb 000
+
+2. ikon
+
+Dupla katt a rétegen, tulajdonságok és átlászóság.
+
+word fájl koordinátát nem tartalmazza
+
+world fájlbó a vetületi koordináta
+
+x * r11
+
+r12 r21 0 akkor 
+
+Nem külön a pixel és a forgatási mátrix
+
+Kicsi forgatás
+
+Sík területen lett volna jó tévétorony elment.
+
+** Infó a képről
+duplakatt a képen
+
+Dimension vagy szélesség magasság 18967x17815 pixel
+
+no 18967
+ns 17815
+
+Hány megapixeles
+
+no*ns
+
+(18967*17815)/10^6 = 337 897 105
+
+338 MP ez azért jó a 50MP kamerához képest.
+
+Sávok száma
+
+RGB színkonponenst tárol a kép.
+
+pixelméret a world fájlból.
+
+r = 8 bit 1 bájt (radiometriai felmontás)
+
+nsáv = 3
+
+Tárhely igény
+V = ns*no*nsáv*r =
+
+337897105 * 3 = 1 013 691 315 bájt
+/2^10 = kbájt
+/2^10 = mbájt
+
+1 Gb-os felvétel
+
+Tömörített kép.
+
+Piramis rétegek vannak a More Informationban!
+
+Ne kelljen a képet teljesen olvasni. Gyorsabb megjelenítés, ha kicsiben nézem.
+
+irfan view mit ír ki?
+jpeg tömörítés
+
+felbontás
+
+1811x1811 DPI
+
+A forgatás miatt a forgatott értéket mutatta a QGIS.
+
+*** World fájl nélküli eredeti
+Helyi koordináta rendszerben. Ú qgis, nincs vagy ismeretlen.
+
+Előző értékek miatt storno!
+(18031*16806)/10^6 = 337 897 105
+303 MP
+
+** Nyers fájl
+bal felső a nulla nulla.
+y mínus annyi
+
+Ilyenkor a képen pixelben mérünk.
+
+Újramintavételezés ablak bilineáris vagy köbös.
+
+Helyi néven elmenteni
+
+Tulajdonságok képfelbontásra vonatkozó.
+
+Irfan view 1811 dpi
+
+Szkenner beleírja a felbontást.
+
+*** Felbontás beszkennelése
+Vonalzóval a keretjelek távolsága.
+
+Vonal rajzolás és annak a hosszát mérjük.
+
+Új geopackage réteg
+
+1019_kalicz új geopackage
+
+Beépített függvény dollár length
+
+Attrib F6 jobb klikk is attrib tábla
+
+A táblán számológép, ott mező név kiírás alul nincs vetület legyen, különben nem tér
+
+Kalibrációs jegyzőkönyv mentve
+
+3: -106.003, 106,0004
+1: 105,998 106,000
+
+Átlós távolság
+d\ = sqrt((105.998--106.003)^2+ (16.004--106)^2)
+
+d\ = sqrt((212.001)^2+ (212.004)^2)
+299.816 mm ugyen ez a távolság pixelben!
+
+QGIS sajátság. Vonalat rajzolunk. Amíg nem mentjük le, addig memórába. Memóriában
+még nincs a winyón. Számolás előtt lementeni!
+
+res' = d\(mm)/d\(pixel)
+
+299.816/21381 = 0.014022 = 14 um/pixel
+
+* <2023-03-27 h> Képek feldolgozása
+Eddig képek készítése, innentől feldolgozás.
+
+** Sztereoszkopikus látás
+- Geometria:
+  - Centrális
+  - Nem centrális leképezéssel készült (más feldolgozás)
+- Tematikai:
+  - Vizuális interpetáció
+  - Digitális képosztályozás
+
+Jelenleg a felvételek geometria feldolgozást centrális leképezéssel foglalkozunk.
+A tematikai Távérzékelés tárgyban. Nem centrális kevés Foto II.
+
+Centrális vetítés elve
+
+Korábban szerepelt eli képlet. Ismert tájékozású felvételen képi pont mérve,
+terepi koordináta Z függényében kifejezhető. Ezért külön egy vagy két(több) képes
+felvételek.
+
+** Természetes sztereoszkopikus látás
+Egér és macska.
+
+- Ragadozó
+  - Távolság felmérése
+  - Térbeli látás
+- Préda
+  - Nagy látómező
+  - két szem két független kép
+
+Kaméleon speciális eset (fóggetlen két szem) Ő tud sztereoban is látni.
+
+** Sztereoszkopikus látás és mérés
+Egy szem = térérzékelés az agyban. Tapasztalat alapján:
+- perspektíva (épített környezetben!)
+- ismert tárgyak méretviszonyai (szék) Óriás szék vagy kisszék.
+- tárgyak részbeni átfedése
+
+Átverés Ames (ejtsd amé) szoba Hátrafelé bővülő szoba. Ide egy szemmel lehet bele tekinteni!
+
+Két szem = egyértelmű térérzékelés.
+
+** Emberi térlátás
+Bázis kb. 65 mm.
+
+- Parallaxisok a két kép között
+- Konvergenciaszög \gamma
+- 2–5" < \Delta\gamma < 1.2\degree  ha nagyobb, akkor nem látunk. Toll közel a szemünkhoz.
+  Ez egy szűk intervallum. Ismétlődő mintázat zavaró lehet. Közel, vagy távol is.
+- Akkomodáció az ember megszokja, hogy a végtelenbe nézünk párhuzamos. Közelebre nézünk
+  nagyobb konvergencia szög (\gamma). Messze kicsi.
+- Konvergencia aés akkomodáció összekötve. Össze van kötve az agyunkban.
+- Magsík (eppipoláris sík) csak a bázis irányba működik a
+  látás. Objektumra sík a sík és a képsík metszésvonalában homológ pontok.
+
+** Mesterséges sztereoszkópikus látás
+Átverjük agyunkat. 3 feltétel:
+
+- Legyen egy képpár. Különböző álláspontból, ezért bázis irányú
+  parallaxis. Átfedő, legalább részben!
+- Képpár relatív tájékozása. Oly módon, hogy zavartalanul szemlélhessük. Csak bázis irányú eltérés legyen!
+- Szétválasztás oly módon, hogy mindkét szem a neki megfelelő képet lássa.
+
+Nehézség a konvergencia és az akkomodáció szétválasztása. Párhuzamos
+tengely közelre fókuszálás.
+
+*** Légifényképezés.
+Standard 2 sor 4 kép. Különböző, legalább részben átfedő. Két kép
+megfelel a sztereo képpárnak. Keskeny terület, ha sorok között. Nagy
+átfedés, nem kell a két szomszédos képet. Rugalmas a kiértékelés.
+
+*** Képpár tájékozás
+- Áttekintő tájékozás nagyjából mozgatjuk a türrös sztrskóp alatt
+- Magsík szerinti tájékozás
+  - keretjelek középpontja
+  - egyik a másikon megkeresni.
+  - egy egyenesbe tesszük a két pontot!
+
+Hat paraméter Z tengely körüli forgatás \kappa szög. Nem lehet forgatni x és y tengely körül.
+Komoly műszernél ezek a szögek is korrigáltak. \omega és \phi nem korrigál.
+
+*** Szétválasztás
+- Sztereoszkópok :: Térben szétválasztjuk.
+  - Lencsés vagy zseb :: 
+    sztereoszkóp. Papír a két képhez.  Távol vannak. Lencse segíti az
+    akkomodációt. Zseb sztereoszkóp kicsi. 6 cm nagyobb kép nem megy,
+    mert ez a szemek bázis távolság. Erdészek is
+    használták. Kicsinyített másolat. Terepre is vihető. Telefonos alkalmazással is
+    megvalósítható.
+  - Tükrös  :: sztereoszkóp 30x30-is, mert tükör növeli a bázis
+    távolságot. Bonyolultabb. Korábbi műszerek ilyenek voltak (a
+    legtöbb).
+
+Példa:
+
+View-Master USA szabadalmaztatott eljárás. sztereo
+korongok. Kis képméret ellenére hatásos térmodell. Csehszlovák Meopta Meoskop.
+
+Ma már a virtuális szemüvevek jól kiváltották. Sok egyéb van!
+
+Google cardboard. Minden elérhető a pontos tervrajz. Párszáz Ft széles alkalmazás lista.
+Megosztott képernyő egyik szemmel egyik, másik kép.
+
+*** Maszkolásos eljárás
+Térbeli képek vagy vonalzók. Mikroprizmás felület. Jobb szemmel más
+kép, mint bal.  Számítógéppel minden második sort kimaszkoltak. Nem
+jöttek be annyira. Oszloponként választották szét.
+
+*** Anaglif eljárás
+Komplementer színek vörös és ciánkék.
+
+Katonák Csizsár Sándor alezredes alapműve.
+
+Vetítés, nyomtatás komplementer színnel. Szemlélés szemüveggel
+
+Prosat pirossal, kéket kékkel. Fekete-fehér képet tudunk!
+
+*** Polarizációs eljárás
+Fény polarizáció. Fény transzverzális hullám. Merőlegesen
+rezeg. Poláros fény csak egy síkban rezeg. Merőleges polarizációval
+nézzük, nem engedi át.
+
+Színes térmodell. Mozik esetén Plaza és Elit mozi. Elforduló fejjel
+átlátunk a szitán, dupla képet látunk.
+
+Keleti mellett Aréna pláza IMAX mozi a polarizáció mellet nagy a látószög is!
+
+Sok film, ami hatásos térbeli szempontból.
+
+**** Munkaállomáshoz
+Fotogammetriai eljáráshoz van ilyen sztereo monitor. Planar cég fejlesztette. Lelke
+a félig áteresztő tükör. Hatékony eljárás, jó térmodellt tud előállítani.
+
+*** Időbeni szétválasztás
+Folyadékkrisztályos felület. 120 Hz 60Hz bal, 60Hz jobb kép. Szemüveg
+két szeme elsütétül.
+
+Fotogammetriai szemüveg. Infravörös jeladóval, vagy vezetékkel.
+Korábban Elit mozi aktív szemüveges eljrás.
+
+Fényerő jelentősen lecsökken! Sötétedő modell. Korábban elterjedt, de ma már inkább polárszűrő.
+
+** Magyarok a 3D technológiában
+*** Holográfia
+Gábor Dénes nem nálunk élt, amikor Nobel díjas volt. 47-ben lefektette
+az elvet. Gyakorlati megvalósítás a laserrel. 1961 lézer, 1971 Nobel díj.
+*** Holovízió
+Volometrikus megjelenítés. Ködben több oldalról bevetítve. Tervező
+programoknál fontos a térben látás.
+*** Leonar3Do
+Rátai Dániel jelentős újítások benne. Hatékony aktív szemüveges
+eljárás.
+
+** Sztereó mérés
+Fotogammetriai munkánál fontos a térbeli szemlélés mellett a mérés.
+
+- Tényleges mérőjel :: konkrét fizikai mérőjel, aminek pozícióját mérem.
+- Virtuális mérőjel :: két jel, amit az agyunk tesz össze.
+  - Szereókomparátor mód :: egyik helyen leteszem. Másikat leteszem. Korábban.
+  - Sztereókiértékelő :: Z irányban is mozog.
+
+** Objektumok magasságának meghatározása
+Egyszerű parallaxis méréssel. Két kép eltér radiális irányban!
+
+Két képen bázis irányú eltérés. Objektum magassága meghatározható.
+
+** Normál sztereogram
+Földi fotogammetriában. Sztereogram = mesterséges sztereografikus képpár.
+Krix-kraksz ábra, amiben térbeli ábra! Van ilyen könyv! Összeáll a térmodel, ha jól nézed.
+
+Régen nagy volt a jelentősége. Olyan képpár, ahol a tengely irány a bázis irányára merőleges.
+Légifénykép merőleges tengely, ha azonos magasság. Nem könnyű
+
+Földinél könnyebben biztosítható.
+
+Merőlegesség miatt sokkal egyszerűbb kiértékelni.
+
+Két dőlés bázis irányú komponense. Hasonló háromszögekre egyenlőség.
+
+\Delta p_1/ m + \Delta p_1 
+
+\Delta p_1'/ m' + \Delta p_1' 
+\Delta p_2'/ m' + \Delta p_2' közös nevezőre hozva
+
+Képi bázis 
+
+\Delta h = \frac{h_0 \cdot \Delta p}{b' + \Delta p}
+
+
+Tükrös sztereoszkóp virtuális mérőjele ilyen. Csak az egyikk
+változik. Bázis irányú pralallaxis. Korábban egy légifénykép pár alapján.
+
+** Minimum kérdések
+- Mesterséges sztereoszkópikus látás
+  - képpár, tájékozva, szétválasztva
+- Szétválasztási eljárások
+- Normál sztereogramm
+- Magasság meghatározás képlete
+
+* <2023-03-27 h> Analóg felvételek kiértékelése
+Analóg felvételek kiértékelése
+
+** Centráls vetítésű felvételek feoldogzása
+Eredeti felvételi helyzet visszaállítása = tájékozás.
+
+Paramétereket megkeressük.
+
+Belső tájékozás, kamera, külső 3 koordináta, 3 tengely körüli forgatás 6 külső feltétel.
+
+Többképes szétbontva. relatív és abszolút.
+
+Kölcsönös, létrejön a térmodell. Felvételpár kölcsönösen tájékozva,
+majd az abszolúttal elhelyezzük az adott vetületi rendszerbe.
+
+** Kiértékelések
+- Egyképes, síkfotogammetria
+- Kettő vagy több képes sztereófotogammetria
+
+Analóg műszerek egy vagy két(több) képes
+
+** Feldolgozás
+- analóg
+- analitikus
+- digitális 
+
+a klasszikus fentit kiegészítjük: (eze előbb voltak
+- mérőasztal fotogammetria = analóg
+- sztereofotogammetria = analitikus
+
+*** Mérőasztal
+Mérőasztal állásponton felálltak a műszerrel, képet is csinálnak.
+Mérendő pontot a mérőképeken irányt szerkesztenek. Kettő metszi egymást, p térbeli helye.
+
+Mérőasztal fotogammetriát sokáig használták. Nagy bázis, nagy szög, pontosabb.
+
+Minél nagyobb bázis, nehéz azonosítása a képpároknak!
+Ugyan olyan házaknál nehéz azonosítani. Pont párja nehéz azonosítnai
+
+
+*** Pulfrich-féle sztereokomparátor
+1901-ben!
+
+Alapja a sztereoszkópikus látás. Térben szemlélt kép párban látjuk. Nem egyesével
+azonostom. Térbe szemlélem!
+
+Mesterséges térmodell segít. Virtuális mérőjel. Két kép kés jel.
+A két sík mérőjellel számítással tudom meghatározni! Képi koordiánátával számítással!
+
+** Analóg fotogammetria
+Analóg felvételekkel dolgozunk.
+
+Analóg az eredeti felvételi helyzetnek megfelelően. Optikai vagy/és
+mechanikai eszközökkel visszaállítok.
+Fénnyel vagy csuklókkal vetítek.
+
+Egyképes vagy két képes. 
+
+*** Egyképes
+képátalakítók
+Sík területen. Képdőlés miatti torzítások visszaállíthatók.
+
+Négy illesztőponttal dolgozunk.
+
+- Grafikus képátalakítás
+  Papírcsík eljárás. Négy pont, kettős viszony, felvételi helyzet.
+- Optikai képátalakítás
+  - virtuális Zeiss légifénykép átrajzoló LUZ (luftbild umzeichner)
+    Közvetelnül a térképre rajzolom az új vonalakta. Csak az agyban
+    lesz a két kép együtt.
+  - valós Zeiss SEG-1 berendezés. Geodéta indulóban. S = Seimpflug
+    féle feltétel.  koraábban volt. Szombathelyi szakközépbe
+    került. Úgy kell elképzelni, mint egy nagyító
+    berendezést. Seimpflug feltétel optika síkja képsík és a tárgysík
+    egy pontba metszi egymást. Teljes képmező éles volt. 30x30 cm is befért.
+    Térképi asztal több, mint 1 m volt.
+
+Képek róluk. SEG-1 ortofotót is tudott! Sík területen.
+
+Thir shift optika. Technikában használták. A képsíkhoz képest döntik az optikát.
+Kép, tárgy és a lencse síkja egy egyenesben metszi egymást.
+
+Eddig analóg egyképes fotogammetria.
+
+** Analóg fotogrammetria
+- optikai vetítés
+- optikai-mecanikai
+- mechanikai vetítésű műszer
+
+*** Analóg kölcsönös tájékozás
+6 kapcsoló pont (Gruber-pont)
+
+Iteratív eljárás. Megvolt a sorrend. Amíg megvolt a relatív tájékozás.
+
+Térmodell abszolút tájékozás. 7 paraméteres transzformáció
+Modellt eltolom, forgatom és a modell méretaránya.
+
+Abszolút tájékozás 7. Ha relatív és abszolót rel = 5 absz 7 összesen 12.
+
+Analóg hozzátájékozás. Két kép kiértékelve. Majd hozzátesezm a harmadikat.
+Forgatás eltolással. Nem volt könnyű. Műszer tartományából kimegyünk.
+
+Multiplex, amit megnéznénk. Biplex kivetítve. Mérőasztallal,
+mérőjellel.  Fizikai mérőjel. A térmodellen. Apró kis fénypont. Úton
+végig viszem a mérőjelet, és felrajzolom. megvan a tájékozás, de
+közvetlenül térképek rajzolhatok.
+
+Multiplex pantográffal. Nekünk hat képtartóval. Multiplex anaglif eljárással.
+Szűrőkkel végigment az ember a soron!
+
+*** Optikai-mechanikai vetítősú műszerek
+Csuklókon keresztül tudo állítani.
+
+*** CSa mechanikai
+Csuklókat mozgatom, képet mozgatom fix jelnél, mérőjelet mozgatom.
+
+**** Kern PG1 (PG2) ilyen a gyakorlóban
+
+**** Wild sztereóautograf A8
+Ez volt a csúcs 1952–1980 1035 db volt. Mechanikus rajzasztal.
+
+Analitikus jön!
+
+Analóg és analitikus műszerrel sem dolgozunk. Megkönnyíti az alapelvek megértését.
+
+* <2023-03-29 sze> gyak légifénykép
+
+Rajzoljuk meg a másik átlót a múlt órai képen
+
+Kettes keretjeltől négyes keretjelig.
+
+Vonalrajzolás után elmenteni, majd újraszámolni
+
+1991_0061_1019
+
+21380
+
+** Magyarra átállítás
+Setting options. Általános (Generál). Felülbírálás. Azután újra indítani.
+
+Van-e probléma
+
+Geometria csoportban
+
+Nincs vetületet be kell kattintatni. Újra számmítattni, ha gond!
+
+1–2 pixel tolerancia van benne. 1–2 pixelen belül jó.
+
+
+#+BEGIN_SRC R
+no <- 18031 # oszlopszám
+ns <- 16806 # sorszám
+r <- 1 # bájt
+nsáv <- 3 # sávok száma
+no * ns # pixelszám
+no * ns / 10^6 # 303 megapixel ha 1 millió
+no * ns * nsáv * r # bájl
+no * ns * nsáv * r / 1024 /1024 # Mega bájt
+no * ns * nsáv * r / 2^10 / 2^10 # Mega bájt
+no * ns * nsáv * r / 2^20 # Mega bájt
+#+END_SRC
+Hány megapixeles? Van még pár bájt fejléc, amit elhanyagolunk!
+
+no*ns
+
+(18967*17815)/10^6 = 337 897 105
+
+338 MP ez azért jó a 50MP kamerához képest.
+
+Sávok száma
+Sávok statisztikája tárolható.
+
+RGB színkonponenst tárol a kép.
+
+pixelméret a world fájlból.
+
+r = 8 bit 1 bájt (radiometriai felmontás)
+
+nsáv = 3
+
+Tárhely igény
+V = ns*no*nsáv*r =
+
+337897105 * 3 = 1 013 691 315 bájt
+/2^10 = kbájt
+/2^10 = mbájt
+
+Piramis rétegek
