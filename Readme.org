@@ -1375,7 +1375,7 @@ Pánkromatikus film és a FF infra film hasonló Pánkromatikusnál sárga, vagy
 Szintetikus film szimulációk
 
 - Ortokromatikus 400-700 nm az erdők-növényzet nagyon sötétek. Épület világos
-- Pankromatikus 900 nm-ig, vegetáció nagyobb struktóra. Közeli infra nagy visszaverés!
+- Pankromatikus 900 nm-ig, vegetáció nagyobb struktúra. Közeli infra nagy visszaverés!
 - Infra. Láható kizárva, csak infravörös. Negatív hatású út vasút
   aszfalt sötét, vegetáció világos.
 
