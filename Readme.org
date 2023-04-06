@@ -1,3 +1,25 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:nil broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+options: p:nil pri:nil prop:nil stat:t tags:nil tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: Fotogammetria I.
+#+date: 2023
+#+author: Kalicz Péter
+#+language: hu
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.3)
+#+latex_class: article
+#+latex_class_options:
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+latex_header: \usepackage[hungarian]{babel}
+#+latex_header_extra:
+#+description:
+#+keywords:
+#+subtitle:
+#+latex_compiler: pdflatex
+
 * <2023-02-27 h>
 Kötelező látogatni az órát.
 
