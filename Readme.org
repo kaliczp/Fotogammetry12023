@@ -3518,3 +3518,839 @@ geoshop regisztráció. Elsődlegesek geoshopon érthetők el.
 
 Regisztrációt érdemes megcsinálni! Földhivatali térképek és régi
 térképek is elérhetők.
+
+* <2023-04-10 h> Húsvét hétfő
+
+* <2023-04-12 sze> Silva miatt nem voltam
+
+* <2023-04-17 h> ea UAV
+Pilótan nélküli
+
+** Pilóta vagy nélkül
+
+Pilótával
+- Pilóta jelentősen költségesebb. Súllyal összefüggésben!
+- Kevésbé rugalmas 100 éves múlt, szigorú szabályozás. Nagy hely a
+  fel-leszálláshoz, manőverekhez
+- Biztonságosabb mint az UAV. Repülés a legbiztonságosabb közlekedés, de ha
+  baj van, végzetes. Biztonságos, régóta fejlesztett, szabályozás,
+  biztonságtechnika. Pilótanélkül nem.
+- Kialakult szabályozás Mo-n a pilótás kiforrott, pilóta nélküli bezzeg.
+- tiltott légterek
+- nagyobb súly profi eszköz!
+
+Pilóta nélkül
+- Olcsóbb eszköz és üzemeltetés
+- Rugalmasabb kis terület, tervezés
+- Kevésbé biztonságos. Újabb és újabb eszközök egyre több
+  biztonságtechnikai rendszer. Ha valami történik vele kisebb károkat tud okozni.
+- Bár már van, de még nem teljesen kiforrott.
+- kevesebb tiltott légtér
+- kisebb súly, kevésbé megbízható eszköz.
+
+** UAV
+UAV = Unmanned Aerial Vehicle (néha Systems), de drón is.
+
+Két csoport:
+- Forgószárnyű vagy Kopter
+  - Rugalmas fel- leszállás VTOL vertical takeoff and landing
+  - Rövidebb repülési idő. Forgószárny folyamatosan forog (ált 30 perc repüléis idő)
+    Van hosszabb is. Ákár 1–2 óra.
+  - Rugalmasabb repülési terv. Magasság változtatása nem igényel külön
+    manővereket. Domborzat követés. Nem kell forduló hely.
+  - Nagyobb rezgések (hátrány!)
+- Merevszárnyú
+  - Felszállás kilövő állványról. Rámpa, sín vagy pirotechnikai
+    eszköz. A szárnyon legyen elég felhajtó erő. Kisebb eszközök
+    eldobás. Vagy erős motor. Komolyabb állvány.
+  - Leszállás
+    - "hasra", amihez füves terület ideális. Kamera védelme
+    (lefelé néz). Kopás elég jelentő. Kemény szálú fű vagy cserje.
+    - Leszállás ejtőernyőre. Leállítja motrort, kilövi ejtőernyőt. Nagyobb helyigény!
+  - Hoszabb repülési idő, akár 2 órás még boltból is. Széles tartomány!
+  - Kevésbé rugalmas repülési terv. Meredek emelkedés, süllyedés
+    nincs, van minimális fordulási sugár! E miatt kevésbé
+    rugalmas. Kisebb teljesítményű motor, rezgések kisebbek!
+
+Zsinóros sárkány, héliummal töltött ballonok. Nem rezegtek.
+
+Általában elektromos hajtás. Korábban robbanómotoros eszközök. Hosszabb repülési
+idő (nagy energia sűrűség). Van még robbanómotoros, de manapság nem jellemző.
+
+** Eszközök
+*** DJI MATRICE600Pro
+Három kategória. Legnagyobb DJI MATRICE600Pro
+
+Hexacopter ez, oktokopter, dodekakopter
+Kvadrokopter 1 motor kiesik, nem marad röpképes. Másik irányba forgat korszerű, biztonságos
+leszállás
+
+Hexakopter egy motorral gond van, még akár a tervet is folytathatja, vagy biztonságosan landol.
+Sérülhet a propeller, ha gond röpképes maradjon.
+
+2 kg hasznos teher, de akár 4,5 kg, de akkor rövid repülési idő (15-20 perc).
+
+Redundánsan GPS és INS. Benne az inerciális navigációs renszer.
+A három eszköz adataiból szögek is meghatározhatók.
+
+Egyszerű eszközök 1 gps és egy ins
+
+Kétféle kamera
+Sony A7R kamera
+Full frames 24x36 mm 35 Mpixel
+35 mm-es optika tartozik.
+
+Sequoi multispektrális kamera
+1,2 MP
+Négy spektrális sáv. RGB színhelyes színes,
+Zöld, vörös, közeli infravörös.
+mm
+
+Külön modul, a GPS, napfény szenzor. Kép kalibrálás a fényviszonyokhoz.
+
+Parrot sequoia.
+
+Redundáns eszközök hat db akkumulátor. Ezek is redundánsak. Egyszerre két akkut használ.
+Váltogatja.
+
+Multispektrális
+- Zöld
+- Vörös
+- Vörös él Vegetáció
+- Közeli Infra Vegetáció
+
+Sequoia RGB kép! Rezgések miatt hullámos. Gopro méretű kamera felfüggesztés.
+Akku és napfény szenzor. Merev vezetékek, kamera stabilizátor nem tud ellene dolgozni.
+
+Mechanikus zár, elektronikus zárszerkezet. Meghatározott időben olvassa a
+Sorok kiolva. Rezgések szempontjából jobb a mechanikus zár. Egy időben rögzítem
+a képet. Mozgókép esetén is zavaró.
+
+2018-tól megvan az eszköz.
+
+Sok probléma az elején. Dobozos termék. Nem minden tökéletesen működik.
+Másfél hónap után komoly felmérés.
+
+Egyetem 180m 124 kép
+2.5 cm terepi felbontás. Ortofotó mozaik és borított felszín modell.
+
+Ortofotó és borított felszín modell (képegyeztetési eljárás Foto II.)
+
+Borított felszín modell is részletgazdag. Épületek és növények is látszanak.
+*** DIJ Matrice 100
+Ez quadrocopter. 20 min repülési idő. Két kamerával.
+
+X3 12 MP kamera
+
+3.61 mm (20 mm egyenértékű fullframera)
+
+XT hőkamera
+336*256
+19 mm (kb. 114 mm )
+Nagy kameraállandó, kis látószög.
+
+Kameraállandó, fókusztávolság.
+
+Fejleszthető sorozat. Szoftver írható rá, moduláris kialakítású.
+
+Fejlesztésre voltak próbálkozások. Komplex SDK-k.
+
+Kompakt, de nem összecsukható. Nem annyira komoly!
+
+*** DJI Phantom 4 Pro / RTK
+Szombathelyi erdőgazdasággal.
+
+Eszköz tetején RTK modul a plusz valami.
+Pár cm pontossággal a helye.
+Kvadrokopter 30 perc
+
+20 mp 30 mm kamera.
+
+Kamerák függetlenek. Sony Alfa, speciális felfüggesztés (gimbal)
+
+Kamera és kamerafelfüggesztés együtt. Külön spéci felfüggesztés.
+
+Hivatalosan 0.1 m-es pontosság az RTK-ra. De valami miatt a magasságot
+(korábban) a bekapcsolásnál rögzíti. Barometrikus figyelés. 180 m-es eltérés durva!
+Most máshogy csinálják! Kép kiértékelésénél gáz!
+
+Magasság csak referenciaponttal.
+
+*** FIMI X8 SE
+Ez is egy kínai gyártó. Saomi is felvásárolta.
+Alacsonykategóriás quadrocopter 33 perc rep idő.
+
+Kamera 12 MP 4.73 (26 mm fókusz)
+
+Stabil és jól repül. Szoftvere a tervezett repülést nehéz meghatározni.
+Nem túl felhasználóbarát.
+
+*** Népszerű UAV-k
+**** DJI
+DIJ a világ UAV 90%-át forgalmazta
+
+https://www.dji.com/hu
+
+Piacvezető, amivel vissza is él. Legnépszerűbb eszköz. Kiváló kínai termék.
+
+**** Parrot
+Francia
+
+**** SenseFly
+https://www.sensefly.com
+**** FIMI
+https://fimi.com/drone.html
+**** Yuneec
+Ez is kínai.
+
+** Előny hátrány
+még egyszer. Fent kiegészítve.
+
+** X3 mintafelvétel
+X3 és hőkamera felvételek
+
+Matrice 100 kamera
+
+Vaddisznó követése. Vadkeresésre kiváló a hőkamera. Felbontásuknál fogva túl komolyra
+nem alkalmas. Jelentősen drágább a hőkamera! Befolyásolja.
+
+330x vmi 2 millió Ft. Speciális germánium optika. (Nagyon drága.)
+
+* UAV szabályozás
+Külön diasor.
+
+Nem annyira kiforrott szabályozás. Alakul-alakul, jelenleg nem tűnik megoldottnak.
+
+** ICAO
+
+Nemzetközi Polgári Repülési Szervezet (ICAO -International Civil Aviation Organization)
+
+1944 Chicagoi egyezmény 54 nemzet.
+
+1947 április 4-én szervezet megalakult
+
+Mo. 1969-től csatlakozott. Polgári légi közlekedés 1. számú hatósága.
+
+Ma 193 tagállaom.
+
+Cikkek és függelékek szabályoz
+
+** EASA
+Európai Repülésbiztonsági Ügynökség
+(EASA -- European Union of Aviaton 
+
+2002 Kölnben
+
+2008 JAA joint Aviation Authorities
+
+2004-től tag Mo
+
+EU regulation 2019/947 és 945
+
+Kötelező a tagállamoknak 2020 dec 31-el bevezetni. Többször kitolták!
+2020 dec. 31-ig kellett volna a magyar szabályozás!
+
+2020-ig nem volt szabályozás
+
+** Tv
+1995 97. tv
+
+2020 129-es dróntörvény.
+pilótanélküli légijárművek üzemeltetéséve összefüggő törvények módósításáról
+
+Átnyomták.
+
+Mo-n ekkor három jelentős szervezet. Modellezős társaság
+rádióirányítású modellezés. MHSZ égiszén, nemzetközi versenyeken eredményeket értek el!
+
+DOE és még egy szervezet.
+
+Eredetileg nem dolgoztak együtt, de egy közös nyilatkozatot kiadtak, mégis vita nélkül
+elfogadták
+
+6/2021 és 7/2021 ITM rendelet szabályozta (feb. 5). a részleteket.
+Azóta már szét is szedték.
+
+Talán érdemes kiemelni.
+
+** EU 2019/947
+Pilótákat regisztrálni kell.
+Pilóta vizsga (A1/A3) a legegyszerűbb.
+
+UA regisztrációja a nyílt kategóriában nem szükséges 2023. január 1-től.
+Nyílt kategória eddig sem, utána egy sem.
+
+20 kg fölött kötelező a biztosítás.
+
+Max. 250 g játék eszközök.
+
+** Dróntörvény
+Kötelező regisztráció
+
+Pilótavizsga (A1/A3) nálunk is internetes
+vizsga, közlekedési hatóság kresz vizsga vizsgapontjain.
+
+Osztrák interneten is megcsinálható.
+
+UA regisztráció kötelező. 2021. március 8-tól 2000 Ft.
+
+Biztosítás minden eszközre! Jelentős eltérés.
+
+Játék:
+- max 120 g
+- Nem rendelkezik kamerával
+- max 100 m eltávolodás.
+
+Bármelyik. Az ehu-hoz képes durva!
+
+Kis kamerás drón! Nem játék!
+
+** UA kategóriák
+EU-s rendelet!
+
+- Nyílt (Open)
+  - A1 (C0, C1)
+  - A2 (C2)
+  - A3 (C2, C3, C4)
+- Speciális (Specific)
+- Engedélyköteles (Certified)
+
+A két utóbbival kapcsolatban nincs semmi. Beadják a papírokat,
+meglátják, hogy mit mondanak rá. Nincs egyértemű szabályozsá.
+
+** Class
+C0 max 250
+C1 900
+C2 4kg
+C3 25 kg + 3m max
+C4 max 25 kg és nincs méret korlátozás!
+
+C az eszközre A az üzemeltetőre.
+
+uninvolved people nem bevont emberek.
+
+Táblázatot néztünk.
+
+16 év a minimum életkor!
+
+** Nyílt kategória repülési magasság
+120 m a tereptől.
+
+Nem függőleges, terepre merőlegesen.
+
+Szélkereket vizsgálata. Ha a tulajdonos kéri!
+
+A1 embertömeg fölött nem!
+Visual Line of Sight mindig szemmel kell tartani!
+
+A2 30m, kis seb 5m
+
+A3 uninvold nem lehet.
+
+** Magyar HungaroControl
+HungaroControl Magyar Légiforgalmi Szolgálat
+
+MyDroneSpace alkalmazás 2022-től. Online a HungaroControl irányában kérés.
+
+Csak internettel működik. Ahol nincs térerő nem lehet bejelenteni.
+
+A dróntörvény hozott azért könnyebbséget is.
+
+Korábban minden repüléshez légtér igénylés kellett (volna). Min. 1 hónap.
+Híradósok is csináltak felvételt.
+
+Külterületen nem kell légtérhasználat. Belterületen továbbra is kell! Ezt egyértelműsítette.
+Pilótavizsga, Belterülethez kell az A2. Ennek van gyakorlati része is.
+
+A2-re vannak egyesületek, amelyek kiállítáják. Van gyakorlati vizsga. Volt meghírdetett
+egyesület, ahol fizetsz. A1-en volt Botond. A2 vizsgára úgy ment valaki, hogy saját magának
+állított ki papírt.
+
+** Környezetvédelmi szempontból korlátozott légtér
+4/998 korm rende 5/b 7 prarag
+A közlekedési hatóság engedélyével. Mo-n elég sok ilyen légtér. Nemzetiparkok
+korlátozott légtérnek minősíttette magát.
+
+https://legter.hu
+
+https://terkep.legter.hu
+
+Aktívak. Az utóbbi térképi megjelenítő. Légtér struktúrája. Különböző légterek.
+Fertő-Hanság körrel, soproni hegység.
+
+1500 láb talajszinttől állandó.
+
+2300 láb veszélyes légtér, lőtér.
+
+395 láb 120 m! Fertőszentmiklósi légibemutató.
+
+Magyar szabályozás a szürke zónát szélesíti.
+
+Van akit feljelentenek. Állampolgári bejelentés.
+* <2023-04-19 sze>
+** Múlt órait folytatjuk
+Múlt órán egyáltalán nem voltam.
+2856 és 2857 helyi qgis dolgok.
+
+Ott hagytuk abba, hogy megrajzoltuk a képi bázist mindkét felvételen.
+A két felvételen a középpontok távolsága.
+
+Külön fájlban számolgatott.
+
+2856 3721
+2857 3705 pixel
+
+Normál sztereogramhoz a kettő átlaga kell.
+
+
+** Ha nincs
+
+x:/dfotogra/2008/2857lf2008
+
+Hozzáadni a képet. Ehhez új geopackage réteg
+Saját könyvtárba. 2057_vezetéknév állomány.
+
+2056-nál kiválasztottuk az átlókat.
+
+A két átlót kiírjuk jobb klikk a rétegen. Kiválasztott elemek exportja.
+Az lessz a másik átlója. Belső tájékozása a digitális képeknek fix!
+A belső tájékozás adott kameránál állandó!!!
+
+Geopackage-betettük. Vetület nélkül nem lehet. Amit kimentünk a másik térképhez hozzáadni.
+
+Rétegkezelő vektoros adat 2857 geopackaget- hozzáadjuk. Megvan az átló, utána be kell rajzolni
+a képi bázis vonalat. A képen a másik kép közepét azonosítani. A metsző pontot átjelölni a másik
+képre!
+
+Megvan a bázis irány fölül középen!
+
+Összekötés előtt beállitani az illesztési beállításokat. Vonalas rétegre és metszésre beállítani!
+Ebbe a rétegben szerkesztem és új elem hozzáadásával. pixel szinten egyeztetni. Ha jó az illesztés,
+akkor lila kereszttel mutatja. klikk, majd jobb klikkel lezárom a vonalat!
+
+Az újonnan rajzolt elem hossza. Először mentem a módosításokat, s utánna az adattáblát nyitom,
+a hosszmezőt, mezőkalkulátor, létezőmező és geometria $length.
+
+Vetületnélküliséget be kell állítani, hogy ne legyen vetület. Vetület
+esetén átkonvertálja a pixel koordinátát valamilyen vetületbe.
+
+Valami ilyen hossz!
+
+2857 helyiként le kell menteni a projektet.
+
+** Képközéppontok átjelölése a másik képre
+A képközéppont ahol metszi egymást a két átló. A másik képen. A bázis
+irány megvan. Alul középen helyezkedik el a pont.
+
+Szerkesztés új vonal. beazonosítom a pontot. bal klikk vonal, jobb klikk a metszéspontig.
+Ez lessz a képi bázis.
+
+Átlóhoz csak le kell rakni a sarkába.
+
+** Folytatjuk a számolást
+b'(2856)
+b'(2857)
+
+A pixeleket beírja az excelbe
+
+b' = a kettő átlaga pixelben!
+
+** Méretarány a másik képen
+
+28 56-nál meghatároztuk a méretarányt képen és a térképen mértünk távolságot.
+Két kereszteződést használtuk. A két képhez ugyan azt a távolságot választottuk.
+
+Jó, ha a képátlóban dolgozunk! Minél hosszabb és a térképen tudjuk azonosítani.
+
+3. qgis-be OSM-be töltöttük be.
+
+A harmadik quick map services OSM, osm standaard
+
+Mo, Sopron-ra nagyítottunk. EOV-ba állítaom, miután SOPRONRA nagytok
+
+Első trafo 23700 pseudomercatorban vannak, EOV-BA teszem.
+
+Hosszú távolságra jó ötlet!
+
+Google hybridet is lehet betölteni, hogy könnyebb legyen! Volt műszaki zár nyomvonala.
+OSM-en is nagyítás után megvan! Átlós sarokba jól azonosítható pontot keresünk.
+Hajnaltér vagy bánfalvi kolostor.
+
+2857 vonalat rajzolunk. Ha gond van jobban tudjuk ellenőrizni
+Vonal, réteg lementése, kijelölöm a rekordot, hogy csak arra számoljon!
+Létező mezők frissítése geometria.
+
+** 2857 kép méretaránya
+Képi távolság
+d' = 14369,35 pixel
+
+Digitális képen pixel koordinátából átváltás.
+M2857
+
+mm-be átváltani. Fájl fejlécében az infü. 2857 kép tulajdonságai
+Az első, vagy a második fülön leírja a fejlécből az iformációkat 7.2 um egy pixel.
+
+res' 7.2 um a távolság 103.459 mm
+
+A terepi távolság a másik képen. Rajzot készíthetek, de a vonalzóval is lehet!
+
+Kisház utca, gesztenés körút.
+7348.430 m
+
+A méretarányszámot kiszámoljuk:
+ak = terepi távolság / képi távolság
+
+ak = d/d' = 7378.43 m 71317.19
+
+mm-t átváltani!!!!!
+
+Mk = 1:71 317-hez!
+
+Repülési magasság =
+h0 = c * ak
+h0 = 100.5/1000 * 71317.19
+
+2857 fejléc a további információ PIXEL_SIZE_HEIGHT 7.2 MICRON, 100.5 MM
+
+GPS altitude 7413 ÓVATOSAN! ellipszoid feletti, de átállítható, nem biztos!
+
+7165 a múltkori, 7167 a másik.
+
+A h0 a két repülési magasság átlaga!
+
+2856 h0-ja + 2857 h0-ja és /2
+
+7166.289 az átlag!
+
+h0 és bázistáolság megvan.
+
+Magassághoz a parallaxis kellene!
+
+Megnézzük, hogy melyik objektumot mértük a másik képen!
+Húerőmű képet a másik képen is megkeresem!
+
+Tartály teteje jellegzetes. Mellette a kémény!  Hosszú árnyék
+feltűnő. Kémény csúcsát, tengelyközepét a kép középponttal összekötöm!
+Segyt mert látjuk, hogy jó irányba dől-e a kémény! A dőlési irány
+meghatározása csúcspont és a tőpont meghatározásában.
+
+Itt is lehet egyképes. Vonal árnyék vonalával metszve delta r és delta r'
+
+Tövét ugyan oda teszi!
+
+Bázis irányú letérés! A tövét össze illesztem, a csúcsa milyen messze egymástól?
+
+*** Csúcs meghatározása
+Lehet a koordinátát alulról a sávról leolvasni. Újramintavételezést nézhetünk.
+
+A képnél a jelrendsezr, újramintavételezés a ngyításnál, összesimítja a pixeleket.
+Pontosabb tengelyközép.
+
+9088!
+
+2856-os képen a csúcs x:9087, y koordináta -9260
+
+*** Tőpont meghat
+Tőpont talajszinten és azonos magasságban és mindkét képen jól azonosítható.
+
+Ideálisat vásztani, oszlopok, bizonytaaln. Aszfalton sötét folt.
+Tőpont!
+
+x: 9066 koordinátája -9168
+
+*** 2857-en is ugyan ezek
+
+Mintavételezés két klikk a képen és köbös mitavételezés. Az a legfejlettebb!
+Azt kell választani
+
+NAS gyenge a hozzáféréshez.
+
+Csúcs 9092 és -5490
+
+tőpont 9071 és -5438
+
+Ha csak anyit látunk és nem látjuk a képet! Miből látjuk?
+
+Koordináták különbsége a bázis távolsággal azonos!
+
+Csak abból láthatjuk, hogy nincs jelentős eltérés, a másiknál bázis irányú eltérés.
+
+\delta p(2856) = tő - csúcs = -9168 --9260 = 92
+haránt parallaxis:
+\delta q(2856) = 9066 - 9087 = -21
+
+
+\delta p(2857) = tő - csúcs = -5438 --5490 = 52
+haránt parallaxis:
+\delta q(2857) = 9071 - 9092 = -21
+
+A harántparallaxisnak ugyan annyinak kell lenni
+
+Itt figyelni a sorrendre!
+Tőpontot összeilleszteni, akkor a távolság!
+\Delta p = \Delta p(2856) -\delta p (2857) = 92-52 = 40 pixel
+
+\delta q = 0
+
+Át lehetne számolni a d' és a dőlést is képi egységbe
+
+\Delta h = h0*(\Delta p / (b' + \Delta p))
+
+\Delta p / (b' + \Delta p) = 0.010658
+
+\delta h = 0.010658 * a repülési magasság átlaga = 76,379
+
+Egy képesnél 73
+
+Amikor közel a nadírponthoz, akkor nem annyira pontos a mérés!
+
+
+** Fontos
+Bázis irányt ne keveerjük a haránt iránnyal! Képi bázisnyi eltérés!
+
+ELŐJELEKRE figyelni, távolságként értelmezni!
+
+** Átfedés
+Még nem számoltuk ki, hogy a képpárnak a képi bázisát, a terepi bázis és átfedés?
+
+B bázis irányú átfedés
+
+A kép melyik irányű mérete. Y-hoz itt fontos az átfedés!
+
+Azért fontos, hogy a felvételeknél nem négyzetes a kép!
+
+Hossz irányban repülve sűrűbben kellene repülni. A keskenyebb irányban sűrűbben csattogtatni
+Digitálisnál is mindig a rövidebb oldalra repül.
+
+Hagyományosnál is a bázis irányú átfedést növeljük.
+
+p-re vagyok kíváncsi
+
+B = Sy*(1-p)
+y irányú képméret * 1-p-vel
+
+b' = s'y*(1-p)
+
+p-t kifejezni.
+
+Rég:
+p = (s'-b')/s'
+
+Itt az y irányú s-re van szükség.
+p = (s'y -b')/s'y
+
+s'y = 67.824 mm, de b' pixelben van, inkább ns
+
+ns = 9420
+b' a két b átlaga
+
+p = (9420 - )/9420 = 0.605
+p = 60,5%
+
+Nem mindegy, hogy milyen irányban számolom az átfedést.
+
+** Terepi bázis
+A képi bázis * méretarány
+
+Többféleképpen kiszámolható
+képi bázis * méretarány. 3721 pixel mennyi mm-ben?
+
+3721 * 7.2 um/1000 = 26.7912
+Másik képen 26.676
+
+Átlagoljuk = 26.7336 mm
+
+
+B(2856) 1910.09
+B(2857) 1902.46 m
+
+B 1906
+
+*** Másik lehetőség
+Méretarány meghatározásból a terepi pixelméret.
+Távolságunk méterben, távolság pixelben: Terepi felbontás
+res = d/pixel szám
+Terepen távolság / pixel
+
+Pixelszám * terepi pixel méret.
+
+2857 ugyan annak kell kijönnie. Ugyan azokból az adatokból ugyan annak kell kijönnie.
+
+** Bázis magasság viszony
+B/h_0
+
+Űrfelvételnél h_0 helyett H
+
+Átlagos terepi bázis / átlagos repülési magasság.
+0.26 jelentősen kisebb, mint analóg mérőkameránál.
+
+
+*** Analóg kameránál nem volt
+B = képi bázis * ak (méretarányszámmal)
+B = 96.466 * 30584,64257/1000 = 2950,38 a terepi bázis az analógnál.
+
+h_0 = 4670 m a kiszámolt!
+
+B/h0 = 0.63
+
+EZ FONTOS! A digitális kameránál kisebb a látószög, ugyan akkora átfedés.
+Minál nagyobb látószöt, nagyobb B/h_0
+Másodlagos digitális kép pontosabban mérek.
+
+Kisebb B/h_0 képegyeztetési eljárás a kisebb bázis magasság viszony, kisebb paralaxis
+kevésbé magassági pontosság, kisebb eltérések, könnyebb képegyeztetés.
+Nem 60% átfedés, hanem nagyobb. A nagyobb pontosság is megvan, a második-harmadik kép,
+de a szomszéd képeket jobban tudom egyeztetni! Jövőre látjuk.
+
+x-y irányban voltak a szögek. Oldal irányba 73 fok lett! Még a hosszabbik oldalhoz
+viszonyítva is nagyobb az analóg látószöge.
+
+Terepi bázis az analógnál jóval nagyobb!
+2950 és a másiknál 1906!
+
+** Szünet
+** Folytattuk
+
+X:/dfotogr/nrrc mappa, képek alkönyvtár.
+
+Irfanview-al megnyitni.
+
+DJI_0569 képet megnyitva.
+
+IrfanView-al
+exif információk jól használhatók.
+
+Kép tulajdonságai, külön EXIF info a részletes adatok
+
+EXIF digitális képek esetében szabvány, hogy milyen metaadatokat használunk. Jól kezeli.
+
+Drónos kép DJI m100 x3
+
+4000x3000 pixeles kép.
+
+no = 4000
+ns = 3000
+
+12 M pixel milliót használunk! nem 2^10-ent!
+
+Focal length
+c = 3.61 mm
+
+focal lenght in 35 mm flm 20 mm
+c(35mm) = 20 mm
+
+Mennyi a kép mérete? Korábban gyorsan és röviden foglalkoztunk vele:
+
+Az egyenértékű fókusz távolság a képátmérőre.
+36x24 mm
+
+s'x = 36
+s'y = 24
+
+Átló pitagorassal
+sqrt(36^2 + 24^2) = 43.2666 mm átlós képméret
+
+Rajzolt egy téglát 24 mm x 36 mm
+
+Átlókra vetítési középpont 20 mm! Átlós látószöget kidöntve meghatározhatom.
+20 mm magas háromszöget.
+
+Egyenértékű fókusztávolság ugyan ezzel az átlós látószöttel jellemezhető.
+
+kis érzékelő átlóját be lehet tenni a látószöggel!
+
+43.266:20 = ?:3.61
+
+c/s'átlós = c(35mm)/s'átlós(35mm)
+
+s'átlós = (s'átlós(35mm)*c)/c(35mm)
+
+43.266*3.61/20 = 7.809 mm az érzékelő átlója
+
+Átlóból az oldalakat. Széltét, hosszát pixelben ismerem, az átlót is ismerem pixelben!
+
+sqrt(4000^2+3000^2) = 5000 pixel a képátló
+
+res' képi felbontás
+
+átlóhossz / átló pixelszám
+0.001562 = 1.562 um egy pixel a kamera érzékelőjén.
+
+4000*0.
+
+6.24769
+4.685
+Pitagorassal ellenőrizni, hogy visszakapom-e az átlót.
+
+A 36 mm-nél különböző az oldalarány!
+
+Az egyenértékű fókusztávolságból kiindulva meghatározható az érzékelő pixelmérete!!!
+
+Mindent elmenteni, s minden bezárható.
+
+** Új projekt!
+Új qgishez hozzáadom az 569-es képet.
+
+Tulajdonságokat nézhetjük, akkor nincs minden. 3 sáv
+
+További információkban az exif adatok.
+
+A végén X,Y-ok mit jelentekenk a qgis végén
+Piramis rétegek vannak benne fele, fele, fele.
+
+Tetején a befoglaló koordináta bal fölső a 0,0!
+
+Nincs vetület.
+
+Átló hossza.
+
+Gyök 2 a pixel átlója.
+
+*** Milyen méretarányú?
+c az exifben.
+GPS altitude
+
+h = 217.68 m
+a = 3.61 / 217.68 /1000 = 602999
+
+GPS magasság. HAE height above ellipsoid WGS84
+
+Mo-n mekkora az ellipszoid és tengerszint felett.
+Geoid unduláció: 40 körül, változik. Sopron környékén 47 m körül.
+
+217.68-47 = baltira vonatkozó magasság!
+
+47556 a méretarányszám!
+
+NRRC tengerszint feletti magassága.
+
+Topotérkép alapján célszerű megnézni.
+eov10sopron.ecw
+240 m-es szintvonal körül a tgszf mag.
+
+240m terep magasság. 171 kalkulált EOV mellett
+
+Nagyon rossz az érték! Gyakran előrordul, hogy a magassági értékek megbízhatatlanok!
+
+Google satellite vagy hibrid.
+
+Műholdas képnél elenyésző különbség 58.633 m! Az NRRC teteje!
+Talajszintben mérni.
+d' = 2990 pixel
+
+2990 * 0.00162 = 4.670155mm a képsíkon!
+
+58.633 / 4.67 * 1000 = 12554,829
+
+h_0 = c * ak / 1000 = 45.3229 m
+
+hTengerszint = 45.3229 + 240 = durva eltérés!!!!
+
+Terepi pixelméret
+res = képi pixel * méretarányszám / 1000 = 0. 0196 m
+
+Másik res(d/d' pixel)
+Van egy mért távolság méterben / pixel 7 0.1960
+
+Egyenértékű fókustávolság a képátlóra vonatkozik. EXIF ben tárolt
+magassági érték nem megbízható DJI kameráinak a sajátossága.
