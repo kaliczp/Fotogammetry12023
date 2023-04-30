@@ -4354,3 +4354,190 @@ Van egy mért távolság méterben / pixel 7 0.1960
 
 Egyenértékű fókustávolság a képátlóra vonatkozik. EXIF ben tárolt
 magassági érték nem megbízható DJI kameráinak a sajátossága.
+* <2023-04-24 h> Földi foto műszerek
+** Zeiss FOTEO
+FOTEO = fototeodolit
+
+1318-as típus 13x18-as üveglemezeket lehet berakni. A kameráknál úgy
+kell kezdeni, hogy tejüvek, amin a képet meg lehet alkotni.
+
+Vetítési középpont eltolható. Képfőpont változtatható. Vízszintes kameratengely, feltolt objektív.
+Függőleges képsí, de följebbi terület.
+
+Ezzel az épületet fényképezhetem.
+
+Sztereofelvételre. Normál sztereogram. A távcső többféleképpen felállítható.
+
+,,A'' pont merőleges a kameratengelyre. Megirányozható a bázisvonal túloldali jelét!
+Prizmát billentünk a magassági irányzáshoz! Vízszintes és függőleges paránycsavarok.
+
+Paránycsavarral beállítani, hogy pont 90-fok legyen. Sztereo mikrométer állító mikroszkóp.
+
+Nincs zárszerkezet! Középen a keretjelek. Bal oldalon az A-B kapcsolók!
+Van képszámláló is.
+
+Tokban a lemez. 13x18 cm -es képméret. Alsó távcső vízszintes szög érték!
+A kivételhez tekerentyűvel eltávolítani.
+
+Fix fókusz. Földi mérőkamerák kicsit közelebbre állítva, nem végtelen!
+
+A 70-es években gyártott műszer!
+Még a 90-es években használt! Nagyon lassan lettek digitális földi mérőkamerák!
+Diplomatervek, homlokzatfelmérés, egyes fák felmérése.
+
+** Zeiss UMK
+UMK = univerzális mérőkamera
+
+Elektronikus zár, fénymérő, elektronikus keretjek megvilágítás.
+
+80-as évek végi technológia.
+
+Keretjel megvilágítása fényes dolgokkal.
+
+99.14-es kameraállandó. A–B tekerentyű. Van számláló!
+
+Álló kép és fekvő képként is betehető.
+Különböző szögben betehető. Pöckök és fix szöggel lehet megváltoztatni. Zárszerkezet
+csak elektromos árammal nyitható. 99-es kameraállandó. Széles látószögű.
+
+Ugyan azt a prizmás megoldást használták az irányzáshoz. Vízszintes, magassági paránycsavar.
+Szimmetriaállító mikrométeres mikroszkóppal megy ez is!
+
+Álláspont meghatározás és képirány meghatározás. Egyszerre két kamera elsütés. Felvétel
+mikroszkóppal vizsgálható.
+
+Szűrők infravörös és sárga szűrők!
+
+Nem volt egy kamera sem. Ez a GGKI-ból származott! Digitális hátfal betehető lenne, de nagyon
+drága az ilyen hátfal. De 6x6 és 6x9-esnél terjedt el!
+
+UltraCam 100x60 mm-es érzékelő van, de 13x18-as képméretre jó.
+
+** Wild C120
+Normál sztereogram. Kamerapár. Egy időpontban készül.
+
+Jóval kisebb képméret.
+
+Beteszi a kazettát és kihúzza a lemezt. Felhúzza és elsüti.
+
+Normál sztereogram szereokomparátorral.  Bűnügyi helyszínelés fontos
+alkalmazási terület. 120 cm-es bázis. Olimpián is használják
+távmérésekre.
+
+1960-as évek közepe körül jelent meg. 6x9 cm-es hátfalat is lehet venni, de drága.
+4.5x6cm-es hátfal. Kisebb képméret, de egyszerre készül.
+
+** Canon EOS
+Tilt shift optika. digitális váz.
+
+Perspektíva korrekció, Seimplfug-féle feltétel. Sík mentén éles kép.
+
+24 mm-es, széles látószögű optika.
+
+Halszem optika is van hozzá. 24x36 közepére készíti a kört. Teljes 180 fokot biztosítja!
+Légifénykép motoros sárkány repülővel.
+
+** Limhof kamera
+Kézi légifényképezés céljára.
+
+Ez is üveglemezes. De volt mellé roll film adapter!
+Sárgaszűrőt rá.
+
+Berdár Béla doktorijában vadszáláláshoz. Lehet ehhez is digitális hátfalat venni.
+
+Kiértékelés a jövő órára maradt.
+
+* <2023-04-26 sze> Mobil kamera
+Sokat késtem. Tanulmányút miatt.
+
+Evelin 60 MP
+
+Referencia távolságot mértek.
+
+Felbontást számoltak.
+
+Nagyon egyszerű számolás.
+
+Referencia távolság, vagy képi pixel méret.
+
+Téglalapot teszünk az ajtóra. Szélesség 194 pixel.
+
+Ajtó
+194 pixel * terepi felbontás.
+
+3 mm-re. Ajtó maassága 379 pixel.
+
+2.73 m
+
+Irfan view-ban mértek!
+
+190 pixel 1.368.
+
+A falsíkban mérjünk, amire a kép OK! Keskenyebb ablakok!
+
+** Összefoglalás
+Méretarányszám, terepi pixelméret, képi pixel méret.
+Utána egyszerű szorzással a távolságok számíthatók!
+
+** Gondolkodás
+Összetartó ablakok. Fölfelé billentve készült.
+
+Képfőpont eltolás jó lenne!
+
+Pozíció. Távolság mérhető, de jobb a mérőszalag/távmérő a ref. távolság meghatározására.
+Nagylátószögű kamera.
+
+** Egyéb képek ha nincs adat!
+
+EXIF mit mond.
+1.65.
+
+4 mm gáz.
+
+8 mm halszemoptika már!
+Sok esetben jó megnézni, hogy mit írnak?
+
+Olyan jó, ahol
+
+Ultra wide 119 fok 1.12 um
+
+0.8 um
+
+2* arctg s'/ 2* c
+
+\Omage = 119
+
+Tangens excelben radiánt igényel!
+
+Átlóból is vissza lehetne számolni!
+
+1157 pixel az ember sejtse, hogy gondolja!
+
+Legbiztosabb c és c egyenérték!
+
+pixelméret a netről!
+
+** Új összeg
+Lépték tényező képi pixel és méretarány szám
+
+Referencia távolság pixel és képi méret segítségéve!
+
+Ha nagy az eltérés, valamelyik adatban hiba van!
+
+https://www.gsmarena.com -t használja!
+
+5 mm a tényleges!
+
+Ha van fölös mérés, akkor több irányból meg lehet közelíteni a dolgokat!
+
+Érdemes a mostani képkészítés tapasztalatai alapján dolgozni!
+
+Nem írja ki az exif adatokat! Van alkalmazás!
+
+** Infók
+Irfan view sok meta adatot kezel. exiftool Phil Harvey készítette.
+
+
+https://exiftool.org/
+
+nagyon egyszerű, ki tudja írni-olvasni. Át lehet írni az idő adatokat!
