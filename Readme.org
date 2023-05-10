@@ -4541,3 +4541,505 @@ Irfan view sok meta adatot kezel. exiftool Phil Harvey készítette.
 https://exiftool.org/
 
 nagyon egyszerű, ki tudja írni-olvasni. Át lehet írni az idő adatokat!
+
+* <2023-05-08 h> Ea. UAV
+
+** Cheerson
+Kamera van rajta, így nem játékszer, bár kicsi.
+
+** FIMI SE
+Special edition. Ezt be is indította.
+
+Sok eszköz, aminek a vezérléséhez kell egy okostelefon és valami alkalmazás.
+
+Nem gond a célszerszám.
+
+Kamera felfüggesztés stabil, bármilyen döntés esetén. 
+
+gimbal
+
+Élőképet meg leht nézni. 12 MP kamera. Jól használható eszköz. Repüléstervező
+szoftver nem túl jó. 2018-as szoftveer (funkciók fejlesztés alatt).
+
+Oldal irányban csillapítás.
+
+Rádióhullámmal megy a kapcsolat. Wifi a kicsinél, rádiókapcsolat mindnél.
+EU jelentősen alacsonyabb teljesítményt engednek meg, mint az USA-ban.
+Ezért a hatótávolság kisebb.
+
+2.2–5.5 GHz a frekvencia. Nagyobb frekvencia, kisebb hatótávolság.
+Két frekvencia, az egyiken távirányítás, másikon az élőkép jön. Nagy
+frekvencia, több adat!
+
+Mobillal megy.
+
+Felpörgetés, ami nem akadályoztat, ellenőrzés.
+
+** DJI matrice 100
+
+quadrocopter. Nem annyira mobil. max 20 perc repülési idő.
+
+Kamera és második akku, de az nem annyi többlet.
+
+Bekapcsolt és pittyeg. MACbook.
+
+DJI zenmooz 19 mm optika speciális hőkamera. Nagyon  kis látószögű. Germánium optika.
+Alacsony töltöttség, pittyeg.
+
+gimbal, kamera kiegyenlítés.
+
+** DJI matrice 600 pro
+Ez a hexacopter egyedül.
+
+Lehajtható karok nagy segítség!
+A kamera nem teljesen integrált.
+
+Gimbal ez is és van több mód, hogy hogy hogyan állhat a kamera.
+
+Parrot seqoia. Zöld-vörös-infra-RGB. Hozzá GPS és a külön GPS és dőlés érzékelő.
+Drót felfüggesztés. A kamera felfüggeszts. Sunshine szenzor.
+
+
+DJI GPS antenna + dőlés érzékelő.
+
+Felszállás után a lábát fel tudja emelni.
+
+** Szabályozás
+Permetező drónokkal kapcsolatban van új információ.
+Félig megvan a permezető drónra a jogszabály. Permetező drónpilóta képzés
+módszertan és minden kidolgozott. Drága tanfolymok
+minimum 300 max 380 óra. Szarvason volt tanfolyam, keszthelyen lesz most.
+
+Egyik része egyenesben.
+
+Egyk eszöz sem RTK képes. Direkt tájékozási adatok mennyire használhatók? Egyre több
+RTK képes cm pontos pozició. Nem kell vagy kevésbé illesztőpont.
+x,y jó, de z-ben nem mindig az igazi!
+
+Idő szinkronizáció is fontos. 5 m/s drón. Milyen időnként ad pozíciót?
+Az időszinkron jó legyen. GPS, DŐLÉS és KÉPKÉSZÍTÉS. Ha pontos a pozíció, de nem akkor
+amikor a kép készült.
+
+Out-of-box nál is gond, de ha te szereled...
+
+** Firmware
+Régi kínai open-source! Jó repüléstervező, mindent meg lehetett csinálni.
+DJI-nál a két eszközre repülés tervező.
+
+DJI Ground Station Pro
+
+Repüléstervező szoftver. Új eszköz, új szoftver. Domborzatot nem tud követni.
+
+Drón deploy, leechee, pixford alternatív szoftverek.
+
+A nagygyal nem működött. Kisebb eszközökre jó. Rossz szoftverrel el lehet veszítnei.
+Mindig kiírja az új firmwaret. Őrségben volt, hogy nincs kapcsolat.
+Downgradelni kellett a távirányító szoftverét. Nehezen sikerült.
+
+No-drone-zone aktualizálva. Ha az eszközre letölti, nem is lehet ott repülni.
+Sok automatikus!
+
+Open-source elterjedt. Napjainkban elnyomták. Régebben az open-source
+volt a jelentősebb.
+
+fimi 120 e Ft körül volt. Sajnos a szoftvere...
+
+Matrice 100 800 e Ft. Kifutott
+
+Matrice 600 2 MFt ma már nem gyártják.
+
+Cheerson is régi. Gyorsan változnak a dolgok!
+
+** Repülés-tervezés információk
+Ma már ritkán tervezünk kézzel. De szoftver sem tökéletes vagy nincs megfelelő szoftver.
+
+Mindig adatból kell kiindulni.
+
+*** 
+res (a terepi felbontás) általában a fő bemeneti paraméter. Milyen felbontásban?
+
+res = 0.01 m terepi felbontás. Az mindig egy fontos paraméter. Gyakran erre tervezünk.
+*** Pixelméret
+res' (méretarányszám, ha az érzékelő pixelmérete ismert)
+res' = 0.005 mm az érzékelő pixelmérete.
+
+*** Méretarányszám
+
+a_k = \frac{res}{res'}
+0.01 * 1000 / 0.005 = 2000
+
+m_k = 1:2000
+
+*** Képméret
+Ismerjük mindenirányban. Fullframe
+s'_x = 36 mm
+s'_y = 24 mm
+
+*** Terepi képméret
+S_x = s'_x * a_k = 
+
+S_x = 36 * 2000 = 72 m
+
+S_y = s'_y * a_k = 
+S_y = 24 * 2000 = 48 m
+
+
+*** Repülési magasság
+
+35 mm széles, de nem túl széles.
+
+c = 35 mm
+
+Milyen repülési magasságból tudom elérni.
+
+
+h_0 = c * a_k
+
+35 * 2000 /100 = 70 m
+
+Lineáris, tehát 2 cm 140 m.
+
+*** Elemi látószög
+Egy pixel látószöge, jellemzően radiánban.
+
+\omega (IFOW)
+
+Képi felbontás (homokórából)
+
+res' = c * \omega
+
+res'/c
+
+\omega = 0.005 / 35 = 0.0001428571 rad
+
+\omega = 0.14 mrad
+
+*** Ellenőrzés
+res = h_0 * \omega
+
+70 * 0.0001428
+
+Közelítő képletek, ívhosszat ad meg, de kicsi középponti szög!
+
+\omega, akkor bármely értékre ki tudjuk számolni a felbontást!
+
+*** Hány MP a felvéte?
+24*36 mm 
+
+n_o = s'x / res' = 7200 pixel
+n_s = s'y / res' = 4800 pixel
+
+7200*4800 = 34560000 = 34.5 MP
+
+*** Átfedések
+Milyen átfedéssel készítenénk a felvételeket?
+
+- p :: bázisirányú átfedés (soron belüli) base overlap
+- q :: harántirányú (sorok között) átfedés, side overlap
+
+p 60%, q 20% hagyományos.
+
+p = 80%, q = 60%
+
+Ha ilyen átfedés, akkor egy adott területről hány felvétel.
+
+Lerajzol egy képet. Nem négyzet alakú képek. Rövid irányba repül, hogy szélesebb
+területet tudjak lefedni. Kevesebb sorra van szükség! MINDEN esetben így!
+
+5 részre osztom (4 vonallal) a 80 % miatt. 1 pont ö6 képen rajta a közepéről.
+
+60 % harmadol! Egy pont 5*3 15 kép.
+De még + két kép a teljes kép átfedése!
+
+*** Bázistávolság
+Haladási irányban milyen a kép távolság.
+
+B = S_y * (1-p) = 
+48 * 0.2 = 9.6 m a bázis távolság
+
+9.6 / 200
+
+b' = s'y * (1-p)
+24 * 0.2
+
+*** Sortávolság
+A = S_x * ( 1 -q)
+72 * 0.4
+
+28.8 m
+
+a' = s'_x * (1-q) = 14.4 mm
+
+*** Most jön a neheze
+
+Egy téglalapot akarunk lerepülni. Mindig a hosszabb irányba repülünk! A repülési
+költségek csökkentésére.
+
+Rajzolt egy álló téglát. AX és AY
+
+AY a hosszabb.
+
+**** Hány sor kell?
+AX = 50 m, AY = 100 m
+
+Repülési sorok száma.
+
+1 sorral 72 m területet tudok felmérni. Elég-e az 1 sor?
+
+AX = S_x + (n_{sor}-1) * A 
+
+Itt n_{sor} = 1
+
+Az első sor kivéve a sortávolságok A a sorok átfedése.
+
+Ha a teljes területen legyen meg a sorok közötti átfedés.
+
+AX = n_{sor} * A
+50 m / A és fölfelé kerekítünk
+
+50/28.2 = 1.9 = 2 sor!
+
+**** B bázisirány
+Bonyolultabb!
+
+Teljes átfedés. Az első és utolsó képnek meglegyen a sztereo átfedése! Ki kell menni a %-nak,
+hogy a másodiktól meglegyen!
+
+n_{kép} soron a képek!
+
+AY = n_{kép} * B
+
+1-P és P van a két szélén!
+
+AY = n_{kép} * B - B * S_y * (1-p)
+
+AY = (n_{kép} - 2) - B + S_y
+
+
+B = 9.6 
+
+7.42, azaz 8!
+
+Ellenőrzés!
+
+Mindkét képen meglegyen a sztereo 5 kép!
+
+* <2023-05-10 sze> Repülés-tervezés
+Végre időben ideértem!
+
+Böngészőből
+http://dji.com
+
+Enterprise products
+
+DJI Zenmus X7 Specs
+
+Érzékelő mérete:
+- s'x = 23.5 mm
+- s'y = 15.7 mm
+
+24 MP
+
+Photo Sizes
+6016x4008, de ha beállítod 16:9, vagy 4:3-ra levágja a pixelt. Mindig érdemes az
+eredeti natív felbontást választnai.
+
+6016x4008 pixel
+
+** Cserélhető objektív
+- 16 mm
+- 24 mm
+- 34 mm normál látószög
+- 50 mm teleoptika
+
+
+** Kiválasztva:
+6016x4008 pixel
+c = 24 mm
+
+** Lerepülendő terület
+Botanikus kert, engedélyt kell kérni!
+
+Botankert nem szabályos 
+620 m-t szeretnénk lefényképezni.
+
+*** Magasság és szélesség meghatározása
+google earth pro-n
+
+H = 620 m
+W = 480 m
+
+*** Terepi felbontás
+res = 0,02 m terepi felbontás
+
+*** Átfedések
+Bázis irányú átfedés:
+p = 80%
+Sorok közötti átfedés
+q = 60%
+
+** Repülési magasság, terepi méretarány
+
+*** Képi pixelméres
+Szenzor méretből, és pixel szám van.
+
+res' = s'x/px = 
+
+23.5/6016
+[1] 0.00390625
+
+Ki kell számolni (nem mindig négyzetes pixel
+
+res' = s'y/py = 
+15.7 / 4008
+
+Van egy kicsi eltérés! Sokszor van, hogy a méretet nem adják meg egészen pontosan.
+Érdemes a pontosabbnak gondolt adatokból kiindulni.
+
+0.0039 mm = 3.9 um a képi pixelméret.
+
+*** Méretarányszám
+0.02 m = 20 mm
+a_k = res/res' = 20 mm / 0.0039 = 5128.2
+
+Mk = ~ 1:5128
+
+h0 = c * a_k = 24 mm * 5128.2
+
+24 * 5128.2
+[1] 123076.8
+
+h0 = ~ 123 m
+
+Elvileg 120 m-en szabad repülni! Fontos paraméter a repülés során.
+
+sx = s'x * a_k = 23.5 mm * 5128.2
+
+23.5 * 5128.2
+[1] 120512.7
+
+120.51 m
+
+sy = s'y * a_k =  mm * 5128.2
+
+80.51 m
+
+120.5 x 80.5 m
+
+** Bázistávolság
+
+B = sy * (1-p)
+
+80.51 * (1-0.8)
+[1] 16.102
+
+16.1 m
+
+A = s_x * (1-q)
+
+120.5 * ( 1 - 0.6)
+
+120.5 * ( 1 - 0.6)
+[1] 48.2 m
+
+*** Mekkora
+Bázis irány és a lefényképezendő téglalap hosszabb oldalával!
+
+620 m-t hány képpel tudjuk lefedni. Sztereoszkopikus felvételt szeretnénk!
+
+H = (nk - 1) * B
+
+Rajz a táblán. Szélső kép minden esetben 1-p-vel lóg túl 20% lóg túl elején és a végén is!
+A túllógások távolságát hogyan tudjuk számolni?
+
+(nk-1) * B képek közepének (szélének) távolságát adja meg. Ezért egyszer a képméretet.
+
+H = (nk - 1) * B + Sy - 2* s_y * (1-p)
+
+H = (nk-1) * B + Sy * ( 1 - 2 + 2p) = (nk-1) * B + Sy * (2p - 1)
+
+nk = (H - Sy (2p-1)) B + 1
+
+(620 - 80.5 * ( 2* 0.8 -1) )/ 16.1 + 1
+
+36.5 fölfelé kell kerekíteni, így 36 kép. Érdemes visszahellyettesíteni.
+
+H = (37 -1 )*16.1 + 80.51 * ( 2* 0.8 -1)
+
+627.9 ha levonunk egy bázist, akkor nem lenne elég!
+
+*** Másik irányban
+Keresztben rárajzolta a képeket. Itt nem kell túlnyúlás.
+
+(ns - 1) * A
+
+W = (ns - 1) * A + Sx
+
+ns =( W - sx) / A + 1
+(480 - 120.51) / 48.2 + 1
+[1] 8.458299
+
+9 sorra van szükség
+
+Visszaellenőrzés:
+
+(9 - 1) * 48.2 + 120.51
+[1] 506.11
+
+Ha levonunk belőle 48.2m-t, akkor kisebb.
+
+Képek száma összesen:
+ns * nk = 9 * 37
+[1] 333
+
+Mennyi memória kell, stb.
+
+Adott eszköz milyen sebességgel repül és milyen sűrűn készít képeket.
+
+dt = 1 s
+v = B/dt = 16.1 sec
+50 km/h
+
+*** Repülési út meghatározása
+1 sor:
+(n_k - 1) * B a repülési hossz.
+
+Oldalirányban a két kép középpontot kell menni.
+
+ns sor van:
+(n_k - 1) * B * n_s
+
+sorok közötti út:
+(ns _ 1) * A
+
+Össz út
+(n_k - 1) * B * n_s + (ns - 1) * A
+( 37 -1) * 16.1 * 9 + (9-1) * 48.2
+
+t = s / v = 347.615 sec = 5:47.615 
+
+Még 123-ra fel kell menni
+vv max = 5 m /s
+tv = 123 m / 5 m6s
+
+24.6 sec emelkedés
+
+Leszállás is! más !
+vv max le = 4 m /s
+123 / 4
+
+30.75 sec
+
+Megjegyzés nagykopter tervezője nem veszi figyelembe az emelkedést!
+
+*** Kérdés
+Írási sebesség?
+jpegeket ment az ember, hogyan tud tömöríteni a kamera?
+Hó és az ágszerkezet rosszul tömöríthető. A hó előtt. Nagy jpeg-ek!
+Jó ha az embernek van tapasztalata!
+
+** Feladatok
+Egymásra csúsztunk. Repüléstervezés közösen másfél óra alatt.
+
+Mindenki válasszon eszközt, amit szeretne. Sok pénze lenne. Ami tetszik. A drónnak
+a paramétereivel. Megadott fő paraméterek mentén repülést tervezni.
