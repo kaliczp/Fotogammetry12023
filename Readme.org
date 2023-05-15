@@ -5043,3 +5043,219 @@ Egymásra csúsztunk. Repüléstervezés közösen másfél óra alatt.
 
 Mindenki válasszon eszközt, amit szeretne. Sok pénze lenne. Ami tetszik. A drónnak
 a paramétereivel. Megadott fő paraméterek mentén repülést tervezni.
+
+* <2023-05-15 h> Repüléstervezés Botonddal
+Ő is diasort hozott.
+
+Eddig képletekkel néztük, most grafikusan megnézzük. És lesz a
+fényképek feldolgozásáról is.
+
+** Alapkérdések
+Nehéz a repülést befolyásoló dolgokat szétszedni.
+
+- Felmérés célja :: mit akarunk elérni? térképezési cél vagy objektum
+  modellezése? Itt térképezés, ezzel foglalkozik. Repülési magasságból
+  nadír képek készülnek.
+  - Repülési magasság
+  - átfedések Mennyire részletgazdag?
+  A fentiek alapján.
+
+- Repülőeszköz, szenzor :: Voltak bent drónok. Szenzor a nagyon
+  cserélhető, illetve vannak a kompaktak. DJI magic pro. Ekvivalens
+  fókusztávolság a legfontosabb. A területet le tudunk határolni.
+  - Repülési sebesség drónnál 70 km/h–0km nem annyira korlátoz
+  - Szenzor jellemzői
+  - Repülési idő akkumulátor használati ideje, szél, hőmérséklet, egyéb
+
+- Terep :: Milyen? Erdősült vagy nyítl,
+  - Domborzat, tereptárgyak
+  - Drón-távirányító kapcsolat tv. szerint mindig fent kell állni.
+    Feltöltve a drónba a terv, néha eltűnhet. Nem tudjuk, hogy mikor
+    találkozik nagy madárral?
+  - Terület nagysága, alakja. Nagy terület sok akksi.
+
+** Felmérés terékei
+*** Ortofotó
+Ortofotót készíthetünk több fényképből. Nagy fénykép, minden
+tereptárgy nadírból látható, mintha fentről. Kép centrális, több
+képből előállítható.
+
+Ortorektifikáció.
+*** Felületmodellek
+Kétféle:
+- Borított felszín modell (BFM)
+- Digitális dormozatmodell (DDM)
+- Kettő különbsége a normalizált bfm
+
+Ház eltávolítva a minta képpel, DDM-hez lyukak kitöltve.
+
+Fontos a képméret és abból kiszámítva terepi képméret.
+Mi az ekvivalens fókusztávolság?
+
+Szenzor többféle képarányt tudnak. 3:2 arány a legnagyobb, amit tudnak.
+20 MP amihez az ekvivalens fókuszhoz tartozó 32*24-es filmet rendelünk.
+
+24 mm 46fok látószög, nagyobb oldal 65 fok.
+
+80 m-ről 68.57 és 102.86m
+
+Nagyobb repülési magasság annál nagyobb terület. Kisebb repülési
+magasság esetén nagyobb a felbontás.
+
+Képeknél a repülési irány a rövid oldallal párhuzamos. Hogyan
+helyezzük el a sorokat? Átfedést számolunk. Bázis irányú átfedés
+általában a magasabb.
+
+80 m rövid oldal bázis irányú átfedés. 90% 10% a képek közötti átfedés
+
+Két kép között el kell telnie egy-két másodpercnek. Nagyobb átfedés, kisebb
+repülési sebesség kell!
+
+100x100 m-es terület, amit le akarunk repülni. A képet úgy
+helyezzükel, hogy a lehetőleg a legtöbb irányból lássuk a területet minimálisan.
+Utolsó kép épphogy rajta a területen.
+
+A másik irányban nagyobb a szélesség, nagyobb a látószög.
+
+Szélesebben kell futni a repülési területnek, mint a felvételezendő
+terület. A szélső kép pl. a fa másik oldaláról kell, amivel le tudjuk hatrolni.
+
+** Tervező szoftverek
+Itt Dron Deploy
+
+Hibái vannak.
+
+Kiválasztott terület, be kell rajzolni. KMLt jobban szereti, shp-t is tud. be kell tölteni.
+
+80% bázis és sorok közötti átfedés, vissza adja a korábban bemutatott
+trajzot.  Kis terület, repülési idővel nem kell számolni, dron deploy
+megtervezi. Mindig túlbecsül.
+
+Ha nagyon kiszámolná, lezuhan.
+
+Repülési sebességet is beállítja.
+
+** Nem síkon
+Domborzat nehezíti a dolgot. Ha domborzat és a drón síkban mozog, nem lesz átfedés.
+Megvan az átfedés, kis lejtés nagyobb átfedés. 50m szint már a 80 m 30-ra csökkenti,
+s az átfedés 40%-ra leesik. Fel sem lehet így dolgozni.
+
+30 m-en még egy nagyobb fát is eltalálhatunk.
+
+A magass részen szállunk. Ott 80 m. De 131 m (nem jó a nyílt kategória). Speciális
+kategóriában OK, de a pixel méret jóval kisebb. Nem lesz homogén a képanyag!!!!
+
+Drón deploy van egy beépített domborzatkövető funkciója. Az eszköz mindig a megadott
+repülési magasságban legyen. Globális domborzatmodellt használ. 80% nagyjából
+meg lesz.
+
+Domborzat követő betervezi a magasságot. Meredek terpen a hegyoldalba bele repülne.
+
+** Nagyobb területen
+Nem elég az akksi. kettő-három se. Akár 20 repülés is kellhet. 600 ha
+22 repülésből ment.
+
+80 ha fölött nem támogat domborzatmodellt. 22 részterületre bontotta.
+
+Nagy terület hátrányok:
+- hiányzik a megfelelő mobil kapcsolat. Domborzati adatok az internetről jön. Nem lehet offline
+  letölteni. Telefon alkalmazásról OK. De újraindulhat az applikáció, s ekkor le kell jönni.
+- 500 m maximális relatív repülési magasság. Meredek területen. Honnan
+  szállunk fel. Felszállási ponthoz relatívban számolja.
+- Akkumulátorok újratöltési kérdései. (45 e Ft, ha melegen töltöd
+  póposodik. Kell valami töltési lehetőség. Nagyobb powerbank is
+  segítség lehet. Nagy akku 4-5 e mA. Nagy powrbank is jó.
+
+600 ha 100 km lerepülés! Ideális esetben túlnyúlás. Bizonyos zónával
+túlnyomon, nem szokta. Fénykép hosszú oldalának felével lehet megnövelni. Terepi felbontás
+200 m. QGIS védőzóna, repülési terület.
+
+Alkalmazás optimális repülési irányt határoz meg. Utána repülési szakaszok lehatárolása.
+Belenagyítva, sort belenagyítva vonalzóval. AutoCAD-ban dolgozik. Egy sor milyen hosszú.
+
+Románia Sztereo70 vetületi rendszer. Bizonyos távolság után leszáll. A megfelelő
+módon tervez.
+
+*** Egy szakasz idő- és energiaigénye
+Felszállás, leszállás idő és energiaigénye.
+
+Érdemes párszor megpróbálni, 4-5% -ot igényel 160 m-re emelkedni.
+
+Felszállás után hol kezdődik a repülés. Felszállási pont minél
+közelebb a kezdő és végponthoz.
+
+Kezdőpontra repülés az útvonal teljesítéséhez szükséges idő.
+
+Meredek területek esetében a vertikális sebesség nagy korlát. Fel 4m/s, le 3 m/s.
+100%-os lejtőn a 7 m/s tervezett, amit vissza vesz az emelkedés miatt.
+
+Végpontra repülés és leszállás. Ez lassabb, energia kb. annyi.
+
+Időjárási viszonyok!!! Nagy szél nagyobb energiaigény. Hátszél sem igazán számít.
+
+Magas- és alacsonyhőmérséklet is csökkent. Nem érdemes kicentizni. Nagyon lemerített akku
+veszít a kapacitásából. Optimálisan 50%-al jönne le, szeles időben így 20-al jön le.
+Nem érdemes kockáztatni, hogy kicentizzük. Akkunak is jobb.
+
+Színes kép mutatja a sebesség változásokat. Repülési log fájl, ami folyamatosan rögzít.
+Lefelé azért kevésbé gyorsabban veszít a töltöttségéből.
+
+*** Felszállási pont választás
+Nem mindegy, hogy hol száll fel. Jó kilátás fontos. Tisztás vagy lék!
+Nagyobb széllökés se zavarja a felszállást, neki csapja
+valaminek. Google maps műhold felvétel. Kiválasztott hely!
+
+Műholdak elérhetősége 9–10 műholdnál hajlandó felszállni. A gép megmakacsolja magát!
+Tartható-e kapcsolat a drónnal? Meredek területen nem biztos, hogy lesz.
+
+Közel a start és a végponthoz. Kevés legyen a holt repülés. Relatív 500 m meglegyen.
+Ezzel is trükközni kell. A legmagasabb pont sem lehet magasabb! Lék kell, s az eltűnő térerő.
+
+*** Képek feldolgozása
+Minden képhez van pozíció. 17+ műhold a magassan. RTK drón antennával 10 cm-nél
+nem pontosabb 25–30 cm elvárható nem RTK 2–3 m!
+
+Pozíciókat felhasználva agisoft methashape képegyeztető az előzetes koordinátákkal.
+SFM structure for motion algoritmust használja.
+
+tömbkiegyenlítéshez 9 kapcsoló pont volt topolynxben
+
+80% átfedésnél agisoft 600 kapcsolópontot azonosít. Függ attól, hogy
+milyen paramétereket adok? Milyen minőségben feleljen meg. 8 pixelenként alacsonyabb,
+vagy részletes. Pontosabb modellt generál. Ritka pontfelhő a kapcsoló pontokkal.
+
+400 kép 300 e kapcsolópont a 100x100 területen. Algritmus kamera
+kallibrációt is számol. Nem kell mérőkamera. A szoftver kalibrációs
+paramétert is kiszámol. Hol van a kép pozíciója.
+
+Pontfelhő generálás a denscloud. 400 képes felmérés 65–70 millió
+pont. 1.5 ha-os területen. Sok a pont, tovább kell szűrni. Sok az
+alacsony megbízhatóságú pont. 1/3 kidobható, rácsháló alapján le lehet szűrni. Minden
+hálóból az alacsonyabb.
+
+Pontfelhő osztályozás:
+
+- talaj vs. nem talaj
+- épület, v. út vs. más
+
+Utána BFM, DDM, ortofotó.
+
+*** Kapcsolópontok
+kék vonal párok, hibásakat kiejti. Képeket nem tud elhelyezni, nem talál pixeleket.
+Mind a 10-et kiüti. Nem lehet neki mondani, mégis tedd be.
+
+Sűrű pontfelhő. Doborzatban fenyő alat lyuk. Földi referencia pontok. Azzal a modell
+beilleszthető vetületbe! Ha nincs illesztő, akkor a drón pontossága.
+
+** Példák az átfedésekre
+Sorok közötti átfedés csökken, akkor masszív sáv marad, ahol dőlnek a fák!
+már 50% sorok közöttinél is!
+
+Nyílt területen, rétnél akár 20% is elég!
+
+Minimális:
+- Erdős, beépített :: bázs min 85, sorok között 65% képegyeztetéshez
+- Nyílt :: 60% és 20% elég lehet.
+
+Ez az ő vizsgálata.
+
