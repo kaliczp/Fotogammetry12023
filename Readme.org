@@ -20,6 +20,9 @@
 #+subtitle:
 #+latex_compiler: pdflatex
 
+* Meghajtó
+X:/dfotogr/nrrc
+
 * <2023-02-27 h>
 Kötelező látogatni az órát.
 
@@ -5259,3 +5262,462 @@ Minimális:
 
 Ez az ő vizsgálata.
 
+
+* <2023-05-17 sze>
+Időben ideértem (végre).
+
+** Feladatok
+Feladatkiírásban. Minél kisebb méretarányú fénykép 20000 a másodlagosnál.
+
+Elsődlegesek nagyon kis méretarányúak, azrét kellene kis méretarányú,
+hogy a kettő közel legyen egymáshoz.
+
+*** 2. feladat:
+Kis méretarány.
+
+Ha EXIF nincs az elsődleges képeknél a tiff
+tegekben meg lehet nézni. További leírásnál.
+
+Sokszor a leírásokba ömlesztették az adatokat.
+
+*** 3. feladat:
+Eredeti kép is kellene.
+
+*** 4. feladat:
+Ott annyi a probléma. A kiválasztott eszköz
+általános jellemzésére szükség van.
+
+Kopter 20 percet tud repülni 60 percre
+jön ki a repülés, az meghatározza a dolgokat.
+
+Repülési idő, terhelhetőség, szélviszonyok.  Milyen messze tud
+menni. Mennyi ideig, hány akku készlet.
+
+** Egy kérdéskör word-file
+
+world file-ok
+
+szöveges állomány, amely hat paramétert tartalmaz.
+
+Forgatási mátrix 4 eleme, illetve eltolás tx és ty
+
+r11
+r12
+r21
+r22
+tx
+ty
+
+Hogyan számolja ki a pixel koordinátából az adott vetületi koordinátát?
+
+pixel koordináták -> vetületi koordináták
+
+Nincs meghatározva, hogy milyen kkordinánta rendszer. Nem szerepel benne. Nekünk
+kell tudni!!!!
+
+A képletek viszonylag egyszerűek:
+pixel x (px)
+
+X = px*r11 + py * r12 + tx
+y = px*r21 + py * r22 + ty
+
+Ami gondot okoz: A forgatási mátrix itt nem egy egységmátrix!!!!
+Azaz ezt a transzformációt fel lehet úgy írni. Mintha a forgatási mátrix
+nem egység lenne!
+
+A forgatási egységmátrix pixelmérettel szorozva!
+
+A pixelkoordináták alapesetben a bal fölső sarokból indulnak! DK tájolású.
+
+A 0,0 pixel a bal fölső sarok. (Upper Left) Nem egészen egységes, hogy a pixel közép
+és a pixel sarka! Fél pixelnyi elcsúszás.
+
+Hivatalosan a pixel sarkára vonatkozik!!! Van olyan szoftver, ahol nem így van!
+
+Két * három pixelnyi példa!
+
+Bal felső 0,0, jobb alsó 3,2
+
+tx ty a bal felső tényleges koordinátája. A körül forgatom!!!!
+
+Ki-hogyan tanulta a forgatási mátrixot? Ebből is vannak problémák!
+
+A bal felső sarok ba húzott vízszintessel szög \alpha. Normál
+descartes koordináta renszerben
+
+A régi koordinátában az x-et meghozni. A jobb felsővel bezért szög egy pixelre.
+
+\alpha órával egyező cw
+
+\cos \alpha az eredeti x irányból a meglévő x irány!
+
+\cos \alpha | -\sin \alpha
+
+A vetületi koordináta rendszerek észek keleti tájolásúak, így a y irányok
+
+- \sin \alpha | - \cos \alpha
+
+
+(0,1) koordináta az eredeti rendszerben
+
+Az előjelek változnak, ha a forgatási irány megváltozik!
+
+Még beszorozzuk a pixelmérettel. 2 m pixelmérettel még be kell szorozni
+minden tagot! Azaz 2-vel mindent!
+
+*** A forgatási mátrix
+
+| \cos \alpha | -\sin \alpha |
+| - \sin \alpha | - \cos \alpha |
+
+
+A word fájl lehetővé teszi a különböző pixel méreteket!
+Téglával is megoldható.
+
+*** kiterjesztés
+A forgatási mátrix egy sima szöveges állomány. A kiterjesztése
+az eredeti fájlkiterjesztés első és utolsó betűje + w
+
+bmp -> bpw
+tif -> tfw
+jpg -> jgw
+
+Fájlnév azonos az eredetivel!
+
+pl. 2856_1f_2008.tif -> 2856_1f_2008.tfw
+
+*** Elsődleges digitális kép
+Elsődleges digitális kép esetében hogyan nézne ki az a word fájl, amellyel a fotogammetriai
+képi koordináta renszerbe áttérnénk!
+
+Egy lapos téglalapot rajzol. Kép közép az origó. \ksi \eta koordináta rendszer.
+
+Ebben az esetben a forgatási egységmátrix 
+
+| 1 |  0 |
+| 0 | -1 |
+
+Ezt be kell szorozni a pixel mérettel! Tudjuk a pixelméretet.
+
+Fotogammetriai képi koordináta rendszerben mm -ben írjuk
+
+| 0.0072 |       0 |
+|      0 | -0.0072 |
+
+
+Még kell az eltolási paraméter. A 0,0-t a végleges koordináta
+
+
+s'_x/ kettővel eltoni
+
+s'_y / 2
+
+res' = 0.0072 mm/pixel
+s'x = 103.896 mm
+s'y = 67.824 mm
+
+pixel szám és méret ki kell, hogy adja
+
+Itt 14430 pixel
+
+14430 * 0.0072 = 103.896
+
+Lehetnek eltérések. Van
+
+Szenzor méretet elosztva pontosabban megkapjuk. Normál esetben konzisztensnek kell lenni!
+
+9420 * 0.0072
+[1] 67.824
+
+A felével kell eltolni!
+
+Fontos, hogy az új renszerbeli eltolásparaméter kell!
+
+tx = -s'x / 2 = -51.948
+
+x az negatív, de y pozitív
+
+67.824/2
+[1] 33.912
+
+word file tizedes ponttal!
+0.0072
+0
+0
+-0.0072
+-51.948
+33.912
+
+Sok szoftverben idézőjelbe kell a neve, hogy ne tegye be a 
+
+Mindkét irányban fél pixel eltérés. Még egy fél pixel eltolásán kell változtatni.
+A különbséggel. Mindkét irányban fél pixellel kevesebbel eltoni
+
+tx = -(s'x / 2 - (res' * 0.5)) = -51.948
+ty is!
+
+51.9444
+
+-(51.948 - 0.0036)
+[1] -51.9444
+
+33.912 - 0.0036
+[1] 33.9084
+
+*** 
+Még mindig nincs mirendrenbe
+
+Képfőpont koordináta principal point
+
+\xsi_0 \eta_0
+
+0, 0.216 mm!!!
+
+Ennek a képnek a képfőpontja a közepétől kicsit feljebb helyezkedik el.
+
+A képfőpontot vegyük origóhoz. A képfőponthoz viszonyítva van minden.
+
+Még annyival lejjebb kellene tolni. y irányban legyen a 0,0
+Tovább kellene csökkenteni 0.216-al.
+
+** Következő digitális kép
+DJI_X3-al készült
+M100
+
+DJI_0552.JPG
+
+Azonos kameránál azonos!
+
+Kell a pixelméret és az érzékelő mérete!
+res'
+s'x
+s'y
+
+c(35mm) = 20 mm
+
+A fenti az átlós látószöget fejezi ki!
+
+Függőlegesen egyenértékű fókusztávolság. Ugyan akkora látószög, mint a 35mm-nél a képátló!
+
+s'y
+
+Kell a tényleges c
+
+s'átlós(35mm) / c(35mm) = s'átlós / c
+
+s' = s'átlós(35 mm) / c(35mm) *
+
+c = 3.61
+
+s'átlós / c = állandó
+
+s' átlós = s'átlós(35mm) / c(35mm) * c
+
+s'átlós(35mm) = \sqrt(s'x^2 + s'y^2) =
+
+sqrt( 36 ^2 + 24^2)
+[1] 43.26662
+
+Ez a képátlója a 35 mm
+
+43.26662 / 20 * 3.61
+
+43.26662 / 20 * 3.61
+[1] 7.809625
+
+A fenti az átlós képméret. Tényleges képméret.
+
+s'x
+s'y
+
+Az oldalarányból számolható 4000*3000 pixel
+
+Pixel szám átlós arányban
+
+no = 4000
+ns = 3000
+n/ = 5000 átlós!
+
+res' = s'átlós / (n átlós)
+
+7.809625 / 5000
+[1] 0.001561925  azaz 1.5 mikronos
+
+s'x = res
+
+> 0.001561925 * 4000
+[1] 6.2477
+> 0.001561925 * 3000
+[1] 4.685775
+
+Ellenőrzés:
+sqrt(4.685775^2 + 6.2477^2)
+[1] 7.809625
+
+Fél pixellel korrigáljunk:
+-(6.2477/2 - (0.0015619 * 0.5))
+4.685775/2 - (0.0015619 * 0.5)
+
+pixelméret
+0.001561925
+0
+0
+-0.001561925
+-3.123069
+2.342107
+
+** Feladatok
+Másodlagosan és elsődlegesen. Olyan objektum! Illene lemérni!
+
+** Befejezés a word fájlokkal
+Az egyik másodlagos kép.
+
+Fentről vagy geoshopról letöltve
+Az EOV eltolásra!
+Kicsi forgatás van benne
+
+Megvan a pixel * sin és pixel * cos
+
+valamiszer * sin + valami * cos
+
+sin ^2 \alfa + cos^2 \alpha
+
+Mit látunk a word fájlon? Nem nagy a forgatás. Az eltolásból tudjuk, hogy EOV!
+
+Terepi felbontás:
+resx = sqrt(r11^2 + r12^2)
+resy = sqrt(r21^2 + r22^2)
+sqrt(0.416072145224371^2 + 0.0167684280014594^2)
+[1] 0.4164099
+
+Így a legegyszerűbb kiszámolni a felbontást.
+
+Mi 0.429-et kaptunk korábban!
+
+Itt bonyolultabb a word fájl, mert forgatásunk is van!!!! Nézzük ezt a képet!
+Mire van szükség a word fájlhoz.
+
+Van olyan, amikor a szkennelési felbontás benne van.
+14 mikronnal szkennelt fentről pont hus képek!
+
+Mi alapján határoztuk meg a képi felbontást?
+
+Keretjel távolságok alapján:
+res' = 
+
+wordfájlban hat paraméter eltolás (1 és 2), elforgatás (3.) Ha xy
+ugyan olyan pixel más nem is kell ha külöböző akkor még kell egy!
+
+Egy keretjelre hány paraméter?
+Két paramétert tudunk felírni egy keretjelre x,y
+Két keretjelet felírunk, azonos pixel
+
+Átlós keretjelet használunk. Pontosabb lesz a mérés.
+
+Kamera kalibrációs jegyzőkönyv. 2 & 4 keretjelet
+
+2-es keretjel esetében
+benne a jegyzőkönyvben
+-106,001
+-106.002
+
+4-es keretjel:
+105.999
+106.000
+
+delták
+212 212.002
+dátlós = sqrt ( )
+
+Átlósat használjunk, mert pontosabb
+
+2-es keretjel pixel koordinátái.
+
+Két vonás akkor 2-es kertjel!
+
+2-es keretjel
+2109
+-16000
+
+4-es keretjel (négy vonás)
+17168
+- 827
+
+delta pixel
+2109-17168
+[1] -15059
+> 16000-827
+[1] 15173
+
+dátlós = 21377,4042 pixel
+
+Ami problémát okozhat, az eddigi koordináta renszerben pixel koordináta renszer
+y koordináták minuszok. y irány mínusz lesz!
+
+Kiszámoljuk a távolságokat!
+\delta x és \delta y
+
+A fenti két átlós ból a felbontás
+299.81469/21377.4042
+[1] 0.01402484
+
+Most fent megvan a pixelméret. Forgatást meg kell határozni.
+
+A két keretjel átló a régi rendszerben és az új átló irányát.
+
+2 és négy keretjel két pontnak irányszögét!
+
+212 = deltax 212.002 = delta y
+
+Kicsit több az irány 
+
+delta = atan ( \delta y / \delta x) lenne, de más a koordináta rsz
+
+delta = atan ( \delta x / \delta y) 
+
+atan(212.002/212)
+
+atan(212/212.002)*180/pi
+
+atan(15059/15173)*180/pi
+
+atan(212/212.002)*180/pi
+[1] 44.99973
+> atan(15059/15173)*180/pi
+[1] 44.78395
+
+pozitív irányba forgatni! Kettő különbségével nagyon kicsit!
+\Alfa = + 44.9997729
+
+\alpha = 0.215781865
+
+*** Még eltolás kell
+Még az eltolás paraméterek kellenek
+Melyik koordinátába essen.
+
+cos (0.215781865) * 0.01402484
+sin (0.215781865) * 0.01402484
+
+0.0140249
+-0.00005281948390
+-0.00005281948390
+-0.0140249
+
+Kettes keretjelet használjuk. A word fájl eredeti egyenletében
+
+2-es keretjellel
+-106.001 = 2109 * r11 + -16000 * r12 + tx
+-106.002 = 2109 * r21 + -16000 * r22 + ty
+
+-16000 vagy kivonjuk a teljes rensezrve
+
+tx = -106.001 - 29.5785141 + 29.5785141 - 0.8451117424 = -106.8461
+ty = -106.002 + 0.1113962915451 + 224.3984
+2109 * 
+
+-106.002 + 0.1113962915451 + 224.3984
+[1] 118.5078
+
+twf-e ment
+
+Eredeti keretjelből tudom pixel koord rsz itt volt forgatás!
