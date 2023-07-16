@@ -3480,7 +3480,7 @@ EXIF adatokból focal lenth 35 mm -fil kis filmes eyenértékű fókusz távols�
 
 f35 vagy c35! 24 * 36
 
-Úgy van megadva, hogy a képátló menté legyen azonos a látószög!
+Úgy van megadva, hogy a képátló mentén legyen azonos a látószög!
 
 3/4 2:3-hoz az oldalarány a 35 mm filmnél!
 
@@ -3491,7 +3491,7 @@ Látószög is kiszámolható. Egyszerű aránnyal számoltuk.
 
 \Omega látószög = képátló / 2 * c
 
-2*fokarctan(átlós képméret / 2 * c)) 94.49 fok. 43 és 20 mm-nél is ugyan annyi. Éreemben egyszerű aránypárral tudunk számolni.
+2*fokarctan(átlós képméret / 2 * c)) 94.49 fok. 43 és 20 mm-nél is ugyan annyi. Érdemben egyszerű aránypárral tudunk számolni.
 
 Priamis csúcsán 3.61 mm 20 mm az egyenrétékű képátló a 7.valamennyi.
 
@@ -4239,7 +4239,7 @@ ns = 3000
 Focal length
 c = 3.61 mm
 
-focal lenght in 35 mm flm 20 mm
+focal lenght in 35 mm film 20 mm
 c(35mm) = 20 mm
 
 Mennyi a kép mérete? Korábban gyorsan és röviden foglalkoztunk vele:
@@ -4450,7 +4450,7 @@ Berdár Béla doktorijában vadszáláláshoz. Lehet ehhez is digitális hátfal
 
 Kiértékelés a jövő órára maradt.
 
-* <2023-04-26 sze> Mobil kamera
+* <2023-04-26 sze> Mobil kamera homlokzat földi foto
 Sokat késtem. Tanulmányút miatt.
 
 Evelin 60 MP
@@ -4677,7 +4677,6 @@ m_k = 1:2000
 Ismerjük mindenirányban. Fullframe
 s'_x = 36 mm
 s'_y = 24 mm
-
 *** Terepi képméret
 S_x = s'_x * a_k = 
 
@@ -5721,3 +5720,175 @@ ty = -106.002 + 0.1113962915451 + 224.3984
 twf-e ment
 
 Eredeti keretjelből tudom pixel koord rsz itt volt forgatás!
+
+* <2023-05-22 h> Összefoglalás
+ZH írás.
+
+Jövő óra második fele, szerdai gyakorlat.
+Vizsga előtt beugróként.
+
+** Alapfogalmak
+Beugró
+
+1. Bevezetés
+   1. Fotogammetria meghatározása
+   Fénykép mérés, mennyiségi információ. Objektum és képek
+   geometria. Előadásban ASPRS definíció.  Képek és egyéb tudománya és
+   műveszete. Objektum és matematikai kapcsolata. Csak fényképmérés
+   nem elég.
+   1. Fotogammetria felosztásai
+      Sokféle felosztás van! Nem kell mindent leírni, egyet kiválsztani.
+      - digitális kamera
+	Feldolgozás:
+	-analóg analitikus, digitális
+	Egyképes, kétképes
+2. Centrális vetítés
+   1. Legfontosabb tulajdonságai
+      egyenes képe egyenes. Hasonlóság csak párhuzamos képsík és tárgysík esetében
+   2. Alapvető számítások
+      M_k, B, A bázis és sortávolság
+3. Fényképészeti felvelvőrendszerek
+   1. Feketedési görbe
+      Feketedés logaritmikus görbe. Filmre jutó és átjutó fényáram hányadosa.
+      Jellegzetes görbe alapfátyol, könyök, lineáris tartomány, csúcsnál visszahajlik
+   2. Mérőkamerák ismérvei Analóg mérőkamerákról lenne szó. Mi az ami
+      megkülönbözteti a mérőkamerát a nem mérőkamerától. Belső
+      tájékozás, képsík és a vetítősík egymáshoz
+      viszonya. Keretjelek. Képi koordináták keretjellel illesztjük
+      Optikai elrajzolás ismerete. Nagy képméret. Földi esetben is nagy 13x18, 6x9 lemez.
+      Nagy képméret és kiegészítő információk ráfényképezése a képre.
+      Magasságmérő, óra, szelencés libella, optika adatai. Földi kamerá kamerák keretjelek résau grid
+4. Digitális mérőképek
+   1. Digitális mérőképek helyigénye oszlop x sor x raiometriai felbontás. Lesz számolás is
+      10000x10000 pixeles szürkeárnyalatos mennyi
+   2. Digitális mérőkamerák csop 2d képszenzor, vagy 1D sorszenzorral
+      rendelkező ez utóbb Leica ADS sorozat Mo-n Ultracam
+      elterjedt. 99% ezzel készült. Ennek a különböző típusai.  Belső
+      tájékozás és optikai elrajzolás. Alapvető
+      különbség. Keretjel. Filmet elvesszük analógnál.
+   3. Nevezzen meg koszerőt.
+5. Sztereoszkopikus
+   1. Mesterséges felvétel
+      - képpár
+      - különböző álláspontból bázis irányú parralaxis
+        1 pontbból veszem fel nem lesz sztere. 2 pontból nem lesz
+      - Relatv tájékozás zavartalan szemléléshez. Ne legyen haránt
+        irányú, csak bázis irányú parralaxis.
+      - Zavartlan szemlélés ne legyen haránt
+      - Harmadik: szétválasztás, csak a megfelelőt egy-egy.
+   2. szétválasztás
+      Lencsés
+      zseb sztereoskóp.  Légi fénykép tükrös
+      sztereoszkóp. Mikroprizmás térbeli. Anaglif eljárás
+      komplementer színek. Időbeli szétválasztás, aktív, lcd
+      kristályos szemüveg. Nagy frekvencia. Polarizáció
+   3. Normál sztereogram :: Olyan sztereoszkopikus képpár, ami normál
+      felvételi helyzetű. A bázisra a felvétel iránya merőleges (normális) bázisra merőleges
+      felvételek. Korábban volt nagy jelentősége, könnyen számolható. Leegyszerűsödő számítás.
+      Magasságmeghatározás képlete:
+6. Analóg felvételek Feldolgozása analóg vs. analitikus.
+   1. Analóg
+      képek, analóg kiértékelése röviden. Analóg képek kiértékelése oly
+      módon, hogy a vetítősugaraktat optikai és vagy mechanikusan
+      állitjuke elő. Síkrajz grafikusan kiértékelhető. Közvetlenül térképet.
+   2. Analitikus képek kiértékelése, képi koordinátákat mérünk. Képi
+      koordinátákból számolással határozzuk meg a térbeli koordinátákat.
+7. Digitális fotogammetria Def.: digitális képek, digitális
+   kiértékelése. Az analitikushoz közel. Nem az analgóg képen képi
+   koordinátát, hanem a digitális képen digitálisan. Azért népszerű,
+   egyre több feladat automatizálható. Hardveer és szoftver eszközök,
+   sztereo látás 3D egér. Csak definíció szerűen.
+8. Tájékozások
+   Általában: az eredeti felvételi helyzet meghatározása. Paraméterekkel történő leírása.
+   1. Belső tájékozás
+      Kamerán belül. Vetítési középpont és a képsík egymáshoz való viszonya.
+      Analóg kamera keretjel vagy résau háló digitálisnál nem, de kamera adatok mindkettőnél.
+   2. Külső tájékozás :: Az a már megadott belső tájékozású kamera vetítési középpontja.
+      Egy képnél hat külső tájékozási felvétel. Centrum koordináták, illetve milyen irányban,
+      három forgatási szög koordináta irányba, omega, phi, kappa. Egy kép esetében hat paraméter.
+      1. Relatív (kölcsönös) Ha több kép van ketté bontható Kapcsoló
+         pontok gruber pontok (bázis sík) magsík szerint. Relatív
+         tájékozás, eredményeként létrejön a térmodell. A
+         sztereoszkopikus képpár, térmodell létrejön. Valóság
+         méretarányos kicsinyítése.
+      2. Abszoltút térmodellt elhelyezzük. Eltolás és beforgatás a
+         koordináta irányába. 7. paraméter a méretarány tényező. Két
+         kép 12 relatívban 5, abszolútnál 7-et. Tájékozások alapjával mindenki tisztában legyen.
+9. UAV
+   1. Kategóriák
+      - nyílt
+      - engedélyköteles
+      - specializált
+** Vizsga előtt
+Mindenki tudja. Hármat kapunk.
+** Tételsor
+Az előadások mentén. Távérzékelés fogalma, képalkotás, fotogammetria története.
+
+Végigolvastuk a tételsort. 11 tétel. Egy tétel húzása, amiből felelni kell.
+
+Jogi szabályozás a végén.
+
+Felkészülés:
+
+
+Vizsgák a hétfői napon. 12-én lenne az első nap.
+
+
+** Feladato kapcsán
+3. feladat a képet csatolni. Képet nézve, mit akarunk mérni. Kép és tárgysík párhuzamos legyen.
+Mivel párhuzamos? Fontos, hogy a számolásoknál jelöljük, mit miből jelölünk.
+
+Van aki adatokat írt. Számolta, vagy honnan jött? Pixelméret, egyenértékű fókuszból indulhatunk.
+Derüljön ki a leírásból, hogy melyik irányt?
+
+Nem egy rövid távolság referenciának! Jó lenne egy hosszú referenciának.
+Minél nagyobb referencia annál jobb.
+
+* <2023-05-24 sze>
+Elkéstem.
+
+Fényképezőgép. Ökoszisztémát veszel. Szoftverkövetés.
+
+Régi gépek. Videózásra nem használható.
+
+Canon, Sony tükörreflex nélkül.
+
+Soni Alpha 1 van és 5. generáció.
+
+apsc olcsóbb, mint egy fullframe-s.
+
+Sok esetben APSC nincs külön optika.
+
+Kisebb szenzor olcsóbbat jelent.
+
+DP review. Kamera adatbázis. Abbahagyják.
+Régi biztosan benne van. Alaposan felépített adatbázis.
+
+** Feladatok
+
+4-es feladat három vagy négy ember küldte be.
+
+*** 3. feladat
+A 3. feladat alapvetése. Akkor használható jól, ha síkon használjuk, és
+párhuzamos a síkkal az anyag.
+
+Csak a ház legyen a képen. Jobb legyen a mérendő objektum.
+
+Mindenkinél érdemes felhívni a figyelmet. Milyen adatból indulunk ki,
+mi az amit számoltunk. Minden-mindennel összefügg. Van elvi bukfenc.
+
+A harmadik és negyedik feladat, amiből kiindultunk egységesen jelölni.
+
+Repülési magasságnál fontos, hogy a tényleges vagy az egyenértékű
+fókusztávolságot számoljuk. A fullframes lenne a szenzor!
+
+c(35mm) vagy f(35mm)
+
+Melyik az egyenértékű? A repülési magasságot nem az egyenértékűből számoljuk.
+
+A tényleges kameraállandóval kell a repülési magasság.
+Cserélhető optikásnál milyen optikát választok?
+
+Milyen messze mehet, mennyi ideig. Kamera paraméterei, milyen paraméterek?
+
+Látószög az fontos!
